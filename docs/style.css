@@ -1,0 +1,45 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f9f9f9;
+  color: #222;
+  text-align: center;
+}
+
+header {
+  background: #fff;
+  padding: 3rem 1rem 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.bio {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  font-style: italic;
+}
+
+.gallery {
+  padding: 2rem;
+}
+
+.images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.images img {
+  max-width: 300px;
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+footer {
+  background: #eee;
+  padding: 2rem 1rem;
+  margin-top: 2rem;
+}
