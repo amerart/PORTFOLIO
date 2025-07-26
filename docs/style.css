@@ -43,3 +43,14 @@ footer {
   padding: 2rem 1rem;
   margin-top: 2rem;
 }
+.artwork {
+  max-width: 300px;
+  margin-bottom: 2rem;
+}
+
+.artwork p {
+  margin-top: 0.5rem;
+  font-style: italic;
+  font-size: 0.95rem;
+  color: #444;
+  }
