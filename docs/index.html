@@ -1,42 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
-
+<head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Amer Musa Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
 <body>
   <div class="container">
 
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
-
+    <header>
       <h1>Amer Musa</h1>
       <p>Contemporary artist based in Paris</p>
     </header>
 
-    <section class="about">
+    <section class="about fade-in">
       <h2>About</h2>
 
-      <div class="lang-section">
+      <div class="lang-buttons">
+        <button onclick="showLang('en')">English</button>
+        <button onclick="showLang('fr')">Français</button>
+        <button onclick="showLang('ar')">العربية</button>
+      </div>
+
+      <div id="lang-en" class="lang-section">
         <h3>English</h3>
         <p>I was born in Sudan and arrived in Paris in 2017. I didn’t speak the language, had no home, and knew nothing about art. One day, I picked up a marker and started to draw — not to impress, but to heal.</p>
         <p>Since then, drawing became my language. Through repetition, geometry, and quiet forms, I explore memory, solitude, and space.</p>
         <p>Today, I live and work in Paris, sharing what was once private: the art of staying silent, and the beauty of finding light in limited colors.</p>
       </div>
 
-      <div class="lang-section">
+      <div id="lang-fr" class="lang-section" style="display:none;">
         <h3>Français</h3>
         <p>Je suis né au Soudan et je suis arrivé à Paris en 2017. Je ne parlais pas la langue, je n’avais pas de maison, et je ne connaissais rien à l’art. Un jour, j’ai pris un feutre et j’ai commencé à dessiner — non pas pour impressionner, mais pour guérir.</p>
         <p>Depuis, le dessin est devenu ma langue. Par la répétition, la géométrie et des formes silencieuses, j’explore la mémoire, la solitude et l’espace.</p>
         <p>Aujourd’hui, je vis et travaille à Paris, en partageant ce qui était autrefois intime : l’art de rester silencieux, et la beauté de trouver la lumière dans des couleurs limitées.</p>
       </div>
 
-      <p>أنا من السودان، ووصلت إلى باريس في عام 2017. لم أكن أتكلم اللغة، ولم يكن لدي مكان أعيش فيه، ولم أكن أعرف شيئًا عن الفن.</p>
-<p>ذات يوم، أمسكت بقلم وبدأت أرسم. لم أكن أرسم لأبهر أحدًا، بل لأُعبّر وأشعر بالراحة.</p>
-<p>مع الوقت، أصبح الرسم لغتي. من خلال التكرار والأشكال الهندسية البسيطة، بدأت أُعبّر عن الذاكرة، والعزلة، والمساحة من حولي.</p>
-<p>اليوم، أعيش وأرسم في باريس. أشارك رسومات كانت في الماضي خاصة جداً — رسومات تتحدث عن الصمت، وعن الضوء الذي وجدته في الألوان البسيطة.</p>
+      <div id="lang-ar" class="lang-section" style="display:none;" dir="rtl">
+        <h3>العربية</h3>
+        <p>أنا من السودان، ووصلت إلى باريس في عام 2017. لم أكن أتكلم اللغة، ولم يكن لدي مكان أعيش فيه، ولم أكن أعرف شيئًا عن الفن.</p>
+        <p>ذات يوم، أمسكت بقلم وبدأت أرسم. لم أكن أرسم لأبهر أحدًا، بل لأُعبّر وأشعر بالراحة.</p>
+        <p>مع الوقت، أصبح الرسم لغتي. من خلال التكرار والأشكال الهندسية البسيطة، بدأت أُعبّر عن الذاكرة، والعزلة، والمساحة من حولي.</p>
+        <p>اليوم، أعيش وأرسم في باريس. أشارك رسومات كانت في الماضي خاصة جداً — رسومات تتحدث عن الصمت، وعن الضوء الذي وجدته في الألوان البسيطة.</p>
+      </div>
+    </section>
 
+    <section class="gallery fade-in">
       <h2>My Work</h2>
       <div class="images">
         <div class="artwork"><img src="artwork1.jpg" alt="Artwork 1" /><p>The Silent Path</p></div>
@@ -47,17 +58,30 @@
         <div class="artwork"><img src="artwork6.jpg" alt="Artwork 6" /><p>Invisible Threads</p></div>
       </div>
     </section>
-</section> <!-- end of gallery -->
 
-<section class="exhibitions fade-in">
-  ...
-</section>
+    <section class="exhibitions fade-in">
+      <h2>Exhibitions</h2>
+      <ul>
+        <li><strong>2024 –</strong> Paul Smith × Amer Musa, Paris (Rue de Grenelle)</li>
+        <li><strong>2023 –</strong> “Geometry of Silence”, Independent Gallery, Paris</li>
+        <li><strong>2022 –</strong> Featured in <em>Wallpaper Magazine</em></li>
+        <li><strong>2021 –</strong> Solo show: “Between the Lines”, Café L’Arbre, Montreuil</li>
+        <li><strong>2020 –</strong> Online portfolio launch</li>
+      </ul>
+      <div class="cv-download">
+        <a href="amer-musa-cv.pdf" download>⬇ Download CV (PDF)</a>
+      </div>
+    </section>
 
-<footer>
-  ...
-</footer>
-
-</div> <!-- end of container -->
+    <section class="contact fade-in">
+      <h2>Contact</h2>
+      <form name="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
 
     <footer>
       <p><a href="https://instagram.com/musa.amer">@musa.amer</a></p>
@@ -65,36 +89,25 @@
     </footer>
 
   </div>
+
+  <script>
+    function showLang(lang) {
+      document.getElementById('lang-en').style.display = lang === 'en' ? 'block' : 'none';
+      document.getElementById('lang-fr').style.display = lang === 'fr' ? 'block' : 'none';
+      document.getElementById('lang-ar').style.display = lang === 'ar' ? 'block' : 'none';
+    }
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    });
+
+    document.querySelectorAll('.fade-in').forEach(section => {
+      observer.observe(section);
+    });
+  </script>
 </body>
 </html>
-<section class="about fade-in">
-...
-</section>
-
-<section class="gallery fade-in">
-  <section class="exhibitions fade-in">
-  <h2>Exhibitions</h2>
-  <ul>
-    <li><strong>2024 –</strong> Paul Smith × Amer Musa, Paris (Rue de Grenelle)</li>
-    <li><strong>2023 –</strong> “Geometry of Silence”, Independent Gallery, Paris</li>
-    <li><strong>2022 –</strong> Featured in *Wallpaper* Magazine</li>
-    <li><strong>2021 –</strong> Solo show: “Between the Lines”, Café L’Arbre, Montreuil</li>
-    <li><strong>2020 –</strong> Online portfolio launch</li>
-  </ul>
-</section>
-
-...
-</section>
-<script>
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
-  });
-
-  document.querySelectorAll('.fade-in').forEach(section => {
-    observer.observe(section);
-  });
-</script>
