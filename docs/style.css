@@ -6,68 +6,92 @@ body {
   color: #222;
 }
 
-main {
+.container {
   max-width: 900px;
   margin: 0 auto;
   padding: 2rem 1rem;
 }
 
-.bio {
-  max-width: 600px;
-  margin: 2rem auto;
-  padding: 0 1rem;
+header {
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.2rem;
+}
+
+header p {
+  color: #666;
   font-style: italic;
 }
 
+.about {
+  margin-top: 3rem;
+}
+
+.about h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+.lang-section {
+  margin-bottom: 2.5rem;
+}
+
+.lang-section h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #000;
+}
+
+.lang-section[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
 .gallery {
-  padding: 2rem;
+  margin-top: 4rem;
+}
+
+.gallery h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
 }
 
 .images {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
-.images img {
-  max-width: 300px;
+.artwork {
+  max-width: 250px;
+  width: 100%;
+  text-align: center;
+}
+
+.artwork img {
   width: 100%;
   border-radius: 8px;
   border: 1px solid #ccc;
 }
 
-footer {
-  background: #eee;
-  padding: 2rem 1rem;
-  margin-top: 2rem;
-}
-.artwork {
-  max-width: 300px;
-  margin-bottom: 2rem;
-}
-
 .artwork p {
   margin-top: 0.5rem;
-  font-style: italic;
   font-size: 0.95rem;
-  color: #444;
-  }.about {
-  max-width: 700px;
-  margin: 3rem auto;
-  padding: 0 1rem;
-  text-align: left;
+  font-style: italic;
+  color: #555;
 }
 
-.about h2 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
+footer {
   text-align: center;
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid #ddd;
+  font-size: 0.9rem;
 }
-
-.about p {
-  line-height: 1.6;
-  margin-bottom: 1rem;
-  color: #333;
-}
-
