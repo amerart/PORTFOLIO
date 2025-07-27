@@ -1,72 +1,85 @@
+/* Global styles */
 body {
-  font-family: sans-serif;
+  font-family: "Helvetica Neue", Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: #f9f9f9;
+  background: #fdfdfd;
   color: #222;
+  line-height: 1.6;
 }
 
 .container {
-  max-width: 900px;
+  max-width: 880px;
   margin: 0 auto;
   padding: 2rem 1rem;
 }
 
+/* Header */
 header {
   text-align: center;
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
 }
 
 header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.2rem;
+  font-size: 2.8rem;
+  letter-spacing: 1px;
+  margin: 0.5rem 0;
 }
 
 header p {
-  color: #666;
   font-style: italic;
+  color: #555;
+  font-size: 1.1rem;
 }
 
-.about {
-  margin-top: 3rem;
-}
-
-.about h2 {
-  text-align: center;
+/* About Section */
+.about h2,
+.gallery h2 {
   font-size: 1.8rem;
+  text-align: center;
+  margin-top: 4rem;
   margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+.lang-buttons {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.lang-buttons button {
+  background: #222;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1rem;
+  margin: 0 0.3rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.3s;
+}
+
+.lang-buttons button:hover {
+  background: #444;
 }
 
 .lang-section {
-  margin-bottom: 2.5rem;
-}
-
-.lang-section h3 {
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-  color: #000;
+  margin-bottom: 3rem;
+  text-align: left;
 }
 
 .lang-section[dir="rtl"] {
-  direction: rtl;
   text-align: right;
+  direction: rtl;
 }
 
-.gallery {
-  margin-top: 4rem;
-}
-
-.gallery h2 {
-  text-align: center;
-  margin-bottom: 2rem;
-  font-size: 1.8rem;
-}
-
+/* Gallery */
 .images {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
+  margin-top: 2rem;
 }
 
 .artwork {
@@ -78,20 +91,52 @@ header p {
 .artwork img {
   width: 100%;
   border-radius: 8px;
-  border: 1px solid #ccc;
+  border: 1px solid #ddd;
+  transition: transform 0.3s;
+}
+
+.artwork img:hover {
+  transform: scale(1.02);
 }
 
 .artwork p {
-  margin-top: 0.5rem;
+  margin-top: 0.6rem;
   font-size: 0.95rem;
+  color: #444;
   font-style: italic;
-  color: #555;
 }
 
+/* Footer */
 footer {
   text-align: center;
-  margin-top: 4rem;
+  margin-top: 5rem;
   padding-top: 2rem;
-  border-top: 1px solid #ddd;
   font-size: 0.9rem;
+  border-top: 1px solid #eee;
+  color: #666;
+}
+
+footer a {
+  color: #444;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .artwork {
+    max-width: 90%;
+  }
+
+  .lang-buttons button {
+    margin: 0.5rem 0.3rem;
+    font-size: 0.85rem;
+  }
 }
