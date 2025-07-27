@@ -134,12 +134,32 @@
     document.querySelectorAll('.fade-in').forEach(section => {
       observer.observe(section);
     });
-  </script>
+  <script>
+  function showLang(lang) {
+    document.getElementById('lang-en').style.display = lang === 'en' ? 'block' : 'none';
+    document.getElementById('lang-fr').style.display = lang === 'fr' ? 'block' : 'none';
+    document.getElementById('lang-ar').style.display = lang === 'ar' ? 'block' : 'none';
+  }
+
   function showGallery(lang) {
-  document.getElementById('gallery-en').style.display = lang === 'en' ? 'flex' : 'none';
-  document.getElementById('gallery-fr').style.display = lang === 'fr' ? 'flex' : 'none';
-  document.getElementById('gallery-ar').style.display = lang === 'ar' ? 'flex' : 'none';
-}
+    document.getElementById('gallery-en').style.display = lang === 'en' ? 'flex' : 'none';
+    document.getElementById('gallery-fr').style.display = lang === 'fr' ? 'flex' : 'none';
+    document.getElementById('gallery-ar').style.display = lang === 'ar' ? 'flex' : 'none';
+  }
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  });
+
+  document.querySelectorAll('.fade-in').forEach(section => {
+    observer.observe(section);
+  });
+</script>
+
 
 </body>
 </html>
