@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Timeline – Amer Musa</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+</head>
+<body>
+  <header>
+    <h1>Amer Musa</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="timeline.html" class="active">Timeline</a>
+      <div class="lang-buttons">
+        <button onclick="setLang('en')">EN</button>
+        <button onclick="setLang('fr')">FR</button>
+        <button onclick="setLang('ar')">AR</button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="timeline-container">
+    <h2 data-en="Artistic Journey" data-fr="Parcours artistique" data-ar="المسار الفني">Artistic Journey</h2>
+
+    <div class="timeline-entry">
+      <img src="images/your-artwork.jpg" alt="Artwork" />
+      <p data-en="A turning point in 2023: this piece merged symmetry with feeling." 
+         data-fr="Un tournant en 2023 : cette œuvre a fusionné la symétrie avec l’émotion." 
+         data-ar="نقطة تحول في عام 2023: جمعت هذه القطعة بين التناسق والشعور.">
+         A turning point in 2023: this piece merged symmetry with feeling.
+      </p>
+    </div>
+
+    <div class="timeline-entry">
+      <p data-en="2017 – Arrived in Paris, where drawing became a necessity, not a hobby."
+         data-fr="2017 – Arrivée à Paris, où le dessin est devenu une nécessité, pas un loisir."
+         data-ar="2017 – الوصول إلى باريس، حيث أصبح الرسم ضرورة وليس هواية.">
+         2017 – Arrived in Paris, where drawing became a necessity, not a hobby.
+      </p>
+    </div>
+
+    <div class="timeline-entry">
+      <p data-en="2022 – Collaboration with Paul Smith. A public moment from a private practice." 
+         data-fr="2022 – Collaboration avec Paul Smith. Un moment public issu d'une pratique intime." 
+         data-ar="2022 – تعاون مع بول سميث. لحظة عامة من تجربة خاصة.">
+         2022 – Collaboration with Paul Smith. A public moment from a private practice.
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    <p><a href="https://www.instagram.com/musa.amer">@musa.amer</a></p>
+    <p>Email: <a href="mailto:amer.99.er@gmail.com">amer.99.er@gmail.com</a></p>
+  </footer>
+
+  <script>
+    function setLang(lang) {
+      document.querySelectorAll('[data-' + lang + ']').forEach(el => {
+        el.textContent = el.getAttribute('data-' + lang);
+      });
+    }
+  </script>
+</body>
+</html>
