@@ -1,0 +1,107 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  color: #111;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+nav {
+  text-align: center;
+  margin-top: 20px;
+}
+
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #000;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.language-switcher {
+  text-align: right;
+  margin: 20px;
+}
+
+.language-switcher a {
+  margin-left: 15px;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.language-switcher a:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  font-size: 48px;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.gallery img {
+  width: 200px;
+  height: auto;
+  object-fit: cover;
+  border: 1px solid #ccc;
+}
+
+.timeline {
+  border-left: 4px solid #000;
+  padding-left: 20px;
+  margin-top: 40px;
+  position: relative;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -13px;
+  top: 4px;
+  width: 12px;
+  height: 12px;
+  background-color: #000;
+  border-radius: 50%;
+}
+
+.timeline-image {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.timeline-item p {
+  font-size: 18px;
+  line-height: 1.6;
+}
