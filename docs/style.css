@@ -174,3 +174,47 @@ footer a:hover {
 .cv-download a:hover {
   background: #333;
 }
+/* Timeline-specific layout */
+.timeline-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem;
+}
+
+.timeline-entry {
+  margin-bottom: 2rem;
+  border-left: 3px solid #222;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.timeline-entry img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-entry::before {
+  content: '';
+  width: 12px;
+  height: 12px;
+  background-color: #222;
+  border-radius: 50%;
+  position: absolute;
+  left: -9px;
+  top: 4px;
+}
+
+.lang-buttons {
+  float: right;
+  margin-left: auto;
+}
+
+.lang-buttons button {
+  background: none;
+  border: none;
+  font-weight: bold;
+  margin-left: 10px;
+  cursor: pointer;
+}
