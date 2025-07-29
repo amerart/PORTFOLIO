@@ -3,47 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Amer Musa | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
- <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <title>Amer Musa - Contemporary Art</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+  <!-- Header -->
   <header>
     <h1>Amer Musa</h1>
     <nav>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#gallery">Portfolio</a></li>
-        <li><a href="timeline.html">Timeline</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+      <a href="#about" data-en="About" data-fr="À propos" data-ar="عنّي">About</a>
+      <a href="#gallery" data-en="Gallery" data-fr="Galerie" data-ar="معرض">Gallery</a>
+      <a href="#timeline" data-en="Timeline" data-fr="Chronologie" data-ar="الخط الزمني">Timeline</a>
+      <a href="#contact" data-en="Contact" data-fr="Contact" data-ar="تواصل معي">Contact</a>
     </nav>
-    <div class="lang-switch">
-      <button onclick="switchLang('en')">EN</button>
-      <button onclick="switchLang('fr')">FR</button>
-      <button onclick="switchLang('ar')">AR</button>
-    </div>
   </header>
 
-  <!-- ABOUT SECTION -->
+  <!-- About Section -->
   <section id="about">
-    <div class="lang en">
-      <h2>About Me</h2>
-      <p>I explore contemporary art through drawings and paintings, blending geometry, color, and memory into minimal and symbolic forms.</p>
-    </div>
-    <div class="lang fr" style="display:none;">
-      <h2>À propos de moi</h2>
-      <p>J’explore l’art contemporain à travers des dessins et des peintures, en mêlant géométrie, couleur et souvenirs dans des formes minimalistes et symboliques.</p>
-    </div>
-    <div class="lang ar" style="display:none; direction:rtl; text-align:right;">
-      <h2>عنّي</h2>
-      <p>أستكشف الفن المعاصر من خلال الرسومات واللوحات، ممزوجاً بين الهندسة والألوان والذكريات بأسلوب بسيط ورمزي.</p>
-    </div>
+    <h2 data-en="About Me" data-fr="À propos de moi" data-ar="عنّي">About Me</h2>
+    <p>
+      I am Amer Musa, a contemporary artist exploring drawings and paintings through geometric
+      forms and limited color palettes. My work is inspired by personal experiences and memories.
+    </p>
   </section>
 
-  <!-- GALLERY SECTION -->
+  <!-- Gallery Section -->
   <section id="gallery">
-    <h2>Portfolio</h2>
+    <h2 data-en="Gallery" data-fr="Galerie" data-ar="معرض">Gallery</h2>
     <div class="gallery">
       <img src="artwork1.jpg" alt="Artwork 1">
       <img src="artwork2.jpg" alt="Artwork 2">
@@ -54,30 +42,34 @@
     </div>
   </section>
 
- <!-- Contact Section -->
-<section id="contact" class="fade-in">
-  <h2 data-en="Contact" data-fr="Contact" data-ar="تواصل معي">Contact</h2>
-  <form action="https://formspree.io/f/mrblkrvv" method="POST">
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder="Your Email" required>
-    <textarea name="message" placeholder="Your Message" required></textarea>
+  <!-- Timeline Section -->
+  <section id="timeline">
+    <h2 data-en="Timeline" data-fr="Chronologie" data-ar="الخط الزمني">Timeline</h2>
+    <ul class="timeline">
+      <li><strong>2017:</strong> Started my journey in art after moving to Paris.</li>
+      <li><strong>2023:</strong> Exhibition “A Big Dream” at Paul Smith, Paris.</li>
+      <li><strong>2025:</strong> Launch of my official website.</li>
+    </ul>
+  </section>
 
-    <!-- Redirect to Thank You page -->
-    <input type="hidden" name="_next" value="https://www.amermusa.com/thank-you.html">
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2 data-en="Contact" data-fr="Contact" data-ar="تواصل معي">Contact</h2>
+    <form action="https://formspree.io/f/mrblkrvv" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
 
-    <button type="submit">Send Message</button>
-  </form>
-</section>
+      <!-- Redirect to thank-you page -->
+      <input type="hidden" name="_next" value="https://www.amermusa.com/thank-you.html">
+
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
 
   <footer>
-    <p>© 2025 Amer Musa | All Rights Reserved</p>
+    <p>© 2025 Amer Musa | Follow me on Instagram: <a href="https://www.instagram.com/musa.amer" target="_blank">@musa.amer</a></p>
   </footer>
 
-  <script>
-    function switchLang(lang) {
-      document.querySelectorAll('.lang').forEach(el => el.style.display = 'none');
-      document.querySelector('.' + lang).style.display = 'block';
-    }
-  </script>
 </body>
 </html>
