@@ -3,47 +3,97 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Amer Musa Portfolio</title>
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <title>Amer Musa - Portfolio</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="favicon.ico">
 </head>
 <body>
   <header>
     <h1>Amer Musa</h1>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="timeline.html">Timeline</a>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#gallery">Portfolio</a></li>
+        <li><a href="#timeline">Timeline</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </nav>
     <div class="lang-switch">
-      <span>EN</span> <span>FR</span> <span>AR</span>
+      <button onclick="setLanguage('en')">English</button>
+      <button onclick="setLanguage('fr')">Français</button>
+      <button onclick="setLanguage('ar')">عربي</button>
     </div>
   </header>
 
-  <main class="container">
-    <section class="gallery">
-      <h2>My Artworks</h2>
-      <img src="artwork1.jpg" alt="Artwork 1">
-      <img src="artwork2.jpg" alt="Artwork 2">
-      <img src="artwork3.jpg" alt="Artwork 3">
-      <img src="artwork4.jpg" alt="Artwork 4">
-      <img src="artwork5.jpg" alt="Artwork 5">
-      <img src="artwork6.jpg" alt="Artwork 6">
+  <main>
+    <!-- About Section -->
+    <section id="about" class="fade-in">
+      <h2 data-en="About Me" data-fr="À Propos" data-ar="عنّي">About Me</h2>
+      <p data-en="I explore contemporary art through drawings and paintings." 
+         data-fr="J'explore l'art contemporain à travers le dessin et la peinture." 
+         data-ar="أستكشف الفن المعاصر من خلال الرسم والتلوين.">
+         I explore contemporary art through drawings and paintings.
+      </p>
     </section>
 
-    <section class="contact">
-      <h2>Contact Me</h2>
-     <form action="https://formspree.io/f/xyzabcde" method="POST">
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery fade-in">
+      <h2 data-en="Portfolio" data-fr="Portfolio" data-ar="الأعمال الفنية">Portfolio</h2>
+      <div class="images">
+        <img src="artwork1.jpg" alt="Artwork 1">
+        <img src="artwork2.jpg" alt="Artwork 2">
+        <img src="artwork3.jpg" alt="Artwork 3">
+        <img src="artwork4.jpg" alt="Artwork 4">
+        <img src="artwork5.jpg" alt="Artwork 5">
+        <img src="artwork6.jpg" alt="Artwork 6">
+      </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section id="timeline" class="fade-in">
+      <h2 data-en="Timeline" data-fr="Chronologie" data-ar="الجدول الزمني">Timeline</h2>
+      <div class="timeline">
+        <div class="event">
+          <h3>2023 - A Big Dream</h3>
+          <p>Exhibition at Paul Smith Paris.</p>
+        </div>
+        <div class="event">
+          <h3>2022 - Artistic Growth</h3>
+          <p>Created multiple series of geometric drawings.</p>
+        </div>
+        <div class="event">
+          <h3>2017 - The Beginning</h3>
+          <p>Started drawing in Paris as self-expression.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="fade-in">
+      <h2 data-en="Contact" data-fr="Contact" data-ar="تواصل معي">Contact</h2>
+      <form action="https://formsubmit.co/your-email@gmail.com" method="POST">
         <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="_replyto" placeholder="Your Email" required>
-        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+
+        <!-- Redirect to Thank You page -->
+        <input type="hidden" name="_next" value="https://www.amermusa.com/thank-you.html">
+        
         <button type="submit">Send Message</button>
       </form>
     </section>
   </main>
 
   <footer>
-    <p>© 2025 Amer Musa. All rights reserved.</p>
+    <p>© 2025 Amer Musa | All Rights Reserved</p>
   </footer>
+
+  <script>
+    function setLanguage(lang) {
+      document.querySelectorAll("[data-en]").forEach(el => {
+        el.textContent = el.getAttribute(`data-${lang}`);
+      });
+    }
+  </script>
 </body>
 </html>
