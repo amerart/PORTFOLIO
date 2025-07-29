@@ -3,26 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Amer Musa - Contemporary Art</title>
+  <title>Amer Musa | Portfolio</title>
   <link rel="stylesheet" href="style.css">
-
-  <!-- Favicon -->
-<link rel="icon" type="image/x-icon" href="favicon.ico">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+ <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
   <header>
     <h1>Amer Musa</h1>
     <nav>
       <ul>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#timeline">Timeline</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#gallery">Portfolio</a></li>
+        <li><a href="timeline.html">Timeline</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
-    <!-- Language Switch -->
     <div class="lang-switch">
       <button onclick="switchLang('en')">EN</button>
       <button onclick="switchLang('fr')">FR</button>
@@ -30,61 +25,54 @@
     </div>
   </header>
 
-  <!-- About Section -->
-  <section class="about">
-    <h2 data-en="About Me" data-fr="À propos de moi" data-ar="عنّي">About Me</h2>
-    <p data-en="I explore contemporary art through drawings and paintings, inspired by geometric patterns and minimal colors."
-       data-fr="J'explore l'art contemporain à travers des dessins et des peintures, inspirés par des motifs géométriques et des couleurs minimalistes."
-       data-ar="أستكشف الفن المعاصر من خلال الرسومات واللوحات، مستلهماً من الأشكال الهندسية والألوان البسيطة.">
-       I explore contemporary art through drawings and paintings...
-    </p>
+  <!-- ABOUT SECTION -->
+  <section id="about">
+    <div class="lang en">
+      <h2>About Me</h2>
+      <p>I explore contemporary art through drawings and paintings, blending geometry, color, and memory into minimal and symbolic forms.</p>
+    </div>
+    <div class="lang fr" style="display:none;">
+      <h2>À propos de moi</h2>
+      <p>J’explore l’art contemporain à travers des dessins et des peintures, en mêlant géométrie, couleur et souvenirs dans des formes minimalistes et symboliques.</p>
+    </div>
+    <div class="lang ar" style="display:none; direction:rtl; text-align:right;">
+      <h2>عنّي</h2>
+      <p>أستكشف الفن المعاصر من خلال الرسومات واللوحات، ممزوجاً بين الهندسة والألوان والذكريات بأسلوب بسيط ورمزي.</p>
+    </div>
   </section>
 
-  <!-- Portfolio Section -->
-  <section id="portfolio" class="gallery fade-in">
-    <h2 data-en="Portfolio" data-fr="Portfolio" data-ar="الأعمال">Portfolio</h2>
-    <div class="images">
+  <!-- GALLERY SECTION -->
+  <section id="gallery">
+    <h2>Portfolio</h2>
+    <div class="gallery">
       <img src="artwork1.jpg" alt="Artwork 1">
       <img src="artwork2.jpg" alt="Artwork 2">
       <img src="artwork3.jpg" alt="Artwork 3">
+      <img src="artwork4.jpg" alt="Artwork 4">
+      <img src="artwork5.jpg" alt="Artwork 5">
+      <img src="artwork6.jpg" alt="Artwork 6">
     </div>
   </section>
 
-  <!-- Timeline Section -->
-  <section id="timeline" class="timeline fade-in">
-    <h2 data-en="Timeline" data-fr="Chronologie" data-ar="المسار الفني">Timeline</h2>
-    <div class="timeline-container">
-      <div class="timeline-item" data-en="Exhibited at Paul Smith, Paris (2023)" data-fr="Exposition chez Paul Smith, Paris (2023)" data-ar="عرض في بول سميث، باريس (2023)">Exhibited at Paul Smith, Paris (2023)</div>
-      <div class="timeline-item" data-en="Created 'H Connection' Series (2024)" data-fr="Création de la série 'H Connection' (2024)" data-ar="إنشاء سلسلة H Connection (2024)">Created 'H Connection' Series (2024)</div>
-      <div class="timeline-item" data-en="Website Launch (2025)" data-fr="Lancement du site web (2025)" data-ar="إطلاق الموقع الإلكتروني (2025)">Website Launch (2025)</div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="contact fade-in">
-    <h2 data-en="Contact Me" data-fr="Contactez-moi" data-ar="اتصل بي">Contact Me</h2>
-    <form action="https://formsubmit.co/amer.99.er@gmail.com" method="POST">
+  <!-- CONTACT FORM -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form action="https://formspree.io/f/yourFormID" method="POST">
       <input type="text" name="name" placeholder="Your Name" required>
       <input type="email" name="email" placeholder="Your Email" required>
       <textarea name="message" placeholder="Your Message" required></textarea>
-
-      <!-- Redirect to Thank You page -->
-      <input type="hidden" name="_next" value="https://www.amermusa.com/thank-you.html">
-
       <button type="submit">Send Message</button>
     </form>
   </section>
 
   <footer>
-    <p>&copy; 2025 Amer Musa | All Rights Reserved</p>
+    <p>© 2025 Amer Musa | All Rights Reserved</p>
   </footer>
 
   <script>
-    // Language Switcher
     function switchLang(lang) {
-      document.querySelectorAll('[data-en]').forEach(el => {
-        el.textContent = el.getAttribute('data-' + lang);
-      });
+      document.querySelectorAll('.lang').forEach(el => el.style.display = 'none');
+      document.querySelector('.' + lang).style.display = 'block';
     }
   </script>
 </body>
