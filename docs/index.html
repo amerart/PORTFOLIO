@@ -47,12 +47,19 @@
     <!-- CONTACT -->
     <section id="contact">
       <h2 data-lang-en="Contact Me" data-lang-fr="Contactez-moi" data-lang-ar="تواصل معي">Contact Me</h2>
-      <form class="contact-form">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" placeholder="Your Message" required></textarea>
-        <button type="submit">Send</button>
-      </form>
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+  <label for="name">Name:</label>
+  <input type="text" name="name" id="name" required>
+
+  <label for="email">Email:</label>
+  <input type="email" name="email" id="email" required>
+
+  <label for="message">Message:</label>
+  <textarea name="message" id="message" rows="5" required></textarea>
+
+  <button type="submit">Send</button>
+</form>
+
       <p>Email: amer.99.er@gmail.com | Instagram: <a href="https://instagram.com/musa.amer" target="_blank">@musa.amer</a></p>
     </section>
   </main>
