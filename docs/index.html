@@ -1,65 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Amer Musa - Artist</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amer Musa</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
-
-  <!-- Navigation -->
   <header>
+    <h1>Amer Musa</h1>
     <nav>
       <ul>
-        <li><a href="#about" data-en="About" data-fr="À propos" data-ar="حول">About</a></li>
-        <li><a href="#gallery" data-en="Gallery" data-fr="Galerie" data-ar="معرض">Gallery</a></li>
-        <li><a href="#timeline" data-en="Timeline" data-fr="Chronologie" data-ar="الخط الزمني">Timeline</a></li>
-        <li><a href="#contact" data-en="Contact" data-fr="Contact" data-ar="تواصل معي">Contact</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#timeline">Timeline</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- About Section -->
-  <section id="about">
-    <h1 data-en="Amer Musa" data-fr="Amer Musa" data-ar="عامر موسى">Amer Musa</h1>
-    <p data-en="Explore contemporary art through drawings and paintings."
-       data-fr="Explorez l'art contemporain à travers des dessins et des peintures."
-       data-ar="اكتشف الفن المعاصر من خلال الرسومات واللوحات.">
-      Explore contemporary art through drawings and paintings.
-    </p>
-  </section>
+  <main>
+    <!-- Gallery Section -->
+    <section id="gallery">
+      <h2>Gallery</h2>
+      <div class="gallery-grid">
+        <img src="images/art1.jpg" alt="Artwork 1">
+        <img src="images/art2.jpg" alt="Artwork 2">
+        <img src="images/art3.jpg" alt="Artwork 3">
+        <img src="images/art4.jpg" alt="Artwork 4">
+        <img src="images/art5.jpg" alt="Artwork 5">
+        <img src="images/art6.jpg" alt="Artwork 6">
+      </div>
+    </section>
 
-  <!-- Gallery Section -->
-  <section id="gallery">
-    <h2 data-en="Gallery" data-fr="Galerie" data-ar="معرض">Gallery</h2>
-    <div class="grid">
-      <img src="images/art1.jpg" alt="Art 1" />
-      <img src="images/art2.jpg" alt="Art 2" />
-      <img src="images/art3.jpg" alt="Art 3" />
-      <img src="images/art4.jpg" alt="Art 4" />
-      <img src="images/art5.jpg" alt="Art 5" />
-      <img src="images/art6.jpg" alt="Art 6" />
-    </div>
-  </section>
+    <!-- Timeline Section -->
+    <section id="timeline">
+      <h2>Timeline</h2>
+      <ul>
+        <li><strong>2025:</strong> Website launched and new series of artworks.</li>
+        <li><strong>2024:</strong> Exhibitions in Paris.</li>
+        <li><strong>2023:</strong> Collaboration with Paul Smith.</li>
+      </ul>
+    </section>
 
-  <!-- Timeline Link -->
-  <section id="timeline">
-    <h2 data-en="Timeline" data-fr="Chronologie" data-ar="الخط الزمني">Timeline</h2>
-    <p><a href="timeline.html">View my artistic journey</a></p>
-  </section>
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <form action="https://formspree.io/f/mrblkrvv" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
 
-  <!-- Contact Section -->
-  <section id="contact">
-    <h2 data-en="Contact" data-fr="Contact" data-ar="تواصل معي">Contact</h2>
-    <form action="https://formspree.io/f/mrblkrvv" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
+        <!-- Redirect to Thank You page -->
+        <input type="hidden" name="_next" value="https://www.amermusa.com/thank-you.html">
 
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Amer Musa. All rights reserved.</p>
+  </footer>
 </body>
 </html>
