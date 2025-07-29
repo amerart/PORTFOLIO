@@ -3,73 +3,61 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Amer Musa - Contemporary Art</title>
-<link rel="icon" href="favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="styles.css">
+  <title>Amer Musa - Art Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
-
   <!-- Header -->
   <header>
     <h1>Amer Musa</h1>
     <nav>
-      <a href="#about" data-en="About" data-fr="À propos" data-ar="عنّي">About</a>
-      <a href="#gallery" data-en="Gallery" data-fr="Galerie" data-ar="معرض">Gallery</a>
-      <a href="#timeline" data-en="Timeline" data-fr="Chronologie" data-ar="الخط الزمني">Timeline</a>
-      <a href="#contact" data-en="Contact" data-fr="Contact" data-ar="تواصل معي">Contact</a>
+      <ul>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#timeline">Timeline</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </nav>
   </header>
 
-  <!-- About Section -->
-  <section id="about">
-    <h2 data-en="About Me" data-fr="À propos de moi" data-ar="عنّي">About Me</h2>
-    <p>
-      I am Amer Musa, a contemporary artist exploring drawings and paintings through geometric
-      forms and limited color palettes. My work is inspired by personal experiences and memories.
-    </p>
-  </section>
-
   <!-- Gallery Section -->
   <section id="gallery">
-    <h2 data-en="Gallery" data-fr="Galerie" data-ar="معرض">Gallery</h2>
-    <div class="gallery">
-      <img src="artwork1.jpg" alt="Artwork 1">
-      <img src="artwork2.jpg" alt="Artwork 2">
-      <img src="artwork3.jpg" alt="Artwork 3">
-      <img src="artwork4.jpg" alt="Artwork 4">
-      <img src="artwork5.jpg" alt="Artwork 5">
-      <img src="artwork6.jpg" alt="Artwork 6">
+    <h2>Gallery</h2>
+    <div class="gallery-grid">
+      <img src="images/artwork1.jpg" alt="Artwork 1">
+      <img src="images/artwork2.jpg" alt="Artwork 2">
+      <img src="images/artwork3.jpg" alt="Artwork 3">
+      <img src="images/artwork4.jpg" alt="Artwork 4">
+      <img src="images/artwork5.jpg" alt="Artwork 5">
+      <img src="images/artwork6.jpg" alt="Artwork 6">
     </div>
   </section>
 
   <!-- Timeline Section -->
   <section id="timeline">
-    <h2 data-en="Timeline" data-fr="Chronologie" data-ar="الخط الزمني">Timeline</h2>
-    <ul class="timeline">
-      <li><strong>2017:</strong> Started my journey in art after moving to Paris.</li>
-      <li><strong>2023:</strong> Exhibition “A Big Dream” at Paul Smith, Paris.</li>
-      <li><strong>2025:</strong> Launch of my official website.</li>
+    <h2>Timeline</h2>
+    <ul>
+      <li><strong>2025:</strong> Website launched and new series of artworks.</li>
+      <li><strong>2024:</strong> Exhibitions in Paris.</li>
+      <li><strong>2023:</strong> Collaboration with Paul Smith.</li>
     </ul>
   </section>
 
   <!-- Contact Section -->
   <section id="contact">
-    <h2 data-en="Contact" data-fr="Contact" data-ar="تواصل معي">Contact</h2>
+    <h2>Contact</h2>
     <form action="https://formspree.io/f/mrblkrvv" method="POST">
       <input type="text" name="name" placeholder="Your Name" required>
       <input type="email" name="email" placeholder="Your Email" required>
       <textarea name="message" placeholder="Your Message" required></textarea>
-
-      <!-- Redirect to thank-you page -->
       <input type="hidden" name="_next" value="https://www.amermusa.com/thank-you.html">
-
       <button type="submit">Send Message</button>
     </form>
   </section>
 
+  <!-- Footer -->
   <footer>
-    <p>© 2025 Amer Musa | Follow me on Instagram: <a href="https://www.instagram.com/musa.amer" target="_blank">@musa.amer</a></p>
+    <p>© 2025 Amer Musa. All Rights Reserved.</p>
   </footer>
-
 </body>
 </html>
