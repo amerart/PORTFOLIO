@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Amer Musa | Portfolio</title>
+  <title>Amer Musa Portfolio</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
@@ -13,19 +14,15 @@
     <nav>
       <a href="index.html">Home</a>
       <a href="timeline.html">Timeline</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-      <div class="lang-switch">
-        <button onclick="switchLang('en')">EN</button>
-        <button onclick="switchLang('fr')">FR</button>
-        <button onclick="switchLang('ar')">AR</button>
-      </div>
     </nav>
+    <div class="lang-switch">
+      <span>EN</span> <span>FR</span> <span>AR</span>
+    </div>
   </header>
 
-  <main>
-    <!-- GALLERY -->
-    <section class="gallery fade-in">
+  <main class="container">
+    <section class="gallery">
+      <h2>My Artworks</h2>
       <img src="artwork1.jpg" alt="Artwork 1">
       <img src="artwork2.jpg" alt="Artwork 2">
       <img src="artwork3.jpg" alt="Artwork 3">
@@ -34,46 +31,19 @@
       <img src="artwork6.jpg" alt="Artwork 6">
     </section>
 
-    <!-- ABOUT -->
-    <section id="about">
-      <h2 data-lang-en="About the Artist" data-lang-fr="À propos de l'artiste" data-lang-ar="عن الفنان">About the Artist</h2>
-      <p data-lang-en="I am Amer Musa, a contemporary artist exploring minimal and geometric forms in my drawings and paintings."
-         data-lang-fr="Je suis Amer Musa, un artiste contemporain qui explore des formes minimales et géométriques dans mes dessins et peintures."
-         data-lang-ar="أنا عامر موسى، فنان معاصر أستكشف الأشكال البسيطة والهندسية في رسوماتي ولوحاتي.">
-         I am Amer Musa, a contemporary artist exploring minimal and geometric forms in my drawings and paintings.
-      </p>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact">
-      <h2 data-lang-en="Contact Me" data-lang-fr="Contactez-moi" data-lang-ar="تواصل معي">Contact Me</h2>
+    <section class="contact">
+      <h2>Contact Me</h2>
       <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-  <label for="name">Name:</label>
-  <input type="text" name="name" id="name" required>
-
-  <label for="email">Email:</label>
-  <input type="email" name="email" id="email" required>
-
-  <label for="message">Message:</label>
-  <textarea name="message" id="message" rows="5" required></textarea>
-
-  <button type="submit">Send</button>
-</form>
-
-      <p>Email: amer.99.er@gmail.com | Instagram: <a href="https://instagram.com/musa.amer" target="_blank">@musa.amer</a></p>
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="_replyto" placeholder="Your Email" required>
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
     </section>
   </main>
 
   <footer>
-    <p>© 2025 Amer Musa | All Rights Reserved</p>
+    <p>© 2025 Amer Musa. All rights reserved.</p>
   </footer>
-
-  <script>
-    function switchLang(lang) {
-      document.querySelectorAll('[data-lang-' + lang + ']').forEach(el => {
-        el.textContent = el.getAttribute('data-lang-' + lang);
-      });
-    }
-  </script>
 </body>
 </html>
