@@ -1,27 +1,37 @@
-body {
-  font-family: Arial, sans-serif;
+* {
   margin: 0;
   padding: 0;
-  text-align: center;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+  line-height: 1.6;
 }
 
 header {
-  background: #fff;
+  text-align: center;
   padding: 20px;
+  background-color: #222;
+  color: white;
 }
 
-h1 {
-  font-family: 'Great Vibes', cursive;
-  margin: 0;
+header h1 {
+  margin-bottom: 10px;
 }
 
-nav a {
-  margin: 0 15px;
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: white;
   text-decoration: none;
-  color: #333;
-}
-
-nav a.active {
   font-weight: bold;
 }
 
@@ -29,70 +39,91 @@ nav a.active {
   margin-top: 10px;
 }
 
-.container {
-  max-width: 900px;
-  margin: 0 auto;
+.lang-switch button {
+  margin: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+main {
+  max-width: 1000px;
+  margin: auto;
   padding: 20px;
 }
 
-.gallery img {
-  width: 30%;
-  margin: 1%;
-  border-radius: 8px;
+section {
+  margin-bottom: 50px;
+  text-align: center;
 }
 
-@media (max-width: 768px) {
-  .gallery img {
-    width: 45%;
-  }
+.gallery .images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  margin-top: 20px;
 }
 
-@media (max-width: 480px) {
-  .gallery img {
-    width: 90%;
-  }
+.gallery .images img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
 }
 
-.contact form {
+.timeline {
   display: flex;
   flex-direction: column;
-  max-width: 500px;
-  margin: 0 auto;
+  gap: 20px;
+  text-align: left;
 }
 
-.contact input,
-.contact textarea {
-  margin: 10px 0;
-  padding: 10px;
-  font-size: 1em;
+.event {
+  background: white;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-.contact button {
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: auto;
+  gap: 10px;
+}
+
+form input, form textarea {
   padding: 10px;
-  font-size: 1em;
-  background-color: black;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  background: #333;
   color: white;
+  padding: 10px;
   border: none;
   cursor: pointer;
 }
 
-.timeline {
-  margin-top: 30px;
-  text-align: left;
-}
-
-.timeline-item {
-  margin-bottom: 20px;
-}
-
-.timeline-item img {
-  width: 100px;
-  display: block;
-  margin-bottom: 10px;
+form button:hover {
+  background: #555;
 }
 
 footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #222;
+  color: white;
   margin-top: 30px;
-  padding: 15px;
-  background: #f2f2f2;
+}
+
+/* Mobile optimization */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .timeline {
+    text-align: center;
+  }
 }
