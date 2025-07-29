@@ -3,96 +3,87 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Amer Musa - Portfolio</title>
+  <title>Amer Musa - Contemporary Art</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/png" href="favicon.ico">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
     <h1>Amer Musa</h1>
     <nav>
       <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#gallery">Portfolio</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
         <li><a href="#timeline">Timeline</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
+    <!-- Language Switch -->
     <div class="lang-switch">
-      <button onclick="setLanguage('en')">English</button>
-      <button onclick="setLanguage('fr')">Français</button>
-      <button onclick="setLanguage('ar')">عربي</button>
+      <button onclick="switchLang('en')">EN</button>
+      <button onclick="switchLang('fr')">FR</button>
+      <button onclick="switchLang('ar')">AR</button>
     </div>
   </header>
 
-  <main>
-    <!-- About Section -->
-    <section id="about" class="fade-in">
-      <h2 data-en="About Me" data-fr="À Propos" data-ar="عنّي">About Me</h2>
-      <p data-en="I explore contemporary art through drawings and paintings." 
-         data-fr="J'explore l'art contemporain à travers le dessin et la peinture." 
-         data-ar="أستكشف الفن المعاصر من خلال الرسم والتلوين.">
-         I explore contemporary art through drawings and paintings.
-      </p>
-    </section>
+  <!-- About Section -->
+  <section class="about">
+    <h2 data-en="About Me" data-fr="À propos de moi" data-ar="عنّي">About Me</h2>
+    <p data-en="I explore contemporary art through drawings and paintings, inspired by geometric patterns and minimal colors."
+       data-fr="J'explore l'art contemporain à travers des dessins et des peintures, inspirés par des motifs géométriques et des couleurs minimalistes."
+       data-ar="أستكشف الفن المعاصر من خلال الرسومات واللوحات، مستلهماً من الأشكال الهندسية والألوان البسيطة.">
+       I explore contemporary art through drawings and paintings...
+    </p>
+  </section>
 
-    <!-- Gallery Section -->
-    <section id="gallery" class="gallery fade-in">
-      <h2 data-en="Portfolio" data-fr="Portfolio" data-ar="الأعمال الفنية">Portfolio</h2>
-      <div class="images">
-        <img src="artwork1.jpg" alt="Artwork 1">
-        <img src="artwork2.jpg" alt="Artwork 2">
-        <img src="artwork3.jpg" alt="Artwork 3">
-        <img src="artwork4.jpg" alt="Artwork 4">
-        <img src="artwork5.jpg" alt="Artwork 5">
-        <img src="artwork6.jpg" alt="Artwork 6">
-      </div>
-    </section>
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="gallery fade-in">
+    <h2 data-en="Portfolio" data-fr="Portfolio" data-ar="الأعمال">Portfolio</h2>
+    <div class="images">
+      <img src="artwork1.jpg" alt="Artwork 1">
+      <img src="artwork2.jpg" alt="Artwork 2">
+      <img src="artwork3.jpg" alt="Artwork 3">
+    </div>
+  </section>
 
-    <!-- Timeline Section -->
-    <section id="timeline" class="fade-in">
-      <h2 data-en="Timeline" data-fr="Chronologie" data-ar="الجدول الزمني">Timeline</h2>
-      <div class="timeline">
-        <div class="event">
-          <h3>2023 - A Big Dream</h3>
-          <p>Exhibition at Paul Smith Paris.</p>
-        </div>
-        <div class="event">
-          <h3>2022 - Artistic Growth</h3>
-          <p>Created multiple series of geometric drawings.</p>
-        </div>
-        <div class="event">
-          <h3>2017 - The Beginning</h3>
-          <p>Started drawing in Paris as self-expression.</p>
-        </div>
-      </div>
-    </section>
+  <!-- Timeline Section -->
+  <section id="timeline" class="timeline fade-in">
+    <h2 data-en="Timeline" data-fr="Chronologie" data-ar="المسار الفني">Timeline</h2>
+    <div class="timeline-container">
+      <div class="timeline-item" data-en="Exhibited at Paul Smith, Paris (2023)" data-fr="Exposition chez Paul Smith, Paris (2023)" data-ar="عرض في بول سميث، باريس (2023)">Exhibited at Paul Smith, Paris (2023)</div>
+      <div class="timeline-item" data-en="Created 'H Connection' Series (2024)" data-fr="Création de la série 'H Connection' (2024)" data-ar="إنشاء سلسلة H Connection (2024)">Created 'H Connection' Series (2024)</div>
+      <div class="timeline-item" data-en="Website Launch (2025)" data-fr="Lancement du site web (2025)" data-ar="إطلاق الموقع الإلكتروني (2025)">Website Launch (2025)</div>
+    </div>
+  </section>
 
-   <!-- Contact Section -->
-<section id="contact" class="fade-in">
-  <h2 data-en="Contact" data-fr="Contact" data-ar="تواصل معي">Contact</h2>
-  
-  <form action="https://formsubmit.co/amer.99.er@gmail.com" method="POST">
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder="Your Email" required>
-    <textarea name="message" placeholder="Your Message" required></textarea>
+  <!-- Contact Section -->
+  <section id="contact" class="contact fade-in">
+    <h2 data-en="Contact Me" data-fr="Contactez-moi" data-ar="اتصل بي">Contact Me</h2>
+    <form action="https://formsubmit.co/amer.99.er@gmail.com" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
 
-    <!-- Redirect to Thank You page -->
-    <input type="hidden" name="_next" value="https://www.amermusa.com/thank-you.html">
+      <!-- Redirect to Thank You page -->
+      <input type="hidden" name="_next" value="https://www.amermusa.com/thank-you.html">
 
-    <button type="submit">Send Message</button>
-  </form>
-</section>
-  </main>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
 
   <footer>
-    <p>© 2025 Amer Musa | All Rights Reserved</p>
+    <p>&copy; 2025 Amer Musa | All Rights Reserved</p>
   </footer>
 
   <script>
-    function setLanguage(lang) {
-      document.querySelectorAll("[data-en]").forEach(el => {
-        el.textContent = el.getAttribute(`data-${lang}`);
+    // Language Switcher
+    function switchLang(lang) {
+      document.querySelectorAll('[data-en]').forEach(el => {
+        el.textContent = el.getAttribute('data-' + lang);
       });
     }
   </script>
