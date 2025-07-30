@@ -43,9 +43,6 @@ section {
 }
 
 /* ABOUT PAGE */
-.about .lang {
-  margin-bottom: 40px;
-}
 .about h2 {
   color: #333;
   margin-bottom: 10px;
@@ -71,76 +68,49 @@ section {
 }
 
 /* CONTACT PAGE */
-.contact {
+.contact-section {
+  max-width: 600px;
+  margin: 60px auto;
   text-align: center;
 }
 
-.contact h2 {
-  color: #333;
-  margin-bottom: 10px;
-}
-
-.contact p {
-  font-size: 1.1em;
-}
-
-.contact form {
-  display: flex;
-  flex-direction: column;
-  max-width: 400px;
-  margin: 20px auto 0;
-}
-
-.contact input,
-.contact textarea {
-  margin: 10px 0;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 1em;
-}
-
-.contact button {
-  background: #111;
-  color: white;
-  border: none;
-  padding: 12px;
-  cursor: pointer;
-  border-radius: 5px;
-  font-size: 1.1em;
-  transition: background 0.3s;
-}
-
-.contact button:hover {
-  background: #f0c040;
+.contact-section h2 {
+  margin-bottom: 20px;
   color: #111;
 }
 
-/* MULTILINGUAL STYLE */
-.lang {
-  margin-bottom: 40px;
-  direction: ltr;
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
-.lang.ar {
-  direction: rtl;
-  text-align: right;
+.contact-form textarea {
+  height: 150px;
+  resize: none;
 }
 
-.lang.fr {
-  font-style: italic;
+.contact-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #111;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background 0.3s;
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  nav a {
-    display: block;
-    margin: 10px 0;
-  }
-  section {
-    padding: 20px;
-  }
+.contact-form button:hover {
+  background-color: #f0c040;
+  color: #111;
 }
+
 /* TIMELINE */
 .timeline {
   max-width: 800px;
@@ -162,40 +132,15 @@ section {
 .timeline .event p {
   margin: 5px 0 0;
 }
-/* Contact Page Fix */
-.contact-section {
-  max-width: 600px;
-  margin: 40px auto;
-  text-align: center;
-}
 
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  font-size: 16px;
-}
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
 
-.contact-form button {
-  width: 100%;
-  padding: 12px;
-  background-color: black;
-  color: white;
-  border: none;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-.contact-languages {
-  margin-top: 40px;
-}
-
-.contact-languages div {
-  margin-bottom: 20px;
-}
-
-.lang.ar {
-  direction: rtl;
-  text-align: right;
+  section {
+    padding: 20px;
+  }
 }
