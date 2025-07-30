@@ -13,16 +13,23 @@
     <h1>Amer Musa</h1>
     <nav>
       <ul>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#gallery" data-lang="en">Gallery</a><a href="#gallery" data-lang="fr">Galerie</a><a href="#gallery" data-lang="ar">المعرض</a></li>
+        <li><a href="#about" data-lang="en">About</a><a href="#about" data-lang="fr">À propos</a><a href="#about" data-lang="ar">من أنا</a></li>
+        <li><a href="#contact" data-lang="en">Contact</a><a href="#contact" data-lang="fr">Contact</a><a href="#contact" data-lang="ar">اتصال</a></li>
       </ul>
     </nav>
+    <div class="language-switch">
+      <button onclick="setLanguage('en')">EN</button>
+      <button onclick="setLanguage('fr')">FR</button>
+      <button onclick="setLanguage('ar')">AR</button>
+    </div>
   </header>
 
   <!-- Gallery Section -->
   <section id="gallery">
-    <h2>Gallery</h2>
+    <h2 data-lang="en">Gallery</h2>
+    <h2 data-lang="fr">Galerie</h2>
+    <h2 data-lang="ar">المعرض</h2>
     <div class="gallery">
       <img src="images/artwork1.jpg" alt="Artwork 1">
       <img src="images/artwork2.jpg" alt="Artwork 2">
@@ -35,37 +42,78 @@
 
   <!-- Contact Button Below Gallery -->
   <div class="contact-button-container">
-    <a href="#contact" class="contact-button">Contact Me</a>
+    <a href="#contact" class="contact-button" data-lang="en">Contact Me</a>
+    <a href="#contact" class="contact-button" data-lang="fr">Contactez-moi</a>
+    <a href="#contact" class="contact-button" data-lang="ar">اتصل بي</a>
   </div>
 
   <!-- About Section -->
   <section id="about">
-    <h2>About Me</h2>
-    <p>I’m Amer Musa, a Sudanese artist living in Paris.  
-    I discovered art in 2017 while homeless, turning to drawing as therapy and self-expression.  
-    I work mainly with markers and oil pastels, creating geometric and abstract pieces inspired by emotions, nature, and daily life.</p>
+    <h2 data-lang="en">About Me</h2>
+    <h2 data-lang="fr">À propos de moi</h2>
+    <h2 data-lang="ar">من أنا</h2>
+    
+    <p data-lang="en">
+      I’m Amer Musa, a Sudanese artist living in Paris.  
+      I discovered art in 2017 while homeless, turning to drawing as therapy and self-expression.  
+      I work mainly with markers and oil pastels, creating geometric and abstract pieces inspired by emotions, nature, and daily life.
+    </p>
+    <p data-lang="fr">
+      Je suis Amer Musa, un artiste soudanais vivant à Paris.  
+      J’ai découvert l’art en 2017, alors que j’étais sans abri, en utilisant le dessin comme thérapie et moyen d’expression.  
+      Je travaille principalement avec des marqueurs et des pastels à l’huile, créant des œuvres géométriques et abstraites inspirées par les émotions, la nature et la vie quotidienne.
+    </p>
+    <p data-lang="ar">
+      أنا عامر موسى، فنان سوداني أعيش في باريس.  
+      اكتشفت الفن عام 2017 عندما كنت بلا مأوى، واستخدمت الرسم كعلاج ووسيلة للتعبير عن الذات.  
+      أعمل بشكل أساسي باستخدام الأقلام الملونة وطباشير الزيت، وأبتكر أعمالًا هندسية وتجريدية مستوحاة من المشاعر والطبيعة والحياة اليومية.
+    </p>
   </section>
 
   <!-- Contact Section -->
   <section id="contact">
-    <h2>Contact Me</h2>
+    <h2 data-lang="en">Contact Me</h2>
+    <h2 data-lang="fr">Contactez-moi</h2>
+    <h2 data-lang="ar">اتصل بي</h2>
+
     <form action="https://formspree.io/f/mrblkrvv" method="POST">
-      <label for="name">Name:</label>
+      <label data-lang="en" for="name">Name:</label>
+      <label data-lang="fr" for="name">Nom :</label>
+      <label data-lang="ar" for="name">الاسم:</label>
       <input type="text" id="name" name="name" required>
 
-      <label for="email">Email:</label>
+      <label data-lang="en" for="email">Email:</label>
+      <label data-lang="fr" for="email">Email :</label>
+      <label data-lang="ar" for="email">البريد الإلكتروني:</label>
       <input type="email" id="email" name="_replyto" required>
 
-      <label for="message">Message:</label>
+      <label data-lang="en" for="message">Message:</label>
+      <label data-lang="fr" for="message">Message :</label>
+      <label data-lang="ar" for="message">الرسالة:</label>
       <textarea id="message" name="message" rows="5" required></textarea>
 
-      <button type="submit">Send</button>
+      <button type="submit" data-lang="en">Send</button>
+      <button type="submit" data-lang="fr">Envoyer</button>
+      <button type="submit" data-lang="ar">إرسال</button>
     </form>
   </section>
 
   <footer>
-    <p>© 2025 Amer Musa | All Rights Reserved</p>
+    <p data-lang="en">© 2025 Amer Musa | All Rights Reserved</p>
+    <p data-lang="fr">© 2025 Amer Musa | Tous droits réservés</p>
+    <p data-lang="ar">© 2025 عامر موسى | جميع الحقوق محفوظة</p>
   </footer>
+
+  <script>
+    // Language switcher
+    function setLanguage(lang) {
+      document.querySelectorAll('[data-lang]').forEach(el => {
+        el.style.display = (el.getAttribute('data-lang') === lang) ? '' : 'none';
+      });
+    }
+    // Default to English
+    setLanguage('en');
+  </script>
 
 </body>
 </html>
