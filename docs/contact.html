@@ -6,83 +6,48 @@
   <title>Contact - Amer Musa</title>
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <style>
-    .contact-section {
-      max-width: 600px;
-      margin: 40px auto;
-      text-align: center;
-    }
-    .contact-form textarea,
-    .contact-form input {
-      width: 100%;
-      margin-bottom: 10px;
-      padding: 10px;
-      font-size: 16px;
-    }
-    .contact-form button {
-      width: 100%;
-      padding: 12px;
-      background: black;
-      color: white;
-      border: none;
-      font-size: 16px;
-      cursor: pointer;
-    }
-    .contact-languages {
-      margin-top: 40px;
-    }
-    .contact-languages h3 {
-      margin-bottom: 5px;
-    }
-    .contact-languages div {
-      margin-bottom: 20px;
-    }
-    .lang.ar {
-      direction: rtl;
-      text-align: right;
-    }
-  </style>
 </head>
 <body>
-<header>
-  <h1>Amer Musa</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="timeline.html">Timeline</a>
-    <a href="press.html">Press</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
+  <header>
+    <h1>Amer Musa</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="timeline.html">Timeline</a>
+      <a href="press.html">Press</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-<section class="contact-section">
-  <h2>Contact Me</h2>
+  <section class="contact-section">
+    <h2>Contact Me</h2>
 
-  <!-- Contact Form -->
-  <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-    <input type="email" name="email" placeholder="Your email" required>
-    <textarea name="message" rows="5" placeholder="Your message" required></textarea>
-    <button type="submit">Send</button>
-  </form>
+    <!-- Contact Form -->
+    <form class="contact-form" action="https://formspree.io/f/YOUR_ID" method="POST">
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
 
-  <!-- 3-Language Email Info -->
-  <div class="contact-languages">
-    <div class="lang en">
-      <h3>Contact Me</h3>
-      <p>Email: <a href="mailto:amer.99.er@gmail.com">amer.99.er@gmail.com</a></p>
+    <!-- Multi-Language Contact Info -->
+    <div class="contact-languages">
+      <div class="lang en">
+        <h3>Contact Me</h3>
+        <p>Email: <a href="mailto:amer.99.er@gmail.com">amer.99.er@gmail.com</a></p>
+      </div>
+      <div class="lang fr">
+        <h3>Contactez-moi</h3>
+        <p>Email : <a href="mailto:amer.99.er@gmail.com">amer.99.er@gmail.com</a></p>
+      </div>
+      <div class="lang ar">
+        <h3>اتصل بي</h3>
+        <p>البريد الإلكتروني: <a href="mailto:amer.99.er@gmail.com">amer.99.er@gmail.com</a></p>
+      </div>
     </div>
 
-    <div class="lang fr">
-      <h3>Contactez-moi</h3>
-      <p>Email : <a href="mailto:amer.99.er@gmail.com">amer.99.er@gmail.com</a></p>
-    </div>
+    <p><a href="index.html">Back to Home</a></p>
+  </section>
 
-    <div class="lang ar">
-      <h3>اتصل بي</h3>
-      <p>البريد الإلكتروني: <a href="mailto:amer.99.er@gmail.com">amer.99.er@gmail.com</a></p>
-    </div>
-  </div>
-</section>
 </body>
 </html>
