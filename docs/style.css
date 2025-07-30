@@ -141,3 +141,24 @@ section {
     padding: 20px;
   }
 }
+/* TIMELINE */
+.timeline {
+  max-width: 800px;
+  margin: auto;
+}
+
+.timeline .event {
+  border-left: 3px solid #f0c040;
+  padding: 15px 20px;
+  margin: 20px 0;
+  position: relative;
+}
+
+.timeline .event h3 {
+  margin: 0;
+  color: #111;
+}
+
+.timeline .event p {
+  margin: 5px 0 0;
+}
