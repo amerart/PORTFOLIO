@@ -106,3 +106,62 @@ footer {
   padding: 20px;
   margin-top: 40px;
 }
+/* =============================
+   PRESS / INTERVIEW SECTION
+============================= */
+.press-section {
+    background-color: #f8f8f8; /* soft background */
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.press-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #222;
+    font-weight: bold;
+}
+
+.press-tabs {
+    margin-top: 20px;
+}
+
+.press-tabs button {
+    background: none;
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.3s;
+    border-radius: 4px;
+}
+
+.press-tabs button:hover {
+    background-color: #222;
+    color: #fff;
+}
+
+.press-tabs button.active {
+    background-color: #444;
+    color: white;
+    border-color: #444;
+}
+
+.press-content {
+    margin-top: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    line-height: 1.6;
+    display: none; /* hide all by default */
+}
+
+.press-content.active {
+    display: block; /* show active language */
+}
+
+.press-content p {
+    margin-bottom: 15px;
+}
