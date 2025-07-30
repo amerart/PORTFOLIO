@@ -165,3 +165,71 @@ footer {
 .press-content p {
     margin-bottom: 15px;
 }
+/* ====== Interview Section Styles ====== */
+.interview-section {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    font-family: Arial, sans-serif;
+    line-height: 1.7;
+}
+
+.interview-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #333;
+}
+
+/* Language buttons */
+.language-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+.language-buttons button {
+    padding: 8px 16px;
+    border: none;
+    background: #333;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.language-buttons button:hover {
+    background: #555;
+}
+
+/* Language content */
+.language-content {
+    display: none;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.language-content.active {
+    display: block;
+}
+
+/* Simple fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.interview-section h3 {
+    margin-top: 20px;
+    color: #444;
+    font-size: 20px;
+}
+
+.interview-section p {
+    margin-bottom: 15px;
+    color: #555;
+}
