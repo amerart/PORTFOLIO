@@ -7,6 +7,30 @@
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
+  <script>
+    // Language tab switching for Press section
+    const pressTabs = document.querySelectorAll(".press-tabs button");
+    const pressContents = document.querySelectorAll(".press-content");
+
+    pressTabs.forEach((tab, index) => {
+        tab.addEventListener("click", () => {
+            // remove active classes
+            pressTabs.forEach(btn => btn.classList.remove("active"));
+            pressContents.forEach(content => content.classList.remove("active"));
+            
+            // activate the clicked tab and corresponding content
+            tab.classList.add("active");
+            pressContents[index].classList.add("active");
+        });
+    });
+
+    // Set first tab as default active
+    if (pressTabs.length > 0) {
+        pressTabs[0].classList.add("active");
+        pressContents[0].classList.add("active");
+    }
+</script>
+
 <body>
 
   <header>
