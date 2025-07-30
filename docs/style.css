@@ -162,3 +162,40 @@ section {
 .timeline .event p {
   margin: 5px 0 0;
 }
+/* Contact Page Fix */
+.contact-section {
+  max-width: 600px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.contact-languages {
+  margin-top: 40px;
+}
+
+.contact-languages div {
+  margin-bottom: 20px;
+}
+
+.lang.ar {
+  direction: rtl;
+  text-align: right;
+}
