@@ -64,86 +64,80 @@
       <img src="images/artwork6.jpg" alt="Artwork 6">
     </div>
   </section>
-<!-- PRESS / INTERVIEW SECTION -->
-<section id="press" class="press-section">
-    <h2 data-lang-en="Press & Interview" data-lang-fr="Presse & Interview" data-lang-ar="الصحافة والمقابلات">
-        Press & Interview
-    </h2>
+<!-- =============================
+     PRESS / INTERVIEW SECTION
+============================= -->
+<section class="press-section" id="press">
+  <h2>Press / Interview</h2>
 
-    <!-- English Version -->
-    <div class="lang-content lang-en">
-        <p><strong>Portrait Of The Artist: Amer Musa</strong></p>
-        <p>As a new exhibition of his colourful, geometric work opens at Rue de Grenelle and Boulevard Raspail, we sat down with Amer Musa to discuss why art is therapy for him and why he feels lucky to live in Paris, a city filled with art.</p>
+  <!-- Language Buttons -->
+  <div class="press-tabs">
+    <button onclick="showPressContent('en')" class="active">English</button>
+    <button onclick="showPressContent('fr')">Français</button>
+    <button onclick="showPressContent('ar')">العربية</button>
+  </div>
 
-        <p>When Amer Musa left Sudan as a refugee in 2014, he had never contemplated becoming an artist. In fact, he’d never even drawn before. But when he arrived in France in 2017 and found himself homeless on the streets of Paris, he began to sketch. He needed an outlet for his anxiety and started to see drawing as a form of therapy. And he didn’t stop.</p>
+  <!-- English Content -->
+  <div class="press-content active" id="press-en">
+    <h3>Portrait Of The Artist: Amer Musa</h3>
+    <p>
+      When Amer Musa left Sudan as a refugee in 2014, he had never contemplated
+      becoming an artist. In 2017, living on the streets of Paris, he discovered
+      drawing as therapy, sketching in libraries to escape his anxiety.
+    </p>
+    <p>
+      Today, alongside his full-time job in a fashion studio, Amer is opening an
+      exhibition of his colorful, geometric artworks in Paris. He explains how
+      art gave meaning to his life and why he still feels like an amateur artist.
+    </p>
+    <p>
+      “Creating art is my therapy. My inspiration comes from emotions, nature,
+      and the details of everyday life. Through my work, I hope to connect with
+      people and inspire them to see the beauty in simplicity.”
+    </p>
+  </div>
 
-        <p>Which brings us today. Juggling a full-time job in the studio of a fashion designer, we’re delighted that he’s opening a new exhibition of his works at our Rue de Grenelle and Boulevard Raspail shops in Paris. To mark the occasion, we spoke to him about how art gave a new meaning to his life and why he’s still not sure he considers himself a “fully-fledged artist” – and on that, we agree to disagree.</p>
+  <!-- French Content -->
+  <div class="press-content" id="press-fr">
+    <h3>Portrait de l’Artiste : Amer Musa</h3>
+    <p>
+      Lorsque Amer Musa a quitté le Soudan en tant que réfugié en 2014, il
+      n’avait jamais imaginé devenir artiste. En 2017, vivant dans les rues de
+      Paris, il a découvert le dessin comme une thérapie, esquissant dans les
+      bibliothèques pour échapper à son anxiété.
+    </p>
+    <p>
+      Aujourd’hui, en parallèle de son travail à temps plein dans un atelier de
+      mode, Amer ouvre une exposition de ses œuvres géométriques et colorées à
+      Paris. Il explique comment l’art a donné un sens à sa vie et pourquoi il se
+      sent encore comme un artiste amateur.
+    </p>
+    <p>
+      « Créer de l’art est ma thérapie. Mon inspiration vient des émotions, de la
+      nature et des détails du quotidien. À travers mon travail, j’espère créer
+      une connexion et inspirer les gens à voir la beauté dans la simplicité. »
+    </p>
+  </div>
 
-        <p><strong>Why did you become an artist?</strong><br>
-        As an amateur, I discovered my love for drawing and creating in the most unlikely of circumstances. In 2017, as a homeless immigrant in Paris, I found solace and escape in public libraries where I started sketching and experimenting with colours. Sketching was a means to keep me busy and avoid the toxicity of my condition, soon it became a passion that brought meaning and an aim to my life. However, I don't yet consider myself as a full-fledged artist, I just know that art is the driving force behind my dreams and aspirations. Living in a city where art is ubiquitous, makes me feel lucky.</p>
-
-        <p><strong>Why do you work primarily in your medium?</strong><br>
-        I work primarily with markers and oil pastels because I enjoy the touch and the unique effects that these materials create in my work. Moreover, these materials allow me to work quickly and spontaneously without waiting for them to dry. I also enjoy creating simple geometric shapes and abstract drawings.</p>
-
-        <p><strong>Where do you find inspiration?</strong><br>
-        My inspiration comes from emotions, nature, music, movies, and daily life. I often find myself creating art based on the things I see and hear around me.</p>
-
-        <p><strong>How would you describe your work?</strong><br>
-        Self-expression and therapy. Drawing is a therapeutic way to make me feel better, gives me positive energy, and helps me understand myself.</p>
-
-        <p><strong>What do you hope people take away from your art?</strong><br>
-        I hope viewers feel a personal connection and take time to engage with my art. If even one person feels inspired, I feel I have succeeded.</p>
-    </div>
-
-    <!-- French Version -->
-    <div class="lang-content lang-fr" style="display:none;">
-        <p><strong>Portrait de l'artiste : Amer Musa</strong></p>
-        <p>À l'occasion de l'ouverture d'une nouvelle exposition de ses œuvres colorées et géométriques à la Rue de Grenelle et Boulevard Raspail, nous avons rencontré Amer Musa pour parler de l'art comme thérapie et de sa vie à Paris, ville d'art.</p>
-
-        <p>Lorsque Amer Musa a quitté le Soudan comme réfugié en 2014, il n'avait jamais envisagé de devenir artiste. En arrivant à Paris en 2017, sans-abri, il a commencé à dessiner pour soulager son anxiété. Très vite, le dessin est devenu une véritable thérapie.</p>
-
-        <p>Aujourd'hui, tout en travaillant à plein temps dans l'atelier d'un créateur de mode, il inaugure une nouvelle exposition à nos boutiques Rue de Grenelle et Boulevard Raspail. Nous avons parlé avec lui de son parcours et de la façon dont l'art a transformé sa vie.</p>
-
-        <p><strong>Pourquoi êtes-vous devenu artiste&nbsp;?</strong><br>
-        En 2017, en tant qu’immigré sans-abri à Paris, j'ai trouvé refuge dans les bibliothèques publiques où j'ai commencé à dessiner. Le dessin est devenu une passion qui a donné un sens à ma vie. Même si je ne me considère pas encore comme un artiste accompli, l’art est la force qui guide mes rêves.</p>
-
-        <p><strong>Pourquoi travaillez-vous principalement avec ce médium&nbsp;?</strong><br>
-        J’utilise surtout des marqueurs et des pastels à l’huile pour leur toucher et l’effet spontané qu’ils permettent, sans temps de séchage. J’aime créer des formes géométriques et des dessins abstraits.</p>
-
-        <p><strong>Où trouvez-vous votre inspiration&nbsp;?</strong><br>
-        Mon inspiration vient des émotions, de la nature, de la musique, des films et de la vie quotidienne.</p>
-
-        <p><strong>Comment décririez-vous votre travail&nbsp;?</strong><br>
-        Expression personnelle et thérapie. Le dessin me donne de l’énergie positive et m’aide à mieux me comprendre.</p>
-
-        <p><strong>Que souhaitez-vous que les gens retiennent de votre art&nbsp;?</strong><br>
-        J’espère que mon art crée une connexion personnelle avec ceux qui le regardent et les invite à voir la beauté dans les détails de la vie.</p>
-    </div>
-
-    <!-- Arabic Version -->
-    <div class="lang-content lang-ar" style="display:none; direction: rtl; text-align: right;">
-        <p><strong>صورة الفنان: عامر موسى</strong></p>
-        <p>مع افتتاح معرض جديد لأعماله الهندسية والملونة في شارع غرينيل وشارع راسباي في باريس، جلسنا مع عامر موسى لنتحدث عن كيف أصبح الفن علاجًا له ولماذا يشعر بالحظ بالعيش في مدينة مليئة بالفن.</p>
-
-        <p>عندما غادر عامر موسى السودان كلاجئ في عام 2014، لم يفكر أبدًا في أن يصبح فنانًا. وعندما وصل إلى باريس في عام 2017 وكان بلا مأوى، بدأ بالرسم كوسيلة للتخلص من القلق. سرعان ما أصبح الرسم علاجًا وملاذًا له.</p>
-
-        <p>اليوم، وبينما يعمل بدوام كامل في ورشة مصمم أزياء، يفتتح معرضًا جديدًا لأعماله في متاجرنا في شارع غرينيل وشارع راسباي. تحدثنا معه عن كيف غيّر الفن حياته.</p>
-
-        <p><strong>لماذا أصبحت فنانًا؟</strong><br>
-        اكتشفت حبي للرسم في أصعب الظروف عام 2017 في باريس، عندما كنت بلا مأوى. كان الرسم علاجًا ومعنى جديدًا لحياتي، حتى لو لم أعتبر نفسي بعد فنانًا مكتملًا.</p>
-
-        <p><strong>لماذا تعمل بهذه المواد تحديدًا؟</strong><br>
-        أستخدم الأقلام الملونة وطباشير الزيت لأنها تمنحني تأثيرات فريدة وتسمح لي بالعمل بسرعة دون انتظار الجفاف.</p>
-
-        <p><strong>من أين تستلهم إبداعك؟</strong><br>
-        أستمد إلهامي من المشاعر والطبيعة والموسيقى والأفلام والحياة اليومية.</p>
-
-        <p><strong>كيف تصف أعمالك؟</strong><br>
-        هي تعبير عن الذات وعلاج نفسي. تمنحني الطاقة الإيجابية وتساعدني على فهم نفسي.</p>
-
-        <p><strong>ماذا تأمل أن يأخذ الناس من فنك؟</strong><br>
-        آمل أن يشعر من يشاهد فني باتصال شخصي وأن يستلهم رؤية الجمال في تفاصيل الحياة.</p>
-    </div>
+  <!-- Arabic Content -->
+  <div class="press-content" id="press-ar" dir="rtl">
+    <h3>صورة الفنان: عامر موسى</h3>
+    <p>
+      عندما غادر عامر موسى السودان كلاجئ عام 2014، لم يتخيل أبدًا أن يصبح
+      فنانًا. في عام 2017، بينما كان يعيش في شوارع باريس، اكتشف الرسم كنوع من
+      العلاج، حيث كان يرسم في المكتبات للهروب من القلق.
+    </p>
+    <p>
+      اليوم، وبالتوازي مع عمله بدوام كامل في استوديو للأزياء، يفتتح عامر معرضًا
+      لأعماله الهندسية والملونة في باريس. يوضح كيف أعطاه الفن معنى جديدًا لحياته
+      ولماذا لا يزال يشعر أنه فنان هاوٍ.
+    </p>
+    <p>
+      « الرسم هو علاجي. تستمد أعمالي إلهامها من المشاعر والطبيعة وتفاصيل الحياة
+      اليومية. من خلال فني، آمل أن أخلق صلة شخصية وألهم الآخرين لرؤية الجمال في
+      البساطة. »
+    </p>
+  </div>
 </section>
 
   <!-- Contact Button Below Gallery -->
