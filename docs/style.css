@@ -1,45 +1,143 @@
-
+/* GENERAL STYLE */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #f9f9f9;
-    color: #333;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #fdfdfd;
+  color: #222;
+  line-height: 1.6;
 }
 
 header {
-    background: #222;
-    color: white;
-    padding: 20px;
-    text-align: center;
+  background: #111;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+nav {
+  margin-top: 10px;
 }
 
 nav a {
-    color: white;
-    margin: 0 10px;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 1.1em;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #f0c040;
+}
+
+/* SECTIONS */
+section {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* ABOUT PAGE */
+.about .lang {
+  margin-bottom: 40px;
+}
+.about h2 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* GALLERY PAGE */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  padding: 20px;
 }
 
 .gallery img {
-    width: 30%;
-    margin: 5px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s;
 }
 
-.btn {
-    display: inline-block;
-    background: #333;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
+.gallery img:hover {
+  transform: scale(1.05);
 }
 
-footer {
-    text-align: center;
-    padding: 10px;
-    background: #222;
-    color: white;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+/* CONTACT PAGE */
+.contact {
+  text-align: center;
+}
+
+.contact h2 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.contact p {
+  font-size: 1.1em;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 20px auto 0;
+}
+
+.contact input,
+.contact textarea {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.contact button {
+  background: #111;
+  color: white;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1.1em;
+  transition: background 0.3s;
+}
+
+.contact button:hover {
+  background: #f0c040;
+  color: #111;
+}
+
+/* MULTILINGUAL STYLE */
+.lang {
+  margin-bottom: 40px;
+  direction: ltr;
+}
+
+.lang.ar {
+  direction: rtl;
+  text-align: right;
+}
+
+.lang.fr {
+  font-style: italic;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+  section {
+    padding: 20px;
+  }
 }
