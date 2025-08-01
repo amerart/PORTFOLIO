@@ -22,26 +22,6 @@ body {
   border-bottom: 1px solid #ddd;
 }
 
-.language-title {
-  font-size: 1.5rem;
-  cursor: pointer;
-  padding: 15px;
-  background: #f9f9f9;
-  margin: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: background 0.3s;
-}
-
-.language-title .arrow {
-  transition: transform 0.3s ease;
-  font-size: 1.2rem;
-}
-
-.language-title.open .arrow {
-  transform: rotate(180deg); /* Rotates arrow */
-}
 .lang.ar {
   direction: rtl;
   text-align: right;
