@@ -70,52 +70,6 @@ section {
   transform: scale(1.05);
 }
 
-/* CONTACT PAGE */
-.contact {
-  text-align: center;
-}
-
-.contact h2 {
-  color: #333;
-  margin-bottom: 10px;
-}
-
-.contact p {
-  font-size: 1.1em;
-}
-
-.contact form {
-  display: flex;
-  flex-direction: column;
-  max-width: 400px;
-  margin: 20px auto 0;
-}
-
-.contact input,
-.contact textarea {
-  margin: 10px 0;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 1em;
-}
-
-.contact button {
-  background: #111;
-  color: white;
-  border: none;
-  padding: 12px;
-  cursor: pointer;
-  border-radius: 5px;
-  font-size: 1.1em;
-  transition: background 0.3s;
-}
-
-.contact button:hover {
-  background: #f0c040;
-  color: #111;
-}
-
 /* MULTILINGUAL STYLE */
 .lang {
   margin-bottom: 40px;
