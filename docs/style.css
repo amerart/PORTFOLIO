@@ -42,6 +42,44 @@ body {
 .language-title.open .arrow {
   transform: rotate(180deg); /* Rotates arrow */
 }
+.lang.ar {
+  direction: rtl;
+  text-align: right;
+}
+
+/* PRESS PAGE ANIMATED LANGUAGE SECTIONS */
+.language-section {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.6s ease, opacity 0.6s ease;
+}
+
+.language-section.open {
+  max-height: 1000px; /* Large enough to fit content */
+  opacity: 1;
+}
+
+.language-title {
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 15px;
+  background: #f9f9f9;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.3s;
+}
+
+.language-title .arrow {
+  transition: transform 0.3s ease;
+  font-size: 1.2rem;
+}
+
+.language-title.open .arrow {
+  transform: rotate(180deg);
+}
 
 
 .language-content {
