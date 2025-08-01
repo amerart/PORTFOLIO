@@ -1,0 +1,24 @@
+/* BASIC STYLE */
+body { margin:0; font-family:Arial, sans-serif; background:#fdfdfd; color:#222; }
+header { background:#111; color:white; padding:20px 0; text-align:center; }
+header h1 { margin:0; }
+nav a { color:white; text-decoration:none; margin:0 15px; }
+nav a:hover { color:#f0c040; }
+section { padding:40px 20px; max-width:800px; margin:auto; }
+
+/* MULTILINGUAL SECTIONS */
+.language-section {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.6s ease, opacity 0.6s ease;
+}
+.language-section.open { max-height: 1000px; opacity: 1; }
+.language-title {
+  font-size: 1.5rem; cursor: pointer; padding: 15px;
+  background: #f9f9f9; margin: 0; display:flex; justify-content: space-between;
+  align-items: center; transition: background 0.3s;
+}
+.language-title .arrow { transition: transform 0.3s ease; font-size: 1.2rem; }
+.language-title.open .arrow { transform: rotate(180deg); }
+.lang.ar { direction: rtl; text-align: right; }
