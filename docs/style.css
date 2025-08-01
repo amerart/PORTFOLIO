@@ -78,3 +78,22 @@ body {
   margin-left: 0;
   margin-right: 20px;
 }
+/* GALLERY PAGE */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* smaller */
+  gap: 20px;
+  padding: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  max-height: 220px; /* limit height */
+  object-fit: cover; /* keeps proportion */
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
