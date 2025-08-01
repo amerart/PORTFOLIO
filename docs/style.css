@@ -18,13 +18,37 @@ body {
 }
 
 .language-section {
-  margin-bottom: 60px;
-  padding-bottom: 40px;
+  margin-bottom: 30px;
   border-bottom: 1px solid #ddd;
 }
 
-.language-section:last-child {
-  border-bottom: none;
+.language-title {
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 15px;
+  background: #f9f9f9;
+  margin: 0;
+  transition: background 0.3s;
+}
+
+.language-title:hover {
+  background: #f0f0f0;
+}
+
+.language-title.open {
+  background: #e6e6e6;
+}
+
+.language-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, padding 0.3s;
+  padding: 0 15px;
+}
+
+.language-content.active {
+  max-height: 2000px; /* Large enough for content */
+  padding: 15px;
 }
 
 .qa {
