@@ -22,15 +22,20 @@ body {
 }
 
 .language-title {
-  font-size: 1.5rem;
+  font-size: 1.2rem;   /* smaller font size */
   cursor: pointer;
-  padding: 15px;
+  padding: 10px 12px;  /* reduced padding */
   background: #f9f9f9;
   margin: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   transition: background 0.3s;
+}
+
+.language-content.active {
+  max-height: 2000px; /* keep large enough for text */
+  padding: 10px 12px; /* reduced padding */
 }
 
 .language-title .arrow {
@@ -42,18 +47,12 @@ body {
   transform: rotate(180deg); /* Rotates arrow */
 }
 
-
 .language-content {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.5s ease, padding 0.3s;
   padding: 0 15px;
 }
-
-.language-content.active {
-  padding: 10px 12px; /* less padding */
-}
-
 
 .qa {
   margin-bottom: 25px;
@@ -81,8 +80,8 @@ body {
 /* Gallery Styling */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* smaller items */
-  gap: 15px; /* less space between images */
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* smaller images */
+  gap: 10px; /* tighter spacing */
 }
 
 .gallery img {
@@ -94,7 +93,7 @@ body {
 }
 
 .gallery img:hover {
-  transform: scale(1.03); /* slight zoom on hover */
+  transform: scale(1.03);
 }
 
 
