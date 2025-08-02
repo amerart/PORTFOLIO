@@ -7,86 +7,52 @@
   <link rel="stylesheet" href="style.css">
   <style>
     body {
-      font-family: "Arial", sans-serif;
-      line-height: 1.7;
-      background-color: #fff;
-      color: #222;
-      padding: 30px;
-    }
+   <h2>Contact Me</h2>
 
-    .container {
-      max-width: 900px;
-      margin: auto;
-      text-align: center;
-    }
+<form action="https://formspree.io/f/mrblkrvv" method="POST" class="contact-form">
+  <input type="email" name="email" placeholder="Your Email" required>
+  <textarea name="message" placeholder="Your Message" required></textarea>
+  <button type="submit">Send</button>
+</form>
 
-    h1 {
-      margin-bottom: 20px;
-    }
+<style>
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin: 30px auto;
+}
 
-    /* Contact Form Styling */
-    .contact-form {
-      max-width: 400px;
-      margin: 30px auto;
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
 
-    .contact-form input,
-    .contact-form textarea {
-      padding: 12px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 1rem;
-      width: 100%;
-    }
+.contact-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
 
-    .contact-form textarea {
-      min-height: 120px;
-      resize: vertical;
-    }
+.contact-form button {
+  background-color: #222;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
 
-    .contact-form button {
-      padding: 12px;
-      background: #222;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    .contact-form button:hover {
-      background: #555;
-    }
-
-    .back-home {
-      display: inline-block;
-      margin-top: 20px;
-      color: #222;
-      text-decoration: none;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-
-    .back-home:hover {
-      color: #555;
-    }
-  </style>
-</head>
+.contact-form button:hover {
+  background-color: #444;
+}
+</style>  
 <body>
-
-<div class="container">
-  <h1>Contact Me</h1>
-  <p>Have a question or want to connect? Send me a message!</p>
-https://formspree.io/f/mrblkrvv
-    <input type="email" name="email" placeholder="Your Email" required>
-    <textarea name="message" placeholder="Your Message" required></textarea>
-    <button type="submit">Send</button>
-  </form>
-
-  <a href="index.html" class="back-home">← Back to Home</a>
-</div>
-</body>
 </html>
