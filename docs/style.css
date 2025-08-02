@@ -51,9 +51,9 @@ body {
 }
 
 .language-content.active {
-  max-height: 2000px; /* Large enough for content */
-  padding: 15px;
+  padding: 10px 12px; /* less padding */
 }
+
 
 .qa {
   margin-bottom: 25px;
