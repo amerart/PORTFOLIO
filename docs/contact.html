@@ -5,33 +5,91 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact - Amer Musa</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <style>
+    body {
+      font-family: "Arial", sans-serif;
+      line-height: 1.7;
+      background-color: #fff;
+      color: #222;
+      padding: 30px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    /* Contact Form Styling */
+    .contact-form {
+      max-width: 400px;
+      margin: 30px auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+      width: 100%;
+    }
+
+    .contact-form textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .contact-form button {
+      padding: 12px;
+      background: #222;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .contact-form button:hover {
+      background: #555;
+    }
+
+    .back-home {
+      display: inline-block;
+      margin-top: 20px;
+      color: #222;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .back-home:hover {
+      color: #555;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>Amer Musa</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="timeline.html">Timeline</a>
-      <a href="press.html">Press</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
 
-  <section class="contact-section">
-    <h2>Contact Me</h2>
+<div class="container">
+  <h1>Contact Me</h1>
+  <p>Have a question or want to connect? Send me a message!</p>
 
-    <!-- Contact Form -->
-    <form class="contact-form" action="https://formspree.io/f/YOUR_ID" method="POST">
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Your Message" required></textarea>
-      <button type="submit">Send</button>
-    </form>
+  <!-- Replace with your Formspree endpoint -->
+  <form action="https://formspree.io/f/abcd1234" method="POST" class="contact-form">
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" required></textarea>
+    <button type="submit">Send</button>
+  </form>
 
-    <p><a href="index.html">Back to Home</a></p>
-  </section>
+  <a href="index.html" class="back-home">← Back to Home</a>
+</div>
 
 </body>
 </html>
