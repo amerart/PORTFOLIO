@@ -74,10 +74,12 @@ nav a:hover {
   background: #444;
 }
 
-/* Featured Work Section */
+/* Featured Work Section (Gallery) */
 .featured-work {
   text-align: center;
-  padding: 50px 20px;
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: auto;
 }
 
 .featured-work h2 {
@@ -86,17 +88,18 @@ nav a:hover {
 }
 
 .art-gallery {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
-  flex-wrap: wrap;
+  justify-items: center;
 }
 
 .art-gallery img {
-  width: 300px;
-  height: 300px;
-  object-fit: cover;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
   border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
 }
 
@@ -108,6 +111,45 @@ nav a:hover {
   text-align: center;
   margin-top: 10px;
   font-weight: bold;
+}
+
+/* Contact Form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin: 30px auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.contact-form button {
+  background-color: #222;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #444;
 }
 
 /* Footer */
