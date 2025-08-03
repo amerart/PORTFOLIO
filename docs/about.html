@@ -5,31 +5,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About - Amer Musa</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
-  <h1>About Me</h1>
+<header>
+  <h1>Amer Musa</h1>
   <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html" class="active">About</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="timeline.html">Timeline</a></li>
-      <li><a href="press.html">Press</a></li>
-      <li><a href="news.html">News</a></li>
-    </ul>
+    <a href="index.html">Home</a>
+    <a href="about.html" class="active">About</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+    <a href="timeline.html">Timeline</a>
+    <a href="press.html">Press</a>
+    <a href="news.html">News</a>
   </nav>
+  <div class="language-switch">
+    <button onclick="switchLanguage('en')">EN</button>
+    <button onclick="switchLanguage('fr')">FR</button>
+    <button onclick="switchLanguage('ar')">AR</button>
+  </div>
+</header>
 
-  <h2>My Story</h2>
-  <p>
-    I am Amer Musa, a contemporary artist based in Paris.  
-    My journey into art began as a form of therapy and self-expression,  
-    inspired by personal memories, geometry, and minimalism.
-  </p>
+<main class="page-section">
+  <section class="lang en">
+    <h2>About Me</h2>
+    <p>I am Amer Musa, a contemporary artist based in Paris. My work reflects my journey from Sudan to France, combining personal stories with geometric abstraction.</p>
+  </section>
+  <section class="lang fr hidden">
+    <h2>À propos de moi</h2>
+    <p>Je suis Amer Musa, artiste contemporain basé à Paris. Mon travail reflète mon parcours du Soudan à la France, mêlant récits personnels et abstraction géométrique.</p>
+  </section>
+  <section class="lang ar hidden">
+    <h2>نبذة عني</h2>
+    <p>أنا عامر موسى، فنان معاصر مقيم في باريس. تعكس أعمالي رحلتي من السودان إلى فرنسا، ممزوجة بالقصص الشخصية والتجريد الهندسي.</p>
+  </section>
+</main>
 
-  <footer>
-    © 2025 Amer Musa. All rights reserved.
-  </footer>
+<footer>
+  <p>© 2025 Amer Musa. All Rights Reserved.</p>
+</footer>
+
+<script>
+function switchLanguage(lang) {
+  document.querySelectorAll('.lang').forEach(el => el.classList.add('hidden'));
+  document.querySelectorAll('.lang.' + lang).forEach(el => el.classList.remove('hidden'));
+  document.body.dir = lang === 'ar' ? 'rtl' : 'ltr';
+}
+</script>
 </body>
 </html>
