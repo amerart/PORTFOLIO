@@ -1,110 +1,72 @@
-/* General Styles */
+/* ===== Global Styles ===== */
 body {
   font-family: "Arial", sans-serif;
   line-height: 1.7;
   background-color: #fff;
   color: #222;
+  margin: 0;
   padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #222;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #555;
+}
+
+h1, h2, h3 {
+  font-weight: normal;
   margin: 0;
 }
 
 .container {
   max-width: 900px;
   margin: auto;
+  padding: 20px;
 }
 
-/* Page Titles */
-.page-title {
+/* ===== Header & Navigation ===== */
+header {
   text-align: center;
-  margin: 50px 0;
+  padding: 40px 20px;
 }
 
-/* Header / Navigation */
-.hero {
-  text-align: center;
-  padding: 20px 0;
-}
-
-.hero nav {
-  margin-top: 10px;
-}
-
-.hero nav a {
-  margin: 0 15px;
-  text-decoration: none;
-  color: #222;
-  font-weight: 500;
-  transition: color 0.3s;
-}
-
-.hero nav a:hover {
-  color: #555;
-}
-
-.site-title {
+header h1 {
   font-size: 2.5rem;
-  font-weight: bold;
-  letter-spacing: 2px;
+  margin-bottom: 15px;
 }
 
-/* Hero Image Section */
-.hero-image {
-  background: url('hero.jpg') center/cover no-repeat;
-  height: 70vh;
+nav {
   display: flex;
   justify-content: center;
-  align-items: center;
-  color: white;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+nav a {
+  font-size: 1rem;
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+
+nav a.active,
+nav a:hover {
+  background-color: #f0f0f0;
+}
+
+/* ===== Page Titles ===== */
+.page-title {
   text-align: center;
-  position: relative;
-}
-
-.hero-image::after {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0,0,0,0.3); /* subtle overlay */
-}
-
-.hero-text {
-  position: relative;
-  z-index: 2;
-  font-size: 1.8rem;
-  max-width: 600px;
-  padding: 0 20px;
-}
-
-/* Featured Gallery */
-.featured-gallery {
-  max-width: 1200px;
-  margin: 60px auto;
-  text-align: center;
-}
-
-.featured-gallery h2 {
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   font-size: 2rem;
 }
 
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  padding: 0 20px;
-}
-
-.gallery img {
-  width: 100%;
-  border-radius: 6px;
-  object-fit: cover;
-  transition: transform 0.3s;
-}
-
-.gallery img:hover {
-  transform: scale(1.03);
-}
-
-/* Language Sections (Press Page) */
+/* ===== Press & Interview Page ===== */
 .language-section {
   margin-bottom: 30px;
   border-bottom: 1px solid #ddd;
@@ -115,11 +77,14 @@ body {
   cursor: pointer;
   padding: 15px;
   background: #f9f9f9;
-  margin: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   transition: background 0.3s;
+}
+
+.language-title:hover {
+  background: #eee;
 }
 
 .language-title .arrow {
@@ -139,6 +104,7 @@ body {
 }
 
 .language-content.active {
+  max-height: 2000px;
   padding: 10px 12px;
 }
 
@@ -166,13 +132,47 @@ body {
   margin-right: 20px;
 }
 
-/* Contact Form */
+/* ===== Gallery Page ===== */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 200px;
+  border-radius: 4px;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.03);
+}
+
+/* ===== Contact Form ===== */
+.contact-section {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.contact-section h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.contact-section p {
+  margin-bottom: 30px;
+  color: #555;
+}
+
 .contact-form {
   display: flex;
   flex-direction: column;
   gap: 15px;
   max-width: 500px;
-  margin: 30px auto;
+  margin: 0 auto;
 }
 
 .contact-form input,
@@ -205,20 +205,11 @@ body {
   background-color: #444;
 }
 
-/* Footer */
+/* ===== Footer ===== */
 footer {
   text-align: center;
-  margin-top: 50px;
   padding: 20px;
   font-size: 0.9rem;
   color: #666;
-}
-
-footer a {
-  color: #222;
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
+  border-top: 1px solid #eee;
 }
