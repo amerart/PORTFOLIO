@@ -97,23 +97,27 @@ body {
 }
 
 /* Contact Page Styling */
-.contact-container {
-  max-width: 600px;
-  margin: 60px auto;
-  text-align: center;
+.contact-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  min-height: 80vh;
 }
 
-.contact-container h2 {
+.contact-page h2 {
   font-size: 2rem;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  color: #222;
 }
 
 .contact-form {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  width: 100%;
   max-width: 500px;
-  margin: 30px auto;
 }
 
 .contact-form input,
@@ -124,6 +128,13 @@ body {
   font-size: 1rem;
   width: 100%;
   box-sizing: border-box;
+  transition: border 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #666;
+  outline: none;
 }
 
 .contact-form textarea {
@@ -145,6 +156,8 @@ body {
 .contact-form button:hover {
   background-color: #444;
 }
+
+/* Response message with fade-in animation */
 .hidden {
   display: none;
 }
