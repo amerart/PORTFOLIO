@@ -1,4 +1,6 @@
-/* Reset and base styling */
+/* ================================
+   RESET & BASE STYLES
+================================ */
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +14,9 @@ body {
   color: #333;
 }
 
-/* Header */
+/* ================================
+   HEADER & NAVIGATION
+================================ */
 header {
   background: #fff;
   padding: 20px 0;
@@ -42,13 +46,15 @@ nav a:hover {
   color: #000;
 }
 
-/* Hero Section */
+/* ================================
+   HERO SECTION
+================================ */
 .hero {
   text-align: center;
   padding: 80px 20px;
 }
 
-.hero h1 {
+.hero h2 {
   font-size: 2.5rem;
   margin-bottom: 20px;
 }
@@ -74,53 +80,57 @@ nav a:hover {
   background: #444;
 }
 
-/* Featured Work Section (Gallery) */
-.featured-work {
+/* ================================
+   FEATURED WORK / HOMEPAGE GALLERY
+================================ */
+.featured {
   text-align: center;
-  padding: 40px 15px;
-  max-width: 1000px;
-  margin: auto;
+  padding: 50px 20px;
 }
 
-.featured-work h2 {
+.featured h2 {
   font-size: 2rem;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
-.art-gallery {
+.gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 15px;
-  justify-items: center;
+  padding: 20px;
 }
 
-.art-gallery img {
+.gallery-item {
+  text-align: center;
+}
+
+.gallery img {
   width: 100%;
-  max-width: 220px; /* smaller image size */
-  height: auto;
+  height: 180px;
+  object-fit: cover;
   border-radius: 6px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s;
 }
 
-.art-gallery img:hover {
-  transform: scale(1.04);
+.gallery img:hover {
+  transform: scale(1.05);
 }
 
-.art-title {
-  text-align: center;
-  margin-top: 6px;
-  font-weight: bold;
+.gallery-item p {
+  margin-top: 8px;
+  font-weight: 500;
   font-size: 0.9rem;
 }
 
-/* Contact Form */
+/* ================================
+   CONTACT FORM
+================================ */
 .contact-form {
   display: flex;
   flex-direction: column;
   gap: 15px;
   max-width: 500px;
-  margin: 40px auto;
+  margin: 30px auto;
 }
 
 .contact-form input,
@@ -153,7 +163,9 @@ nav a:hover {
   background-color: #444;
 }
 
-/* Footer */
+/* ================================
+   FOOTER
+================================ */
 footer {
   text-align: center;
   padding: 20px;
