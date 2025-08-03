@@ -1,6 +1,4 @@
-/* ----------------------
-   Global Reset
----------------------- */
+/* General Reset */
 * {
   margin: 0;
   padding: 0;
@@ -15,16 +13,9 @@ body {
   text-align: center;
 }
 
-/* ----------------------
-   Header & Navigation
----------------------- */
+/* Navbar */
 header {
   padding: 20px 0;
-}
-
-header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
 }
 
 nav {
@@ -40,110 +31,104 @@ nav a {
   margin: 0 15px;
 }
 
-nav a:hover,
-nav a.active {
+nav a:hover, nav a.active {
   color: #d33;
 }
 
-/* ----------------------
-   Buttons (Global)
----------------------- */
-button {
-  font-family: inherit;
+/* Language Buttons */
+.language-switch {
+  margin-top: 10px;
 }
-
-/* Language Switch Buttons */
-.lang-buttons {
-  text-align: center;
-  margin: 30px 0;
-}
-
-.lang-buttons button {
-  margin: 0 10px;
-  padding: 8px 16px;
-  font-size: 1rem;
-  cursor: pointer;
-  border: 1px solid #333;
+.language-switch button {
+  margin: 0 5px;
+  padding: 5px 10px;
+  border: 1px solid #ddd;
   background: #fff;
-  transition: 0.3s;
+  cursor: pointer;
+}
+.language-switch button:hover {
+  background: #eee;
 }
 
-.lang-buttons button:hover {
-  background: #333;
-  color: #fff;
+/* Page Title */
+h1 {
+  font-size: 2.5rem;
+  margin: 20px 0;
 }
 
-/* ----------------------
-   Hero Section
----------------------- */
+h2 {
+  margin-top: 30px;
+  font-size: 1.8rem;
+}
+
+/* Hero Section */
 .hero {
-  padding: 80px 20px;
-  background: #f9f9f9;
+  padding: 50px 20px;
 }
-
-.hero h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
 .hero p {
   max-width: 600px;
-  margin: 0 auto 30px;
-  font-size: 1.1rem;
+  margin: 15px auto;
   color: #555;
 }
-
-.btn {
+.hero .btn {
   display: inline-block;
-  padding: 10px 20px;
+  margin-top: 15px;
+  padding: 12px 30px;
   background: black;
   color: white;
   text-decoration: none;
-  border-radius: 4px;
+  border-radius: 5px;
   transition: 0.3s;
 }
-
-.btn:hover {
+.hero .btn:hover {
   background: #333;
 }
 
-/* ----------------------
-   Featured Gallery (Home)
----------------------- */
-.featured {
-  padding: 50px 20px;
-}
-
+/* Gallery */
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 15px;
-  margin-top: 20px;
+  padding: 20px;
 }
-
 .gallery img {
   width: 100%;
-  border: 1px solid #ddd;
   border-radius: 4px;
-  transition: 0.3s;
+  transition: transform 0.3s;
 }
-
 .gallery img:hover {
-  transform: scale(1.02);
+  transform: scale(1.05);
 }
 
-/* ----------------------
-   Contact Form
----------------------- */
+/* Timeline */
+.timeline {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: left;
+}
+.timeline-item {
+  margin-bottom: 20px;
+  padding-left: 10px;
+  border-left: 2px solid #333;
+}
+
+/* Press / News / Contact */
+.page-section {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: left;
+}
+
+/* Contact Form */
 .contact-form {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 15px;
   max-width: 500px;
-  margin: 50px auto;
+  margin: 30px auto;
 }
-
 .contact-form input,
 .contact-form textarea {
   width: 100%;
@@ -152,10 +137,9 @@ button {
   border-radius: 5px;
   font-size: 16px;
 }
-
 .contact-form button {
-  width: 120px;
-  padding: 10px;
+  width: 150px;
+  padding: 12px;
   background: black;
   color: white;
   border: none;
@@ -164,54 +148,20 @@ button {
   cursor: pointer;
   transition: 0.3s;
 }
-
 .contact-form button:hover {
   background: #333;
 }
 
-/* ----------------------
-   Timeline
----------------------- */
-.timeline {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  text-align: left;
-}
-
-.timeline-item {
-  margin-bottom: 20px;
-  padding-left: 10px;
-  border-left: 2px solid #333;
-}
-
-/* ----------------------
-   Press & Interviews
----------------------- */
-.press-section {
-  display: none;
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 20px;
-  text-align: left;
-  line-height: 1.8;
-}
-
-.press-section.active {
-  display: block;
-}
-
-.press-section[dir="rtl"] {
-  text-align: right;
-}
-
-/* ----------------------
-   Footer
----------------------- */
+/* Footer */
 footer {
   margin-top: 50px;
   padding: 20px 0;
   background: #f9f9f9;
   color: #555;
   font-size: 0.9rem;
+}
+
+/* Language Helper */
+.hidden {
+  display: none;
 }
