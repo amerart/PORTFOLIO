@@ -59,29 +59,39 @@ footer {
 
 /* Contact Page */
 .contact-form {
-  margin: 30px auto;
-  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  max-width: 500px;
+  margin: 50px auto;
 }
 
 .contact-form input,
 .contact-form textarea {
-  padding: 10px;
-  margin: 5px;
+  width: 100%;
+  padding: 12px;
   border: 1px solid #ccc;
-  border-radius: 3px;
+  border-radius: 5px;
+  font-size: 16px;
 }
 
 .contact-form button {
-  padding: 10px 20px;
+  width: 120px;
+  padding: 10px;
   background: black;
   color: white;
   border: none;
+  border-radius: 5px;
+  font-size: 16px;
   cursor: pointer;
+  transition: 0.3s;
 }
 
 .contact-form button:hover {
-  background: #d33;
+  background: #333;
 }
+
 
 /* Gallery */
 .gallery {
