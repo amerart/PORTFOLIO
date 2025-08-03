@@ -153,4 +153,11 @@ body {
   text-align: center;
   font-size: 1.1rem;
   margin-top: 20px;
+  opacity: 0;
+  transition: opacity 1s ease-in;
 }
+
+.fade-in {
+  opacity: 1;
+}
+
