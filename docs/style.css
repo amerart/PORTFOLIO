@@ -89,14 +89,14 @@ nav a:hover {
 
 .art-gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* smaller images */
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 15px;
   justify-items: center;
 }
 
 .art-gallery img {
   width: 100%;
-  max-width: 220px; /* smaller max width */
+  max-width: 220px; /* smaller image size */
   height: auto;
   border-radius: 6px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
@@ -114,14 +114,13 @@ nav a:hover {
   font-size: 0.9rem;
 }
 
-
 /* Contact Form */
 .contact-form {
   display: flex;
   flex-direction: column;
   gap: 15px;
   max-width: 500px;
-  margin: 30px auto;
+  margin: 40px auto;
 }
 
 .contact-form input,
