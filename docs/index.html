@@ -3,31 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Amer Musa - Home</title>
+  <title>Amer Musa - Artist</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Amer Musa</h1>
+  <!-- Header / Navigation -->
+  <header class="hero">
+    <h1 class="site-title">Amer Musa</h1>
     <nav>
-      <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="gallery.html">Gallery</a>
-      <a href="contact.html">Contact</a>
-      <a href="timeline.html">Timeline</a>
       <a href="press.html">Press</a>
+      <a href="timeline.html">Timeline</a>
       <a href="news.html">News</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </header>
 
-  <div class="contact-container">
-    <h2>Contact Me</h2>
-    <form class="contact-form" action="https://formspree.io/f/yourformid" method="POST">
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">Send</button>
-    </form>
-    <a href="index.html" class="back-link">← Back to Home</a>
-  </div>
+  <!-- Hero Section with Background Image -->
+  <section class="hero-image">
+    <div class="hero-text">
+      <h2>Contemporary Art through Drawings & Paintings</h2>
+    </div>
+  </section>
+
+  <!-- Featured Works -->
+  <section class="featured-gallery">
+    <h2>Selected Works</h2>
+    <div class="gallery">
+      <img src="artwork1.jpg" alt="Artwork 1">
+      <img src="artwork2.jpg" alt="Artwork 2">
+      <img src="artwork3.jpg" alt="Artwork 3">
+      <img src="artwork4.jpg" alt="Artwork 4">
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Amer Musa | <a href="https://www.instagram.com/musa.amer" target="_blank">@musa.amer</a></p>
+  </footer>
 </body>
 </html>
