@@ -18,51 +18,40 @@
       <a href="press.html">Press</a>
       <a href="news.html">News</a>
     </nav>
-
-    <!-- Language Buttons -->
-    <div class="lang-buttons">
-      <button onclick="setLanguage('en')">English</button>
-      <button onclick="setLanguage('fr')">Français</button>
-      <button onclick="setLanguage('ar')">العربية</button>
+    <div class="language-switch">
+      <button onclick="switchLanguage('en')">EN</button>
+      <button onclick="switchLanguage('fr')">FR</button>
+      <button onclick="switchLanguage('ar')">AR</button>
     </div>
   </header>
 
   <main>
-    <!-- Hero Section -->
-    <section class="hero">
-      <h2 data-en="Welcome to My World of Art"
-          data-fr="Bienvenue dans mon univers artistique"
-          data-ar="مرحبًا بكم في عالمي الفني">
-        Welcome to My World of Art
-      </h2>
-      <p data-en="Explore my drawings and paintings that reflect my journey, emotions, and inspirations. I invite you to wander through my gallery and discover the stories behind each piece."
-         data-fr="Découvrez mes dessins et peintures qui reflètent mon parcours, mes émotions et mes inspirations. Je vous invite à parcourir ma galerie et à découvrir les histoires derrière chaque œuvre."
-         data-ar="اكتشفوا رسوماتي ولوحاتي التي تعكس رحلتي ومشاعري وإلهاماتي. أدعوكم للتجول في معرضي واكتشاف القصص وراء كل عمل.">
-        Explore my drawings and paintings that reflect my journey, emotions, and inspirations.  
-        I invite you to wander through my gallery and discover the stories behind each piece.
-      </p>
-      <a href="gallery.html" class="btn"
-         data-en="Explore Gallery"
-         data-fr="Voir la Galerie"
-         data-ar="استكشف المعرض">Explore Gallery</a>
+    <section class="hero lang en">
+      <h2>Welcome to My World of Art</h2>
+      <p>Explore my drawings and paintings that reflect my journey, emotions, and inspirations.</p>
+      <a href="gallery.html" class="btn">Explore Gallery</a>
     </section>
 
-    <!-- Featured Work Section -->
+    <section class="hero lang fr hidden">
+      <h2>Bienvenue dans mon monde artistique</h2>
+      <p>Découvrez mes dessins et peintures qui reflètent mon parcours, mes émotions et mes inspirations.</p>
+      <a href="gallery.html" class="btn">Voir la Galerie</a>
+    </section>
+
+    <section class="hero lang ar hidden">
+      <h2>مرحباً بكم في عالمي الفني</h2>
+      <p>اكتشفوا رسوماتي ولوحاتي التي تعكس رحلتي ومشاعري وإلهامي.</p>
+      <a href="gallery.html" class="btn">استكشف المعرض</a>
+    </section>
+
     <section class="featured">
-      <h2 data-en="Featured Work" data-fr="Œuvres en Vedette" data-ar="أعمال مختارة">Featured Work</h2>
+      <h2 class="lang en">Featured Work</h2>
+      <h2 class="lang fr hidden">Œuvres en Vedette</h2>
+      <h2 class="lang ar hidden">أعمال مميزة</h2>
       <div class="gallery">
-        <div class="gallery-item">
-          <img src="images/artwork1.jpg" alt="Artwork 1">
-          <p>Artwork 1</p>
-        </div>
-        <div class="gallery-item">
-          <img src="images/artwork2.jpg" alt="Artwork 2">
-          <p>Artwork 2</p>
-        </div>
-        <div class="gallery-item">
-          <img src="images/artwork3.jpg" alt="Artwork 3">
-          <p>Artwork 3</p>
-        </div>
+        <div class="gallery-item"><img src="images/artwork1.jpg" alt="Artwork 1"><p>Artwork 1</p></div>
+        <div class="gallery-item"><img src="images/artwork2.jpg" alt="Artwork 2"><p>Artwork 2</p></div>
+        <div class="gallery-item"><img src="images/artwork3.jpg" alt="Artwork 3"><p>Artwork 3</p></div>
       </div>
     </section>
   </main>
@@ -71,18 +60,16 @@
     <p>© 2025 Amer Musa. All Rights Reserved.</p>
   </footer>
 
-  <!-- Language Switch Script -->
-  <script>
-    function setLanguage(lang) {
-      document.querySelectorAll('[data-' + lang + ']').forEach(el => {
-        el.textContent = el.getAttribute('data-' + lang);
-        if (lang === 'ar') {
-          el.setAttribute('dir', 'rtl');
-        } else {
-          el.removeAttribute('dir');
-        }
-      });
-    }
-  </script>
+<script>
+  function switchLanguage(lang) {
+    document.querySelectorAll('.lang').forEach(el => {
+      el.classList.add('hidden');
+    });
+    document.querySelectorAll('.lang.' + lang).forEach(el => {
+      el.classList.remove('hidden');
+    });
+    document.body.dir = lang === 'ar' ? 'rtl' : 'ltr';
+  }
+</script>
 </body>
 </html>
