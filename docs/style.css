@@ -77,41 +77,43 @@ nav a:hover {
 /* Featured Work Section (Gallery) */
 .featured-work {
   text-align: center;
-  padding: 60px 20px;
-  max-width: 1200px;
+  padding: 40px 15px;
+  max-width: 1000px;
   margin: auto;
 }
 
 .featured-work h2 {
   font-size: 2rem;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .art-gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* smaller images */
+  gap: 15px;
   justify-items: center;
 }
 
 .art-gallery img {
   width: 100%;
-  max-width: 300px;
+  max-width: 220px; /* smaller max width */
   height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s;
 }
 
 .art-gallery img:hover {
-  transform: scale(1.05);
+  transform: scale(1.04);
 }
 
 .art-title {
   text-align: center;
-  margin-top: 10px;
+  margin-top: 6px;
   font-weight: bold;
+  font-size: 0.9rem;
 }
+
 
 /* Contact Form */
 .contact-form {
