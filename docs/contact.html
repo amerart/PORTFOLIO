@@ -44,9 +44,11 @@
         form.style.display = "none";
         responseMsg.textContent = "✅ Thank you! Your message has been sent successfully.";
         responseMsg.classList.remove("hidden");
+        responseMsg.classList.add("fade-in");
       } else {
         responseMsg.textContent = "❌ Oops! Something went wrong. Please try again.";
         responseMsg.classList.remove("hidden");
+        responseMsg.classList.add("fade-in");
       }
     });
   </script>
