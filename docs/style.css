@@ -42,7 +42,8 @@ nav a {
   transition: 0.3s;
 }
 
-nav a:hover {
+nav a:hover,
+nav a.active {
   color: #000;
 }
 
@@ -93,11 +94,14 @@ nav a:hover {
   margin-bottom: 40px;
 }
 
+/* Responsive grid gallery */
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 15px;
-  padding: 20px;
+  padding: 0 20px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .gallery-item {
@@ -120,47 +124,6 @@ nav a:hover {
   margin-top: 8px;
   font-weight: 500;
   font-size: 0.9rem;
-}
-
-/* ================================
-   CONTACT FORM
-================================ */
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  max-width: 500px;
-  margin: 30px auto;
-}
-
-.contact-form input,
-.contact-form textarea {
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 1rem;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.contact-form textarea {
-  min-height: 120px;
-  resize: vertical;
-}
-
-.contact-form button {
-  background-color: #222;
-  color: #fff;
-  border: none;
-  padding: 12px;
-  font-size: 1rem;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.contact-form button:hover {
-  background-color: #444;
 }
 
 /* ================================
