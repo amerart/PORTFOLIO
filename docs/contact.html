@@ -5,31 +5,84 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact - Amer Musa</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <style>
+    .thank-you-message {
+      display: none;
+      margin-top: 20px;
+      color: green;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
-  <h1>Contact Me</h1>
+<header>
+  <h1>Amer Musa</h1>
   <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="contact.html" class="active">Contact</a></li>
-      <li><a href="timeline.html">Timeline</a></li>
-      <li><a href="press.html">Press</a></li>
-      <li><a href="news.html">News</a></li>
-    </ul>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html" class="active">Contact</a>
+    <a href="timeline.html">Timeline</a>
+    <a href="press.html">Press</a>
+    <a href="news.html">News</a>
   </nav>
+  <div class="language-switch">
+    <button onclick="switchLanguage('en')">EN</button>
+    <button onclick="switchLanguage('fr')">FR</button>
+    <button onclick="switchLanguage('ar')">AR</button>
+  </div>
+</header>
 
-  <h2>Send Me a Message</h2>
-  <form class="contact-form" action="https://formspree.io/f/yourformid" method="POST">
+<main class="page-section">
+  <!-- English -->
+  <section class="lang en">
+    <h2>Contact Me</h2>
+    <p>Fill out the form below to reach me:</p>
+  </section>
+  <!-- French -->
+  <section class="lang fr hidden">
+    <h2>Contactez-moi</h2>
+    <p>Remplissez le formulaire ci-dessous pour me contacter :</p>
+  </section>
+  <!-- Arabic -->
+  <section class="lang ar hidden">
+    <h2>تواصل معي</h2>
+    <p>املأ النموذج أدناه للتواصل معي:</p>
+  </section>
+
+  <!-- Contact Form -->
+  <form class="contact-form" onsubmit="showThankYou(event)">
+    <input type="text" name="name" placeholder="Your Name" required>
     <input type="email" name="email" placeholder="Your Email" required>
     <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
     <button type="submit">Send</button>
   </form>
 
-  <footer>
-    © 2025 Amer Musa. All rights reserved.
-  </footer>
+  <!-- Thank You Message -->
+  <div class="thank-you-message" id="thankYouMessage">
+    ✅ Thank you! Your message has been sent.
+  </div>
+</main>
+
+<footer>
+  <p>© 2025 Amer Musa. All Rights Reserved.</p>
+</footer>
+
+<script>
+  function switchLanguage(lang) {
+    document.querySelectorAll('.lang').forEach(el => el.classList.add('hidden'));
+    document.querySelectorAll('.lang.' + lang).forEach(el => el.classList.remove('hidden'));
+    document.body.dir = lang === 'ar' ? 'rtl' : 'ltr';
+  }
+
+  function showThankYou(event) {
+    event.preventDefault(); // Prevent actual form submission
+    document.querySelector('.contact-form').reset();
+    document.getElementById('thankYouMessage').style.display = 'block';
+    setTimeout(() => {
+      document.getElementById('thankYouMessage').style.display = 'none';
+    }, 5000); // Hide after 5 seconds
+  }
+</script>
 </body>
 </html>
