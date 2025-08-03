@@ -145,3 +145,12 @@ body {
 .contact-form button:hover {
   background-color: #444;
 }
+.hidden {
+  display: none;
+}
+
+#formResponse {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-top: 20px;
+}
