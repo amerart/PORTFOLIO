@@ -1,4 +1,6 @@
-/* General Reset */
+/* =========================
+   Global Reset & Body
+========================= */
 * {
   margin: 0;
   padding: 0;
@@ -13,7 +15,9 @@ body {
   text-align: center;
 }
 
-/* Navbar */
+/* =========================
+   Navbar
+========================= */
 nav {
   background: #fff;
   border-bottom: 1px solid #eee;
@@ -31,13 +35,17 @@ nav a {
   text-decoration: none;
   color: black;
   font-weight: 500;
+  transition: 0.3s;
 }
 
-nav a:hover, nav a.active {
+nav a:hover,
+nav a.active {
   color: #d33;
 }
 
-/* Page Title */
+/* =========================
+   Headings
+========================= */
 h1 {
   font-size: 2.5rem;
   margin: 20px 0;
@@ -48,7 +56,9 @@ h2 {
   font-size: 1.8rem;
 }
 
-/* Footer */
+/* =========================
+   Footer
+========================= */
 footer {
   margin-top: 50px;
   padding: 20px 0;
@@ -57,7 +67,9 @@ footer {
   font-size: 0.9rem;
 }
 
-/* Contact Page */
+/* =========================
+   Contact Page
+========================= */
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -76,6 +88,11 @@ footer {
   font-size: 16px;
 }
 
+.contact-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
 .contact-form button {
   width: 120px;
   padding: 10px;
@@ -92,8 +109,9 @@ footer {
   background: #333;
 }
 
-
-/* Gallery */
+/* =========================
+   Gallery
+========================= */
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -105,9 +123,16 @@ footer {
   width: 100%;
   border: 1px solid #ddd;
   border-radius: 4px;
+  transition: transform 0.3s;
 }
 
-/* Timeline */
+.gallery img:hover {
+  transform: scale(1.03);
+}
+
+/* =========================
+   Timeline
+========================= */
 .timeline {
   max-width: 800px;
   margin: 0 auto;
@@ -121,10 +146,20 @@ footer {
   border-left: 2px solid #333;
 }
 
-/* Press */
+/* =========================
+   Press / Interviews
+========================= */
 .press-section {
   max-width: 900px;
   margin: 0 auto;
   text-align: left;
   padding: 20px;
+}
+
+.press-section h2 {
+  margin-bottom: 10px;
+}
+
+.press-section p {
+  margin-bottom: 15px;
 }
