@@ -3,54 +3,132 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Press & Interviews - Amer Musa</title>
+  <title>Amer Musa - Press & Interviews</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Simple style for language switch */
+    .lang-buttons {
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    .lang-buttons button {
+      margin: 0 10px;
+      padding: 8px 16px;
+      font-size: 1rem;
+      cursor: pointer;
+      border: 1px solid #333;
+      background: #fff;
+      transition: 0.3s;
+    }
+
+    .lang-buttons button:hover {
+      background: #333;
+      color: #fff;
+    }
+
+    .press-section {
+      display: none;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: left;
+    }
+
+    .press-section.active {
+      display: block;
+    }
+
+    /* Arabic Right-to-Left */
+    .press-section[dir="rtl"] {
+      text-align: right;
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Navbar -->
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="timeline.html">Timeline</a></li>
-      <li><a href="press.html" class="active">Press</a></li>
-      <li><a href="news.html">News</a></li>
-    </ul>
-  </nav>
+  <header>
+    <h1>Press & Interviews</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+      <a href="timeline.html">Timeline</a>
+      <a href="press.html" class="active">Press</a>
+      <a href="news.html">News</a>
+    </nav>
+  </header>
 
-  <!-- Page Title -->
-  <h1>Press & Interviews</h1>
-
-  <!-- Press Section -->
-  <div class="press-section">
-    <h2>Portrait Of The Artist: Amer Musa</h2>
-    <p><em>Sudanese refugee Amer Musa, now based in Paris, shares how art became his therapy and his voice. As his colorful, geometric works appear in new exhibitions, he reflects on his journey, struggles, and dreams.</em></p>
-
-    <h3>Interview</h3>
-
-    <p><strong>Q: Amer, can you tell us about your journey from Sudan to Paris?</strong></p>
-    <p>A: I left Sudan in 2014 as a refugee. I never imagined that I would become an artist. When I arrived in France in 2017, I found myself homeless in Paris. It was a very hard time—I didn’t speak the language, and I had nothing but time and my thoughts.</p>
-
-    <p><strong>Q: How did art enter your life during that time?</strong></p>
-    <p>A: I started drawing in public libraries. At first, it was just to pass time and calm my anxiety. Soon, I realized that drawing was helping me heal—it became my therapy. I didn’t stop after that.</p>
-
-    <p><strong>Q: What inspires your artwork today?</strong></p>
-    <p>A: My work is mostly geometric and minimal. I use simple shapes, patterns, and a few strong colors—black, red, yellow, blue. It reflects how I see life: organized, balanced, but with hidden emotions inside.</p>
-
-    <p><strong>Q: You recently exhibited at Paul Smith in Paris. How did that happen?</strong></p>
-    <p>A: I was very lucky. My work was noticed by people who believed in me. My exhibition, <strong>“A Big Dream”</strong>, was shown at Paul Smith stores in Rue de Grenelle and Boulevard Raspail. For me, it was a dream come true—showing my work in the city that gave me a second chance.</p>
-
-    <p><strong>Q: What does art mean to you now?</strong></p>
-    <p>A: Art is my therapy, my voice, and my way to breathe. It’s a space where I feel free. Every drawing I make is like a conversation with myself, and I hope people can feel that connection when they see my work.</p>
+  <div class="lang-buttons">
+    <button onclick="switchLang('en')">English</button>
+    <button onclick="switchLang('fr')">Français</button>
+    <button onclick="switchLang('ar')">العربية</button>
   </div>
 
-  <!-- Footer -->
+  <!-- English -->
+  <div id="lang-en" class="press-section active">
+    <h2>English</h2>
+
+    <p><strong>Q: Can you tell us how you discovered your passion for art?</strong><br>
+    A: I discovered art in 2017, after I arrived in Paris as an immigrant from Sudan. At that time, life was extremely difficult. I spent many days feeling lost and disconnected. One day, I found myself in a public library and began drawing. It started as a way to fill the empty hours, but soon, drawing became a form of therapy. It gave me hope and a sense of purpose.</p>
+
+    <p><strong>Q: How would you describe your artistic style?</strong><br>
+    A: My work is very minimal and graphic. I use markers and oil pastels, with geometric patterns and a limited color palette — mostly black, red, yellow, and blue. Each drawing is a quiet dialogue with myself, often inspired by memories, reflections, and dreams.</p>
+
+    <p><strong>Q: What inspires you the most?</strong><br>
+    A: I am inspired by personal experiences and the simplicity of life. I often think about my childhood in Sudan — counting stars in the night sky, helping my family with the animals, and searching for water. Those memories influence my abstract shapes and patterns, which sometimes resemble constellations or landscapes of the mind.</p>
+
+    <p><strong>Q: How do you see the future of your art?</strong><br>
+    A: I want my art to travel, to connect with people beyond language and borders. My dream is to exhibit in places where stories of resilience, migration, and identity matter. If my drawings can bring even a little comfort or spark curiosity in someone else, then they’ve done their job.</p>
+  </div>
+
+  <!-- French -->
+  <div id="lang-fr" class="press-section">
+    <h2>Français</h2>
+
+    <p><strong>Q : Comment avez-vous découvert votre passion pour l'art ?</strong><br>
+    R : J'ai découvert l'art en 2017, après mon arrivée à Paris en tant que réfugié soudanais. À cette époque, la vie était très difficile. Je me sentais souvent perdu et isolé. Un jour, je me suis retrouvé dans une bibliothèque publique et j’ai commencé à dessiner. Au début, c’était pour passer le temps, puis le dessin est devenu une forme de thérapie. Cela m’a redonné espoir et un sentiment de but.</p>
+
+    <p><strong>Q : Comment décririez-vous votre style artistique ?</strong><br>
+    R : Mon travail est très minimaliste et graphique. J’utilise des marqueurs et des pastels à l’huile, avec des motifs géométriques et une palette de couleurs limitée — principalement noir, rouge, jaune et bleu. Chaque dessin est un dialogue silencieux avec moi-même, souvent inspiré par des souvenirs, des réflexions et des rêves.</p>
+
+    <p><strong>Q : Qu’est-ce qui vous inspire le plus ?</strong><br>
+    R : Je m’inspire de mes expériences personnelles et de la simplicité de la vie. Je pense souvent à mon enfance au Soudan — compter les étoiles dans le ciel, aider ma famille avec les animaux, aller chercher de l’eau. Ces souvenirs influencent mes formes abstraites, parfois proches de constellations ou de paysages mentaux.</p>
+
+    <p><strong>Q : Comment voyez-vous l’avenir de votre art ?</strong><br>
+    R : Je souhaite que mon art voyage, qu’il dépasse les frontières et les langues. Mon rêve est d’exposer dans des lieux où les histoires de résilience, de migration et d’identité sont importantes. Si mes dessins peuvent apporter un peu de réconfort ou éveiller la curiosité, alors ils ont rempli leur rôle.</p>
+  </div>
+
+  <!-- Arabic -->
+  <div id="lang-ar" class="press-section" dir="rtl">
+    <h2>العربية</h2>
+
+    <p><strong>س: كيف اكتشفت شغفك بالفن؟</strong><br>
+    ج: اكتشفت الفن في عام 2017، بعد وصولي إلى باريس كلاجئ من السودان. في ذلك الوقت، كانت الحياة صعبة جداً. شعرت كثيرًا بالضياع والانفصال. ذات يوم، وجدت نفسي في مكتبة عامة وبدأت بالرسم. في البداية كان لملء الفراغ، ثم تحول الرسم إلى شكل من أشكال العلاج. أعطاني الأمل ومعنى للحياة.</p>
+
+    <p><strong>س: كيف تصف أسلوبك الفني؟</strong><br>
+    ج: عملي بسيط وغرافيكي للغاية. أستخدم الأقلام الملونة والباستيل الزيتي، وأعتمد على الأشكال الهندسية ولوحة ألوان محدودة — بشكل رئيسي الأسود والأحمر والأصفر والأزرق. كل رسم هو حوار صامت مع نفسي، مستوحى غالبًا من الذكريات والتأملات والأحلام.</p>
+
+    <p><strong>س: ما الذي يلهمك أكثر؟</strong><br>
+    ج: ألهمتني تجاربي الشخصية وبساطة الحياة. غالبًا ما أتذكر طفولتي في السودان — عدّ النجوم في الليل، مساعدتي لأسرتي في رعاية الحيوانات، والبحث عن الماء. تلك الذكريات تؤثر على الأشكال والأنماط التجريدية التي أرسمها، والتي أحيانًا تشبه الكوكبات أو مناظر العقل.</p>
+
+    <p><strong>س: كيف ترى مستقبل فنك؟</strong><br>
+    ج: أريد لفني أن يسافر، أن يصل إلى الناس بعيدًا عن اللغة والحدود. حلمي هو أن أُعرض أعمالي في أماكن تُعنى بقصص الصمود والهجرة والهوية. إذا تمكنت رسوماتي من إعطاء بعض الراحة أو إثارة فضول أحدهم، فقد أدّت وظيفتها.</p>
+  </div>
+
   <footer>
-    <p>© 2025 Amer Musa. All rights reserved.</p>
+    <p>© 2025 Amer Musa. All Rights Reserved.</p>
   </footer>
+
+  <script>
+    function switchLang(lang) {
+      document.querySelectorAll('.press-section').forEach(section => {
+        section.classList.remove('active');
+      });
+      document.getElementById('lang-' + lang).classList.add('active');
+    }
+  </script>
 
 </body>
 </html>
