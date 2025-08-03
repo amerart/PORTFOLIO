@@ -1,6 +1,4 @@
-/* ================================
-   RESET & BASE STYLES
-================================ */
+/* Reset and base styling */
 * {
   margin: 0;
   padding: 0;
@@ -12,11 +10,12 @@ body {
   line-height: 1.6;
   background: #fff;
   color: #333;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
-/* ================================
-   HEADER & NAVIGATION
-================================ */
+/* Header */
 header {
   background: #fff;
   padding: 20px 0;
@@ -33,6 +32,7 @@ nav {
   display: flex;
   justify-content: center;
   gap: 30px;
+  flex-wrap: wrap;
 }
 
 nav a {
@@ -42,26 +42,23 @@ nav a {
   transition: 0.3s;
 }
 
-nav a:hover,
-nav a.active {
+nav a:hover {
   color: #000;
 }
 
-/* ================================
-   HERO SECTION
-================================ */
+/* Hero Section */
 .hero {
   text-align: center;
-  padding: 80px 20px;
+  padding: 60px 20px;
 }
 
 .hero h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-bottom: 20px;
 }
 
 .hero p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: #555;
   max-width: 700px;
   margin: 0 auto 30px;
@@ -70,10 +67,10 @@ nav a.active {
 .hero .btn {
   background: #000;
   color: #fff;
-  padding: 14px 35px;
+  padding: 12px 28px;
   text-decoration: none;
   border-radius: 6px;
-  font-size: 1.1rem;
+  font-size: 1rem;
   transition: 0.3s;
 }
 
@@ -81,36 +78,17 @@ nav a.active {
   background: #444;
 }
 
-/* ================================
-   FEATURED WORK / HOMEPAGE GALLERY
-================================ */
-.featured {
-  text-align: center;
-  padding: 50px 20px;
-}
-
-.featured h2 {
-  font-size: 2rem;
-  margin-bottom: 40px;
-}
-
-/* Responsive grid gallery */
+/* Gallery Section */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 15px;
-  padding: 0 20px;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.gallery-item {
-  text-align: center;
+  margin-top: 30px;
 }
 
 .gallery img {
   width: 100%;
-  height: 180px;
+  height: 200px;
   object-fit: cover;
   border-radius: 6px;
   transition: transform 0.3s;
@@ -121,14 +99,12 @@ nav a.active {
 }
 
 .gallery-item p {
+  text-align: center;
   margin-top: 8px;
-  font-weight: 500;
   font-size: 0.9rem;
 }
 
-/* ================================
-   FOOTER
-================================ */
+/* Footer */
 footer {
   text-align: center;
   padding: 20px;
