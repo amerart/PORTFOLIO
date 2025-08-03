@@ -1,9 +1,11 @@
+/* General Styles */
 body {
   font-family: "Arial", sans-serif;
   line-height: 1.7;
   background-color: #fff;
   color: #222;
-  padding: 30px;
+  padding: 0;
+  margin: 0;
 }
 
 .container {
@@ -11,20 +13,107 @@ body {
   margin: auto;
 }
 
+/* Page Titles */
 .page-title {
   text-align: center;
-  margin-bottom: 50px;
+  margin: 50px 0;
 }
 
+/* Header / Navigation */
+.hero {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.hero nav {
+  margin-top: 10px;
+}
+
+.hero nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.hero nav a:hover {
+  color: #555;
+}
+
+.site-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+/* Hero Image Section */
+.hero-image {
+  background: url('hero.jpg') center/cover no-repeat;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+.hero-image::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.3); /* subtle overlay */
+}
+
+.hero-text {
+  position: relative;
+  z-index: 2;
+  font-size: 1.8rem;
+  max-width: 600px;
+  padding: 0 20px;
+}
+
+/* Featured Gallery */
+.featured-gallery {
+  max-width: 1200px;
+  margin: 60px auto;
+  text-align: center;
+}
+
+.featured-gallery h2 {
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 6px;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.03);
+}
+
+/* Language Sections (Press Page) */
 .language-section {
   margin-bottom: 30px;
   border-bottom: 1px solid #ddd;
 }
 
 .language-title {
-  font-size: 1.2rem;   /* smaller font size */
+  font-size: 1.5rem;
   cursor: pointer;
-  padding: 10px 12px;  /* reduced padding */
+  padding: 15px;
   background: #f9f9f9;
   margin: 0;
   display: flex;
@@ -33,18 +122,13 @@ body {
   transition: background 0.3s;
 }
 
-.language-content.active {
-  max-height: 2000px; /* keep large enough for text */
-  padding: 10px 12px; /* reduced padding */
-}
-
 .language-title .arrow {
   transition: transform 0.3s ease;
   font-size: 1.2rem;
 }
 
 .language-title.open .arrow {
-  transform: rotate(180deg); /* Rotates arrow */
+  transform: rotate(180deg);
 }
 
 .language-content {
@@ -52,6 +136,10 @@ body {
   overflow: hidden;
   transition: max-height 0.5s ease, padding 0.3s;
   padding: 0 15px;
+}
+
+.language-content.active {
+  padding: 10px 12px;
 }
 
 .qa {
@@ -77,47 +165,14 @@ body {
   margin-left: 0;
   margin-right: 20px;
 }
-/* Gallery Styling */
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* smaller images */
-  gap: 10px; /* tighter spacing */
-}
 
-.gallery img {
-  width: 100%;
-  height: auto;
-  border-radius: 4px;
-  object-fit: cover;
-  transition: transform 0.3s;
-}
-
-.gallery img:hover {
-  transform: scale(1.03);
-}
-
-/* Contact Page Styling */
-.contact-page {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 60px 20px;
-  min-height: 80vh;
-}
-
-.contact-page h2 {
-  font-size: 2rem;
-  margin-bottom: 30px;
-  color: #222;
-}
-
+/* Contact Form */
 .contact-form {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  width: 100%;
   max-width: 500px;
+  margin: 30px auto;
 }
 
 .contact-form input,
@@ -128,13 +183,6 @@ body {
   font-size: 1rem;
   width: 100%;
   box-sizing: border-box;
-  transition: border 0.3s;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-  border-color: #666;
-  outline: none;
 }
 
 .contact-form textarea {
@@ -157,21 +205,20 @@ body {
   background-color: #444;
 }
 
-/* Response message with fade-in animation */
-.hidden {
-  display: none;
-}
-
-#formResponse {
+/* Footer */
+footer {
   text-align: center;
-  font-size: 1.1rem;
-  margin-top: 20px;
-  opacity: 0;
-  transition: opacity 1s ease-in;
+  margin-top: 50px;
+  padding: 20px;
+  font-size: 0.9rem;
+  color: #666;
 }
 
-.fade-in {
-  opacity: 1;
+footer a {
+  color: #222;
+  text-decoration: none;
 }
 
-
+footer a:hover {
+  text-decoration: underline;
+}
