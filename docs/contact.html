@@ -16,15 +16,17 @@
     <a href="contact.html" class="active">Contact</a>
   </nav>
 
-  <h2>Contact Me</h2>
+  <main class="contact-page">
+    <h2>Contact Me</h2>
 
-  <form id="contactForm" class="contact-form">
-    <input type="email" name="email" placeholder="Your Email" required>
-    <textarea name="message" placeholder="Your Message" required></textarea>
-    <button type="submit">Send</button>
-  </form>
+    <form id="contactForm" class="contact-form">
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
 
-  <p id="formResponse" class="hidden"></p>
+    <p id="formResponse" class="hidden"></p>
+  </main>
 
   <script>
     const form = document.getElementById('contactForm');
