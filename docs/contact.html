@@ -5,54 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact - Amer Musa</title>
   <link rel="stylesheet" href="style.css">
-  <style>
-    body {
-   <h2>Contact Me</h2>
-
-<form action="https://formspree.io/f/mrblkrvv" method="POST" class="contact-form">
-  <input type="email" name="email" placeholder="Your Email" required>
-  <textarea name="message" placeholder="Your Message" required></textarea>
-  <button type="submit">Send</button>
-</form>
-
-<style>
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  max-width: 500px;
-  margin: 30px auto;
-}
-
-.contact-form input,
-.contact-form textarea {
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 1rem;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.contact-form textarea {
-  min-height: 120px;
-  resize: vertical;
-}
-
-.contact-form button {
-  background-color: #222;
-  color: #fff;
-  border: none;
-  padding: 12px;
-  font-size: 1rem;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.contact-form button:hover {
-  background-color: #444;
-}
-</style>  
+</head>
 <body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="timeline.html">Timeline</a>
+    <a href="press.html">Press & Interview</a>
+    <a href="contact.html" class="active">Contact</a>
+  </nav>
+
+  <h2>Contact Me</h2>
+
+  <form action="https://formspree.io/f/mrblkrvv" method="POST" class="contact-form">
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" required></textarea>
+    <button type="submit">Send</button>
+  </form>
+</body>
 </html>
