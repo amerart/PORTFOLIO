@@ -33,6 +33,71 @@
     gtag('config', 'G-P1JEFJ2362');
   </script>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .about-layout {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 64px 32px 80px;
+      display: grid;
+      grid-template-columns: 340px 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+    .about-portrait img {
+      width: 100%;
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      border-radius: 0;
+    }
+    .about-portrait-name {
+      font-family: var(--serif);
+      font-size: 22px;
+      font-weight: 300;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      margin-top: 18px;
+    }
+    .about-portrait-role {
+      font-size: 12px;
+      letter-spacing: .1em;
+      color: var(--muted);
+      text-transform: uppercase;
+      margin-top: 4px;
+    }
+    .about-text h2 {
+      font-family: var(--serif);
+      font-size: 40px;
+      font-weight: 300;
+      line-height: 1.1;
+      margin-bottom: 32px;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 16px;
+    }
+    .about-text p {
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 1.85;
+      color: var(--ink2);
+      margin-bottom: 20px;
+    }
+    .about-text p:first-of-type::first-letter {
+      font-family: var(--serif);
+      float: left;
+      font-size: 64px;
+      line-height: .8;
+      padding: 6px 10px 0 0;
+      font-weight: 300;
+      color: var(--ink);
+    }
+    @media (max-width: 860px) {
+      .about-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 40px 20px 60px;
+      }
+      .about-portrait { max-width: 300px; }
+    }
+  </style>
 </head>
 <body>
 
