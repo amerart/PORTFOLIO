@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Paintings — Amer Musa</title>
+  <meta name="description" content="A curated selection of paintings by Amer Musa. Explore minimal, geometric and colour-rich works. Multi-language, fast and responsive."/>
+  <meta property="og:title" content="Paintings — Amer Musa">
+  <meta property="og:description" content="A curated selection of paintings by Amer Musa. Explore minimal, geometric and colour-rich works.">
+  <meta property="og:image" content="https://amermusa.com/IMAGES/painting-cover.jpg">
+  <meta property="og:url" content="https://amermusa.com/gallery-paintings.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://amermusa.com/IMAGES/painting-cover.jpg">
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <script>
+    window.axeptioSettings = {
+      clientId: "6a2335bc34e625bd3f94dcf5",
+      cookiesVersion: "amermusa-en",
+    };
+    (function(d, s) {
+      var t = d.getElementsByTagName(s)[0],
+          e = d.createElement(s);
+      e.async = true;
+      e.src = "//static.axept.io/sdk.js";
+      t.parentNode.insertBefore(e, t);
+    })(document, "script");
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P1JEFJ2362"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-P1JEFJ2362');
+  </script>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Social cards -->
+  <meta property="og:title" content="Paintings — Amer Musa" />
+  <meta property="og:description" content="Explore a curated selection of paintings by Amer Musa." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="IMAGES/paintings/painting-01.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Paintings — Amer Musa" />
+  <meta name="twitter:description" content="Explore a curated selection of paintings by Amer Musa." />
+
+  <style>
+    /* ===== Extra tokens for this page (rest comes from style.css) ===== */
+    :root{
+      --accent:#0f62fe;
+      --card-bg:#fff;
+      --shadow:0 10px 30px rgba(0,0,0,.12);
+    }
+    @media (prefers-color-scheme: dark){
+      :root{
+        --card-bg:#1a1c1f;
+        --shadow:0 10px 30px rgba(0,0,0,.4);
+      }
+      img{ filter:none !important; } /* keep original colors in dark mode */
+    }
+
+    html{ scroll-behavior:smooth; }
+
+    /* Instagram handle in header */
+    .social{
+      position:absolute;
+      right:24px;
+      top:26px;
+      display:flex;
+      align-items:center;
+      gap:6px;
+    }
+    .social .ig{
+      display:inline-flex;
+      align-items:center;
+      gap:4px;
+      font-size:12px;
+      color:var(--ink);
+      text-decoration:none;
+      border-bottom:1px solid transparent;
+      padding:1px 0;
+    }
+    .social .ig:hover{ border-color:var(--ink); }
+    .social svg{ width:14px; height:14px; }
+
+    /* ===== Sticky tools bar (language only) ===== */
+    .tools{
+      position:sticky;
+      top:0;
+      z-index:20;
+      backdrop-filter:saturate(1.2) blur(6px);
+      background:rgba(245,241,234,.92);
+      border-bottom:1px solid #d7d0c3;
+    }
+    @media (prefers-color-scheme: dark){
+      .tools{
+        background:rgba(17,18,20,.85);
+        border-bottom-color:#333;
+      }
+    }
+    .tools-inner{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:10px 24px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      align-items:center;
+      justify-content:space-between;
+    }
+    .left, .right{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+    .lang-bar select,
+    .search input,
+    .sort select{
+      padding:8px 10px;
+      border:1px solid #aaa;
+      background:var(--card-bg);
+      color:var(--ink);
+      border-radius:8px;
+    }
+    .search{ position:relative; }
+    .search input{ width:210px; }
+    .search .count{
+      position:absolute;
+      right:8px;
+      top:50%;
+      transform:translateY(-50%);
+      font-size:12px;
+      color:var(--muted);
+    }
+
+    /* ===== Intro stripe ===== */
+    main{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:0 24px 30px;
+    }
+    .intro-wrap{
+      border-radius:12px;
+      overflow:hidden;
+      background:
+        linear-gradient(rgba(245,241,234,0.88), rgba(245,241,234,0.88)),
+        url('IMAGES/bg-paintings.jpg') center/cover no-repeat;
+      margin-top:18px;
+    }
+    .intro{
+      margin:10px 14px 12px;
+      color:var(--muted);
+      font-size:14px;
+      text-align:center;
+    }
+
+    /* ===== Hide tag + search/sort UI (we keep them in JS but visually off) ===== */
+    .tags{ display:none !important; }
+    .tools .sort,
+    .tools .search{ display:none !important; }
+
+    /* ===== Fixed grid: 4 / 2 / 1 ===== */
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(4, 1fr);
+      gap:48px 40px;
+      margin-top:24px;
+    }
+    @media (max-width:980px){
+      .grid{ grid-template-columns:repeat(2, 1fr); }
+    }
+    @media (max-width:640px){
+      .grid{ grid-template-columns:1fr; }
+    }
+
+    /* Static fallback grid */
+    #fallback-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fill,minmax(240px,1fr));
+      gap:var(--gap);
+      margin-top:12px;
+    }
+    #fallback-grid .thumb{
+      width:100%;
+      height:auto;
+      display:block;
+    }
+    .js-ready #fallback-grid{ display:none; }
+
+    /* ===== Cards (no crop, true colours) ===== */
+    figure.card{
+      margin:0;
+      background:var(--card-bg);
+      border:1px solid #cfc8bb;
+      border-radius:12px;
+      overflow:hidden;
+      box-shadow:var(--shadow);
+      transition: box-shadow .3s ease, transform .3s ease;
+    }
+    figure.card:hover{
+      box-shadow:0 6px 20px rgba(0,0,0,.15);
+      transform: translateY(-2px);
+    }
+
+    .thumb-wrap{
+      position:relative;
+      background:#eee;
+      overflow:hidden;
+    }
+    .thumb-wrap::after{
+      content: attr(data-alt);
+      position:absolute;
+      left:0;
+      right:0;
+      bottom:0;
+      padding:8px 10px;
+      font-size:12px;
+      color:#111;
+      background:linear-gradient(transparent, rgba(255,255,255,.95));
+      opacity:0;
+      transform: translateY(6px);
+      transition: opacity .25s ease, transform .25s ease;
+      pointer-events:none;
+    }
+    .card:hover .thumb-wrap::after{
+      opacity:.95;
+      transform: translateY(0);
+    }
+
+    .thumb{
+      width:100%;
+      height:auto;
+      display:block;
+      object-fit:contain;
+      background:#fff;
+      padding:6px;
+      cursor:zoom-in;
+      filter:none;
+      mix-blend-mode:normal;
+      transition: transform .3s ease;
+    }
+    .card:hover .thumb{ transform: scale(1.02); }
+
+    figcaption{
+      font-size:12.5px;
+      color:#555;
+      padding:10px 12px 12px;
+    }
+    .title{ font-weight:700; color:var(--ink); }
+    .meta{ color:var(--muted); }
+
+    /* ===== Lightbox ===== */
+    .lightbox{
+      position:fixed;
+      inset:0;
+      background:rgba(0,0,0,.88);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      z-index:50;
+    }
+    .lightbox[hidden]{ display:none; }
+    .lightbox-inner{
+      max-width:92vw;
+      max-height:90vh;
+      text-align:center;
+      color:#eee;
+      position:relative;
+    }
+    #lb-img{
+      max-width:92vw;
+      max-height:80vh;
+      background:#fff;
+      border:4px solid #fff;
+      box-shadow:0 10px 30px rgba(0,0,0,.35);
+    }
+    .lightbox-caption{
+      margin-top:8px;
+      font-size:13px;
+      color:#ddd;
+      max-width:min(92vw, 920px);
+      margin-inline:auto;
+    }
+
+    .lb-btn{
+      position:absolute;
+      top:12px;
+      background:rgba(255,255,255,.92);
+      color:#111;
+      border:1px solid #111;
+      padding:4px 8px;
+      border-radius:6px;
+      cursor:pointer;
+      font-size:13px;
+    }
+    .lb-close{
+      right:12px;
+      font-size:14px;
+    }
+    .lb-prev,.lb-next{
+      top:calc(50% - 14px);
+      transform:translateY(-50%);
+      padding:4px 6px;
+      font-size:18px;
+    }
+    .lb-prev{ left:-8px; }
+    .lb-next{ right:-8px; }
+    .lb-actions{
+      position:absolute;
+      left:12px;
+      top:12px;
+      display:flex;
+      gap:6px;
+    }
+
+    /* To-top button */
+    .to-top{
+      position:fixed;
+      right:16px;
+      bottom:16px;
+      padding:10px 12px;
+      border-radius:999px;
+      border:1px solid #111;
+      background:var(--card-bg);
+      box-shadow:var(--shadow);
+      cursor:pointer;
+      display:none;
+      z-index:5;
+      font-size:18px;
+      line-height:1;
+    }
+    .to-top.show{ display:block; }
+
+    .sr-only{
+      position:absolute;
+      width:1px;
+      height:1px;
+      padding:0;
+      margin:-1px;
+      overflow:hidden;
+      clip:rect(0,0,0,0);
+      border:0;
+    }
+
+    /* force no blend on artworks if any external class appears */
+    .blend-on .thumb{
+      mix-blend-mode:normal !important;
+      filter:none !important;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>AMER MUSA</h1>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="gallery.html" class="active">Gallery</a>
+      <a href="timeline.html">Timeline</a>
+      <a href="press.html">Press</a>
+      <a href="news.html">News</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://www.instagram.com/musa.amer" target="_blank">Instagram</a>
+    </nav>
+    <div class="social" aria-label="Social links">
+      <a class="ig" href="https://instagram.com/musa.amer" target="_blank" rel="noopener" aria-label="Instagram @MUSA.AMER">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5A5.5 5.5 0 1 1 6.5 13 5.5 5.5 0 0 1 12 7.5zm0 2A3.5 3.5 0 1 0 15.5 13 3.5 3.5 0 0 0 12 9.5zM18 6.75a1.25 1.25 0 1 1-1.25 1.25A1.25 1.25 0 0 1 18 6.75z"/></svg>
+        <span>@MUSA.AMER</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Sticky bar with language (sort/search hidden via CSS) -->
+  <div class="tools" role="region" aria-label="Gallery tools">
+    <div class="tools-inner">
+      <div class="left">
+        <label class="sr-only" for="langSelect">Language</label>
+        <select id="langSelect" aria-label="Language">
+          <option value="en" selected>English</option>
+          <option value="fr">Français</option>
+          <option value="ar">العربية</option>
+        </select>
+
+        <div class="sort">
+          <label class="sr-only" for="sortSelect">Sort</label>
+          <select id="sortSelect" aria-label="Sort">
+            <option value="year-desc">Newest first</option>
+            <option value="year-asc">Oldest first</option>
+            <option value="title-asc">Title A→Z</option>
+            <option value="title-desc">Title Z→A</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="right">
+        <div class="search">
+          <label class="sr-only" for="searchInput">Search</label>
+          <input id="searchInput" type="search" placeholder="Search title, year, medium…" />
+          <span class="count" id="resultCount">—</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <section class="page-section" style="margin-bottom:0;">
+      <h2>Paintings</h2>
+    </section>
+
+    <div class="intro-wrap">
+      <p class="intro cap cap-en active">A selection of paintings. Click to view larger. Use ← → or swipe to navigate.</p>
+      <p class="intro cap cap-fr">Une sélection de peintures. Cliquez pour agrandir. Utilisez ← → ou balayez pour naviguer.</p>
+      <p class="intro cap cap-ar">مختارات من اللوحات. اضغط للتكبير. استخدم ← → أو اسحب للتنقل.</p>
+    </div>
+
+    <section class="tags" id="tagBar" aria-label="Tags"></section>
+
+    <!-- Grid populated by JS -->
+    <section class="grid" id="grid" aria-live="polite"></section>
+
+    <!-- Fallback if JS is off -->
+    <section id="fallback-grid">
+      <figure class="card">
+        <div class="thumb-wrap">
+          <img class="thumb" src="IMAGES/paintings/painting-01.jpg" alt="Painting (2024)">
+        </div>
+        <figcaption><p><span class="title">Painting, 2024</span></p></figcaption>
+      </figure>
+      <figure class="card">
+        <div class="thumb-wrap">
+          <img class="thumb" src="IMAGES/paintings/painting-02.jpg" alt="Painting (2024)">
+        </div>
+        <figcaption><p><span class="title">Painting, 2024</span></p></figcaption>
+      </figure>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="yr"></span> Amer Musa. All rights reserved.
+  </footer>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" hidden aria-modal="true" role="dialog" aria-label="Image viewer">
+    <div class="lightbox-inner">
+      <div class="lb-actions">
+        <button class="lb-btn" id="lb-share" aria-label="Copy link to this painting">Share</button>
+        <a class="lb-btn" id="lb-download" download aria-label="Download image">Download</a>
+      </div>
+      <button class="lb-btn lb-close" aria-label="Close viewer">Close ✕</button>
+      <button class="lb-btn lb-prev" aria-label="Previous painting">←</button>
+      <img id="lb-img" src="" alt="" />
+      <button class="lb-btn lb-next" aria-label="Next painting">→</button>
+      <div id="lb-cap" class="lightbox-caption" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <button id="toTop" class="to-top" aria-label="Back to top">↑</button>
+
+  <noscript>
+    <div style="max-width:var(--max);margin:10px auto;padding:10px 14px;background:#fff1f1;border:1px solid #e6b3b3;color:#7a0000;border-radius:8px;font-family:ui-monospace,Menlo,Consolas,monospace;">
+      This gallery needs JavaScript enabled.
+    </div>
+  </noscript>
+
+  <script>
+  // ===== Error helper =====
+  function showError(e){
+    const box = document.createElement('div');
+    box.style.cssText = 'max-width:var(--max);margin:10px auto;padding:10px 14px;background:#fff1f1;border:1px solid #e6b3b3;color:#7a0000;border-radius:8px;font-family:ui-monospace,Menlo,Consolas,monospace;white-space:pre-wrap;';
+    box.textContent = (e && (e.stack || e.message)) || String(e);
+    document.body.prepend(box);
+    console.error(e);
+  }
+
+  window.addEventListener('DOMContentLoaded', () => { try {
+    document.body.classList.add('js-ready');
+    document.getElementById('yr').textContent = new Date().getFullYear();
+
+    /* ===== Data: PAINTINGS ===== */
+    const ARTWORKS = [
+      { id:'painting-01', thumb:'IMAGES/paintings/painting-01.jpg', full:'IMAGES/paintings/painting-01.jpg', width:1200, height:1500, year:2024,
+        title:{ en:'Painting', fr:'Peinture', ar:'لوحة' }, medium:{ en:'—', fr:'—', ar:'—' }, tags:['Color'] },
+      { id:'painting-02', thumb:'IMAGES/paintings/painting-02.jpg', full:'IMAGES/paintings/painting-02.jpg', width:1200, height:1500, year:2024,
+        title:{ en:'Painting', fr:'Peinture', ar:'لوحة' }, medium:{ en:'—', fr:'—', ar:'—' }, tags:['Geometric'] },
+      { id:'painting-03', thumb:'IMAGES/paintings/painting-03.jpg', full:'IMAGES/paintings/painting-03.jpg', width:1200, height:1500, year:2024,
+        title:{ en:'Painting', fr:'Peinture', ar:'لوحة' }, medium:{ en:'—', fr:'—', ar:'—' }, tags:['Geometric'] },
+      { id:'painting-04', thumb:'IMAGES/paintings/painting-04.jpg', full:'IMAGES/paintings/painting-04.jpg', width:1200, height:1500, year:2024,
+        title:{ en:'Painting', fr:'Peinture', ar:'لوحة' }, medium:{ en:'—', fr:'—', ar:'—' }, tags:['Minimal'] },
+      { id:'painting-05', thumb:'IMAGES/paintings/painting-05.jpg', full:'IMAGES/paintings/painting-05.jpg', width:1200, height:1500, year:2024,
+        title:{ en:'Painting', fr:'Peinture', ar:'لوحة' }, medium:{ en:'—', fr:'—', ar:'—' }, tags:['Color'] },
+      { id:'painting-06', thumb:'IMAGES/paintings/painting-06.jpg', full:'IMAGES/paintings/painting-06.jpg', width:1200, height:1500, year:2024,
+        title:{ en:'Painting', fr:'Peinture', ar:'لوحة' }, medium:{ en:'—', fr:'—', ar:'—' }, tags:['Minimal'] },
+      { id:'painting-07', thumb:'IMAGES/paintings/painting-07.jpg', full:'IMAGES/paintings/painting-07.jpg', width:1200, height:1500, year:2024,
+        title:{ en:'Painting', fr:'Peinture', ar:'لوحة' }, medium:{ en:'—', fr:'—', ar:'—' }, tags:['Color'] },
+      { id:'painting-08', thumb:'IMAGES/paintings/painting-08.jpg', full:'IMAGES/paintings/painting-08.jpg', width:1200, height:1500, year:2024,
+        title:{ en:'Painting', fr:'Peinture', ar:'لوحة' }, medium:{ en:'—', fr:'—', ar:'—' }, tags:['Figure'] },
+      { id:'painting-09', thumb:'IMAGES/paintings/painting-09.jpg', full:'IMAGES/paintings/painting-09.jpg', width:1200, height:1500, year:2024,
+        title:{ en:'Painting', fr:'Peinture', ar:'لوحة' }, medium:{ en:'—', fr:'—', ar:'—' }, tags:['Figure'] },
+      { id:'painting-10', thumb:'IMAGES/paintings/painting-10.jpg', full:'IMAGES/paintings/painting-10.jpg', width:1200, height:1500, year:2024,
+        title:{ en:'Painting', fr:'Peinture', ar:'لوحة' }, medium:{ en:'—', fr:'—', ar:'—' }, tags:['Minimal'] },
+      { id:'painting-11', thumb:'IMAGES/paintings/painting-11.jpg', full:'IMAGES/paintings/painting-11.jpg', width:1200, height:1500, year:2024,
+        title:{ en:'Painting', fr:'Peinture', ar:'لوحة' }, medium:{ en:'—', fr:'—', ar:'—' }, tags:['Color'] },
+      { id:'painting-12', thumb:'IMAGES/paintings/painting-12.jpg', full:'IMAGES/paintings/painting-12.jpg', width:1200, height:1500, year:2024,
+        title:{ en:'Painting', fr:'Peinture', ar:'لوحة' }, medium:{ en:'—', fr:'—', ar:'—' }, tags:['Geometric'] },
+      { id:'painting-13', thumb:'IMAGES/paintings/painting-13.jpg', full:'IMAGES/paintings/painting-13.jpg', width:1200, height:1500, year:2024,
+        title:{ en:'Painting', fr:'Peinture', ar:'لوحة' }, medium:{ en:'—', fr:'—', ar:'—' }, tags:['Geometric'] },
+      { id:'painting-14', thumb:'IMAGES/paintings/painting-14.jpg', full:'IMAGES/paintings/painting-14.jpg', width:1200, height:1500, year:2024,
+        title:{ en:'Painting', fr:'Peinture', ar:'لوحة' }, medium:{ en:'—', fr:'—', ar:'—' }, tags:['Minimal'] },
+      { id:'painting-15', thumb:'IMAGES/paintings/painting-15.jpg', full:'IMAGES/paintings/painting-15.jpg', width:1200, height:1500, year:2024,
+        title:{ en:'Painting', fr:'Peinture', ar:'لوحة' }, medium:{ en:'—', fr:'—', ar:'—' }, tags:['Color'] },
+      { id:'painting-16', thumb:'IMAGES/paintings/painting-16.jpg', full:'IMAGES/paintings/painting-16.jpg', width:1200, height:1500, year:2024,
+        title:{ en:'Painting', fr:'Peinture', ar:'لوحة' }, medium:{ en:'—', fr:'—', ar:'—' }, tags:['Minimal'] },
+      { id:'painting-17', thumb:'IMAGES/paintings/painting-17.jpg', full:'IMAGES/paintings/painting-17.jpg', width:1200, height:1500, year:2024,
+        title:{ en:'Painting', fr:'Peinture', ar:'لوحة' }, medium:{ en:'—', fr:'—', ar:'—' }, tags:['Color'] },
+      { id:'painting-18', thumb:'IMAGES/paintings/painting-18.jpg', full:'IMAGES/paintings/painting-18.jpg', width:1200, height:1500, year:2024,
+        title:{ en:'Painting', fr:'Peinture', ar:'لوحة' }, medium:{ en:'—', fr:'—', ar:'—' }, tags:['Minimal'] },
+      { id:'painting-19', thumb:'IMAGES/paintings/painting-19.jpg', full:'IMAGES/paintings/painting-19.jpg', width:1200, height:1500, year:2024,
+        title:{ en:'Painting', fr:'Peinture', ar:'لوحة' }, medium:{ en:'—', fr:'—', ar:'—' }, tags:['Figure'] },
+      { id:'painting-20', thumb:'IMAGES/paintings/painting-20.jpg', full:'IMAGES/paintings/painting-20.jpg', width:1200, height:1500, year:2024,
+        title:{ en:'Painting', fr:'Peinture', ar:'لوحة' }, medium:{ en:'—', fr:'—', ar:'—' }, tags:['Figure'] },
+      { id:'painting-21', thumb:'IMAGES/paintings/painting-21.jpg', full:'IMAGES/paintings/painting-21.jpg', width:1200, height:1500, year:2024,
+        title:{ en:'Painting', fr:'Peinture', ar:'لوحة' }, medium:{ en:'—', fr:'—', ar:'—' }, tags:['Color'] }
+    ];
+
+    /* ===== Translations ===== */
+    const T = {
+      en:{ searchPH:'Search title, year, medium…', results:n=>`${n} works`, share:'Link copied' },
+      fr:{ searchPH:'Chercher titre, année, médium…', results:n=>`${n} œuvres`, share:'Lien copié' },
+      ar:{ searchPH:'ابحث في العنوان، السنة، الخامة…', results:n=>`${n} عملًا`, share:'تم نسخ الرابط' }
+    };
+
+    const $ = (s,root=document)=>root.querySelector(s);
+    const $$= (s,root=document)=>Array.from(root.querySelectorAll(s));
+
+    let CURRENT = [];
+
+    /* ===== Language (same logic as other pages) ===== */
+    const STORAGE_KEY = 'site_lang';
+    const langSelect = $('#langSelect');
+    const rtlSet = new Set(['ar']);
+    let LANG = 'en';
+
+    function updateCount(){
+      const n = Array.isArray(CURRENT) ? CURRENT.length : 0;
+      const el = $('#resultCount');
+      const pack = T[LANG] || T.en;
+      if (el) el.textContent = pack.results(n);
+    }
+
+    function applyLang(lang){
+      LANG = lang;
+      document.documentElement.lang = lang;
+      document.documentElement.dir  = rtlSet.has(lang) ? 'rtl' : 'ltr';
+      $$('.cap').forEach(c=>c.classList.remove('active'));
+      $$('.cap-' + lang).forEach(c=>c.classList.add('active'));
+
+      const si = $('#searchInput');
+      const pack = T[lang] || T.en;
+      if (si) si.placeholder = pack.searchPH;
+      updateCount();
+      if(langSelect && langSelect.value!==lang) langSelect.value = lang;
+
+      // update hover overlay texts
+      $$('#grid .card').forEach((fig,i)=>{
+        const a = CURRENT[i];
+        if(!a) return;
+        const wrap = fig.querySelector('.thumb-wrap');
+        if(wrap){
+          const overlayText = `${(a.title[LANG]||a.title.en)} (${a.year})`;
+          wrap.setAttribute('data-alt', overlayText);
+        }
+      });
+    }
+
+    (function initLang(){
+      let initial='en';
+      try{ initial = localStorage.getItem(STORAGE_KEY) || 'en'; }catch(e){}
+      applyLang(initial);
+      langSelect.addEventListener('change', e=>{
+        const v=e.target.value;
+        applyLang(v);
+        try{ localStorage.setItem(STORAGE_KEY, v); }catch(e){}
+      });
+    })();
+
+    /* ===== Tags (hidden visually but kept for structure) ===== */
+    const tagBar = $('#tagBar');
+    const allTags = Array.from(new Set(ARTWORKS.flatMap(a=>a.tags||[]))).sort((a,b)=>a.localeCompare(b));
+    let activeTags = new Set();
+
+    function renderTags(){
+      tagBar.innerHTML = '';
+      const makeBtn = (label)=>{
+        const b=document.createElement('button');
+        b.className='tag';
+        b.type='button';
+        b.textContent=label;
+        b.dataset.tag=label;
+        b.addEventListener('click',()=>{ toggleTag(label); });
+        return b;
+      };
+      const allBtn = makeBtn('All');
+      allBtn.classList.add('active');
+      allBtn.addEventListener('click',()=>{
+        activeTags.clear();
+        $$('.tag',tagBar).forEach(t=>t.classList.remove('active'));
+        allBtn.classList.add('active');
+        filterAndRender();
+      });
+      tagBar.appendChild(allBtn);
+      allTags.forEach(t=> tagBar.appendChild(makeBtn(t)));
+    }
+
+    function toggleTag(tag){
+      const allBtn = $$('.tag',tagBar)[0];
+      if(activeTags.has(tag)){
+        activeTags.delete(tag);
+        $$('.tag',tagBar).find(b=>b.dataset.tag===tag)?.classList.remove('active');
+      } else {
+        activeTags.add(tag);
+        $$('.tag',tagBar).find(b=>b.dataset.tag===tag)?.classList.add('active');
+      }
+      if(activeTags.size) allBtn.classList.remove('active'); else allBtn.classList.add('active');
+      filterAndRender();
+    }
+
+    const sortSelect = $('#sortSelect');
+    const searchInput = $('#searchInput');
+    if (sortSelect) sortSelect.addEventListener('change', filterAndRender);
+    if (searchInput) searchInput.addEventListener('input', debounce(filterAndRender, 120));
+    function debounce(fn,ms){ let t; return (...args)=>{ clearTimeout(t); t=setTimeout(()=>fn(...args),ms); } }
+
+    const grid = $('#grid');
+
+    function renderGrid(items){
+      grid.innerHTML = '';
+      const frag = document.createDocumentFragment();
+      items.forEach((a,i)=>{
+        const fig = document.createElement('figure');
+        fig.className = 'card';
+        fig.id = a.id;
+
+        const wrap = document.createElement('div');
+        wrap.className = 'thumb-wrap';
+
+        const img = document.createElement('img');
+        img.className = 'thumb';
+        img.loading = 'lazy';
+        img.decoding = 'async';
+        img.src = a.thumb;
+        if(a.width && a.height){ img.width=a.width; img.height=a.height; }
+        img.alt = `${(a.title[LANG]||a.title.en)} (${a.year})`;
+        img.addEventListener('click', ()=> openAt(i));
+        wrap.appendChild(img);
+        wrap.setAttribute('data-alt', img.alt);
+
+        const cap = document.createElement('figcaption');
+        cap.innerHTML = `
+          <p class="cap cap-en"><span class="title">${a.title.en}, ${a.year}</span> <span class="meta">${a.medium.en && '— '+a.medium.en}</span></p>
+          <p class="cap cap-fr"><span class="title">${a.title.fr}, ${a.year}</span> <span class="meta">${a.medium.fr && '— '+a.medium.fr}</span></p>
+          <p class="cap cap-ar"><span class="title">${a.title.ar}، ${a.year}</span> <span class="meta">${a.medium.ar && '— '+a.medium.ar}</span></p>
+        `;
+
+        fig.appendChild(wrap);
+        fig.appendChild(cap);
+        frag.appendChild(fig);
+      });
+      grid.appendChild(frag);
+      applyLang(LANG);
+      updateCount();
+    }
+
+    function filterAndRender(){
+      const q = (searchInput ? searchInput.value : '').trim().toLowerCase();
+      const sorter = (sortSelect && sortSelect.value) ? sortSelect.value : 'year-desc';
+
+      let list = ARTWORKS.slice();
+
+      if(activeTags.size){
+        list = list.filter(a=> (a.tags||[]).some(t=> activeTags.has(t)));
+      }
+
+      if(q){
+        list = list.filter(a => {
+          const hay = [
+            a.title.en, a.title.fr, a.title.ar,
+            String(a.year),
+            a.medium.en, a.medium.fr, a.medium.ar,
+            ...(a.tags||[])
+          ].join(' ').toLowerCase();
+          return hay.includes(q);
+        });
+      }
+
+      list.sort((a,b)=>{
+        switch(sorter){
+          case 'year-asc': return a.year - b.year;
+          case 'title-asc': return a.title.en.localeCompare(b.title.en);
+          case 'title-desc': return b.title.en.localeCompare(a.title.en);
+          case 'year-desc':
+          default: return b.year - a.year;
+        }
+      });
+
+      CURRENT = list;
+      renderGrid(list);
+      if(location.hash){
+        const id = location.hash.slice(1);
+        const i = CURRENT.findIndex(a=>a.id===id);
+        if(i>-1) openAt(i);
+      }
+    }
+
+    renderTags();
+    filterAndRender();
+
+    /* ===== Lightbox, deep links, share/download ===== */
+    const box = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lb-img');
+    const lbCap = document.getElementById('lb-cap');
+    const prevBtn = document.querySelector('.lb-prev');
+    const nextBtn = document.querySelector('.lb-next');
+    const closeBtn = document.querySelector('.lb-close');
+    const dl = document.getElementById('lb-download');
+    const shareBtn = document.getElementById('lb-share');
+    let idx = -1;
+
+    function openAt(i){
+      idx = (i + CURRENT.length) % CURRENT.length;
+      const a = CURRENT[idx];
+      lbImg.src = a.full;
+      lbImg.alt = `${a.title[LANG] || a.title.en} (${a.year})`;
+      dl.href = a.full;
+      dl.download = `${a.id}.jpg`;
+      const capHTML = {
+        en: `<strong>${a.title.en}</strong>, ${a.year}${a.medium.en ? ' — '+a.medium.en : ''}`,
+        fr: `<strong>${a.title.fr}</strong>, ${a.year}${a.medium.fr ? ' — '+a.medium.fr : ''}`,
+        ar: `<strong>${a.title.ar}</strong>، ${a.year}${a.medium.ar ? ' — '+a.medium.ar : ''}`,
+      }[LANG];
+      lbCap.innerHTML = capHTML;
+
+      box.hidden = false;
+      document.body.style.overflow = 'hidden';
+      if(history.pushState){
+        history.replaceState(null,'',`#${a.id}`);
+      }
+    }
+    function close(){
+      box.hidden = true;
+      lbImg.src='';
+      lbCap.textContent='';
+      document.body.style.overflow='';
+      if(history.pushState){
+        history.replaceState(null,'',location.pathname+location.search);
+      }
+    }
+    function next(){ openAt(idx + 1); }
+    function prev(){ openAt(idx - 1); }
+
+    nextBtn.addEventListener('click', next);
+    prevBtn.addEventListener('click', prev);
+    closeBtn.addEventListener('click', close);
+    document.addEventListener('keydown', e=>{
+      if(box.hidden) return;
+      if(e.key==='Escape') close();
+      if(e.key==='ArrowRight') next();
+      if(e.key==='ArrowLeft') prev();
+    });
+    box.addEventListener('click', e=>{
+      if(e.target===box) close();
+    });
+
+    // Swipe
+    let sx=0, sy=0;
+    box.addEventListener('touchstart', e=>{
+      const t=e.changedTouches[0];
+      sx=t.clientX; sy=t.clientY;
+    }, {passive:true});
+    box.addEventListener('touchend', e=>{
+      const t=e.changedTouches[0];
+      const dx=t.clientX-sx, dy=t.clientY-sy;
+      if(Math.abs(dx)>40 && Math.abs(dx)>Math.abs(dy)){
+        dx<0 ? next() : prev();
+      }
+    }, {passive:true});
+
+    // Share / copy link
+    shareBtn.addEventListener('click', async ()=>{
+      const url = location.href;
+      try{
+        if(navigator.share){
+          await navigator.share({ title: document.title, url });
+        }else if(navigator.clipboard){
+          await navigator.clipboard.writeText(url);
+          alert((T[LANG]||T.en).share);
+        }
+      }catch(e){}
+    });
+
+    // Deep link on load + hashchange
+    window.addEventListener('hashchange', ()=>{
+      const id = location.hash.slice(1);
+      const i = CURRENT.findIndex(a=>a.id===id);
+      if(i>-1) openAt(i);
+    });
+    if(location.hash){
+      const id = location.hash.slice(1);
+      const i = CURRENT.findIndex(a=>a.id===id);
+      if(i>-1) openAt(i);
+    }
+
+    // Back to top
+    const toTop = document.getElementById('toTop');
+    window.addEventListener('scroll', ()=>{
+      if(window.scrollY>800) toTop.classList.add('show');
+      else toTop.classList.remove('show');
+    });
+    toTop.addEventListener('click', ()=> window.scrollTo({ top:0, behavior:'smooth' }) );
+
+  } catch (e) { showError(e); }
+  });
+  </script>
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Paintings by Amer Musa",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "VisualArtwork",
+          "name": "Painting",
+          "artform": "painting",
+          "dateCreated": "2024",
+          "image": "IMAGES/paintings/painting-01.jpg"
+        }
+      }
+    ]
+  }
+  </script>
+</body>
+</html>

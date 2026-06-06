@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Gallery of works by Amer Musa — drawings and paintings, Paris.">
+  <meta property="og:title" content="Gallery — Amer Musa">
+  <meta property="og:description" content="Gallery of works by Amer Musa — drawings and paintings, Paris.">
+  <meta property="og:image" content="https://amermusa.com/IMAGES/painting-cover.jpg">
+  <meta property="og:url" content="https://amermusa.com/gallery.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://amermusa.com/IMAGES/painting-cover.jpg">
+  <title>Gallery — Amer Musa</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <script>
+    window.axeptioSettings = {
+      clientId: "6a2335bc34e625bd3f94dcf5",
+      cookiesVersion: "amermusa-en",
+    };
+    (function(d, s) {
+      var t = d.getElementsByTagName(s)[0],
+          e = d.createElement(s);
+      e.async = true;
+      e.src = "//static.axept.io/sdk.js";
+      t.parentNode.insertBefore(e, t);
+    })(document, "script");
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P1JEFJ2362"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-P1JEFJ2362');
+  </script>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Filter bar */
+    .filter-bar {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 28px 32px 0;
+      display: flex;
+      gap: 0;
+      border-bottom: 1px solid var(--rule);
+    }
+    .filter-btn {
+      font-family: var(--sans);
+      font-size: 11px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      background: none;
+      border: none;
+      border-bottom: 2px solid transparent;
+      padding: 10px 20px 12px;
+      cursor: pointer;
+      transition: color .2s, border-color .2s;
+      margin-bottom: -1px;
+    }
+    .filter-btn:hover { color: var(--ink); }
+    .filter-btn.active {
+      color: var(--ink);
+      border-bottom-color: var(--accent);
+    }
+
+    /* Hide/show by type */
+    .art-grid figure { transition: opacity .3s; }
+    .art-grid figure.hidden {
+      display: none;
+    }
+
+    /* Type badge on each work */
+    .work-type {
+      font-size: 10px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <div class="site-name"><a href="index.html">Amer Musa</a></div>
+      <ul class="main-nav" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="gallery.html" class="active">Gallery</a></li>
+        <li><a href="timeline.html">Timeline</a></li>
+        <li><a href="press.html">Press</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="https://www.instagram.com/musa.amer" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+      </ul>
+      <select class="lang-select header-lang js-lang" aria-label="Language">
+        <option value="en">EN</option>
+        <option value="fr">FR</option>
+        <option value="ar">AR</option>
+      </select>
+      <button class="burger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="timeline.html">Timeline</a>
+      <a href="press.html">Press</a>
+      <a href="news.html">News</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://www.instagram.com/musa.amer" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <select class="lang-select js-lang" aria-label="Language">
+        <option value="en">EN</option>
+        <option value="fr">FR</option>
+        <option value="ar">AR</option>
+      </select>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <div class="gallery-hero fade">
+    <h1 class="gallery-hero-title">
+      <span class="cap cap-en active">Works</span>
+      <span class="cap cap-fr">Œuvres</span>
+      <span class="cap cap-ar">الأعمال</span>
+    </h1>
+    <p class="gallery-hero-desc cap cap-en active" lang="en">
+      A selection of drawings and paintings. Lines and colours in dialogue.
+      Click any work to view full size.
+    </p>
+    <p class="gallery-hero-desc cap cap-fr" lang="fr">
+      Une sélection de dessins et peintures. Lignes et couleurs en dialogue.
+      Cliquez pour agrandir.
+    </p>
+    <p class="gallery-hero-desc cap cap-ar" lang="ar">
+      مختارات من الرسومات واللوحات. خطوط وألوان في حوار.
+      انقر على أي عمل للتكبير.
+    </p>
+  </div>
+
+  <!-- Filter bar -->
+  <div class="filter-bar" role="group" aria-label="Filter works">
+    <button class="filter-btn active" data-filter="all">
+      <span class="cap cap-en active">All</span>
+      <span class="cap cap-fr">Tout</span>
+      <span class="cap cap-ar">الكل</span>
+    </button>
+    <button class="filter-btn" data-filter="drawing">
+      <span class="cap cap-en active">Drawings</span>
+      <span class="cap cap-fr">Dessins</span>
+      <span class="cap cap-ar">رسومات</span>
+    </button>
+    <button class="filter-btn" data-filter="painting">
+      <span class="cap cap-en active">Paintings</span>
+      <span class="cap cap-fr">Peintures</span>
+      <span class="cap cap-ar">لوحات</span>
+    </button>
+  </div>
+
+  <!-- Gallery grid -->
+  <div class="art-grid" id="grid" aria-live="polite"></div>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lb-overlay" hidden
+       role="dialog" aria-modal="true" aria-label="Image viewer">
+    <div class="lb-inner">
+      <button class="lb-close" id="lb-close">
+        <span class="cap cap-en active">Close</span>
+        <span class="cap cap-fr">Fermer</span>
+        <span class="cap cap-ar">إغلاق</span>
+      </button>
+      <button class="lb-prev" id="lb-prev" aria-label="Previous">←</button>
+      <img id="lb-img" src="" alt="">
+      <button class="lb-next" id="lb-next" aria-label="Next">→</button>
+      <p id="lb-cap" class="lb-caption"></p>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-name">Amer Musa</p>
+      <ul class="footer-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="press.html">Press</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="https://www.instagram.com/musa.amer" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+      </ul>
+      <p class="footer-copy">© <span class="js-year"></span> Amer Musa. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="shared-nav.js"></script>
+  <script>
+  (function () {
+
+    /* ── SELECTED WORKS — mixed, curated order ── */
+    const WORKS = [
+      {
+        id: 'drawing-01',
+        src: 'IMAGES/drawings/drawing-01.jpg',
+        type: 'drawing',
+        year: 2023,
+        title: { en: 'Study in Lines', fr: 'Étude de lignes', ar: 'دراسة خطوط' },
+        medium: { en: 'Marker on paper', fr: 'Feutre sur papier', ar: 'قلم على ورق' },
+        size: ''
+      },
+      {
+        id: 'painting-01',
+        src: 'IMAGES/paintings/painting-01.jpg',
+        type: 'painting',
+        year: 2024,
+        title: { en: 'Composition I', fr: 'Composition I', ar: 'تكوين I' },
+        medium: { en: 'Acrylic on paper', fr: 'Acrylique sur papier', ar: 'أكريليك على ورق' },
+        size: ''
+      },
+      {
+        id: 'drawing-03',
+        src: 'IMAGES/drawings/drawing-03.jpg',
+        type: 'drawing',
+        year: 2022,
+        title: { en: 'Minimal Composition', fr: 'Composition minimale', ar: 'تكوين بسيط' },
+        medium: { en: 'Marker on paper', fr: 'Feutre sur papier', ar: 'قلم على ورق' },
+        size: ''
+      },
+      {
+        id: 'painting-03',
+        src: 'IMAGES/paintings/painting-03.jpg',
+        type: 'painting',
+        year: 2024,
+        title: { en: 'Composition III', fr: 'Composition III', ar: 'تكوين III' },
+        medium: { en: 'Acrylic on paper', fr: 'Acrylique sur papier', ar: 'أكريليك على ورق' },
+        size: ''
+      },
+      {
+        id: 'drawing-06',
+        src: 'IMAGES/drawings/drawing-06.jpg',
+        type: 'drawing',
+        year: 2022,
+        title: { en: 'Night Games', fr: 'Jeux de nuit', ar: 'ألعاب الليل' },
+        medium: { en: 'Marker on paper', fr: 'Feutre sur papier', ar: 'قلم على ورق' },
+        size: ''
+      },
+      {
+        id: 'painting-05',
+        src: 'IMAGES/paintings/painting-05.jpg',
+        type: 'painting',
+        year: 2024,
+        title: { en: 'Colour Field II', fr: 'Champ de couleur II', ar: 'حقل لوني II' },
+        medium: { en: 'Acrylic on paper', fr: 'Acrylique sur papier', ar: 'أكريليك على ورق' },
+        size: ''
+      },
+      {
+        id: 'drawing-07',
+        src: 'IMAGES/drawings/drawing-07.jpg',
+        type: 'drawing',
+        year: 2022,
+        title: { en: 'Night Games II', fr: 'Jeux de nuit II', ar: 'ألعاب الليل II' },
+        medium: { en: 'Marker on paper', fr: 'Feutre sur papier', ar: 'قلم على ورق' },
+        size: ''
+      },
+      {
+        id: 'painting-07',
+        src: 'IMAGES/paintings/painting-07.jpg',
+        type: 'painting',
+        year: 2024,
+        title: { en: 'Colour Field IV', fr: 'Champ de couleur IV', ar: 'حقل لوني IV' },
+        medium: { en: 'Acrylic on paper', fr: 'Acrylique sur papier', ar: 'أكريليك على ورق' },
+        size: ''
+      },
+      {
+        id: 'drawing-08',
+        src: 'IMAGES/drawings/drawing-08.jpg',
+        type: 'drawing',
+        year: 2022,
+        title: { en: 'Geometry I', fr: 'Géométrie I', ar: 'هندسة I' },
+        medium: { en: 'Marker on paper', fr: 'Feutre sur papier', ar: 'قلم على ورق' },
+        size: ''
+      },
+      {
+        id: 'painting-08',
+        src: 'IMAGES/paintings/painting-08.jpg',
+        type: 'painting',
+        year: 2024,
+        title: { en: 'Figure I', fr: 'Figure I', ar: 'شكل I' },
+        medium: { en: 'Acrylic on paper', fr: 'Acrylique sur papier', ar: 'أكريليك على ورق' },
+        size: ''
+      },
+      {
+        id: 'drawing-09',
+        src: 'IMAGES/drawings/drawing-09.jpg',
+        type: 'drawing',
+        year: 2022,
+        title: { en: 'Geometry II', fr: 'Géométrie II', ar: 'هندسة II' },
+        medium: { en: 'Marker on paper', fr: 'Feutre sur papier', ar: 'قلم على ورق' },
+        size: ''
+      },
+      {
+        id: 'painting-12',
+        src: 'IMAGES/paintings/painting-12.jpg',
+        type: 'painting',
+        year: 2024,
+        title: { en: 'Minimal II', fr: 'Minimal II', ar: 'بسيط II' },
+        medium: { en: 'Oil pastel on paper', fr: 'Pastel à l\'huile sur papier', ar: 'باستيل زيتي على ورق' },
+        size: ''
+      },
+      {
+        id: 'drawing-11',
+        src: 'IMAGES/drawings/drawing-11.jpg',
+        type: 'drawing',
+        year: 2022,
+        title: { en: 'Geometry IV', fr: 'Géométrie IV', ar: 'هندسة IV' },
+        medium: { en: 'Marker on paper', fr: 'Feutre sur papier', ar: 'قلم على ورق' },
+        size: ''
+      },
+      {
+        id: 'painting-17',
+        src: 'IMAGES/paintings/painting-17.jpg',
+        type: 'painting',
+        year: 2024,
+        title: { en: 'Colour Study I', fr: 'Étude de couleur I', ar: 'دراسة لونية I' },
+        medium: { en: 'Oil pastel on paper', fr: 'Pastel à l\'huile sur papier', ar: 'باستيل زيتي على ورق' },
+        size: ''
+      },
+      {
+        id: 'drawing-13',
+        src: 'IMAGES/drawings/drawing-13.jpg',
+        type: 'drawing',
+        year: 2022,
+        title: { en: 'Geometry VI', fr: 'Géométrie VI', ar: 'هندسة VI' },
+        medium: { en: 'Marker on paper', fr: 'Feutre sur papier', ar: 'قلم على ورق' },
+        size: ''
+      },
+      {
+        id: 'painting-21',
+        src: 'IMAGES/paintings/painting-21.jpg',
+        type: 'painting',
+        year: 2024,
+        title: { en: 'Colour Study V', fr: 'Étude de couleur V', ar: 'دراسة لونية V' },
+        medium: { en: 'Acrylic on paper', fr: 'Acrylique sur papier', ar: 'أكريليك على ورق' },
+        size: ''
+      },
+      {
+        id: 'drawing-15',
+        src: 'IMAGES/drawings/drawing-15.jpg',
+        type: 'drawing',
+        year: 2022,
+        title: { en: 'Geometry VIII', fr: 'Géométrie VIII', ar: 'هندسة VIII' },
+        medium: { en: 'Marker on paper', fr: 'Feutre sur papier', ar: 'قلم على ورق' },
+        size: ''
+      },
+      {
+        id: 'drawing-16',
+        src: 'IMAGES/drawings/drawing-16.jpg',
+        type: 'drawing',
+        year: 2022,
+        title: { en: 'Geometry IX', fr: 'Géométrie IX', ar: 'هندسة IX' },
+        medium: { en: 'Marker on paper', fr: 'Feutre sur papier', ar: 'قلم على ورق' },
+        size: ''
+      }
+    ];
+
+    /* ── State ── */
+    const grid  = document.getElementById('grid');
+    const lb    = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lb-img');
+    const lbCap = document.getElementById('lb-cap');
+    let LANG    = document.documentElement.lang || 'en';
+    let current = 0;
+    let visible = []; /* works currently shown after filter */
+
+    /* ── Build grid ── */
+    WORKS.forEach((w, i) => {
+      const fig = document.createElement('figure');
+      fig.id = w.id;
+      fig.dataset.type = w.type;
+
+      const img = document.createElement('img');
+      img.src = w.src;
+      img.alt = `${w.title.en}, ${w.year}`;
+      img.loading = 'lazy';
+      img.addEventListener('load', () => img.classList.add('loaded'));
+      if (img.complete) img.classList.add('loaded');
+      img.addEventListener('click', () => {
+        visible = getVisible();
+        const vi = visible.findIndex(v => v.id === w.id);
+        openAt(vi);
+      });
+
+      const cap = document.createElement('figcaption');
+      cap.innerHTML = `
+        <strong class="cap cap-en active">${w.title.en}</strong>
+        <strong class="cap cap-fr">${w.title.fr}</strong>
+        <strong class="cap cap-ar">${w.title.ar}</strong>
+        <span class="work-type cap cap-en active">${w.type === 'drawing' ? 'Drawing' : 'Painting'}, ${w.year}</span>
+        <span class="work-type cap cap-fr">${w.type === 'drawing' ? 'Dessin' : 'Peinture'}, ${w.year}</span>
+        <span class="work-type cap cap-ar">${w.type === 'drawing' ? 'رسم' : 'لوحة'}، ${w.year}</span>
+      `;
+
+      fig.appendChild(img);
+      fig.appendChild(cap);
+      grid.appendChild(fig);
+    });
+
+    /* ── Filter ── */
+    function getVisible() {
+      return WORKS.filter(w => {
+        const fig = document.getElementById(w.id);
+        return fig && !fig.classList.contains('hidden');
+      });
+    }
+
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+        WORKS.forEach(w => {
+          const fig = document.getElementById(w.id);
+          if (!fig) return;
+          if (filter === 'all' || w.type === filter) {
+            fig.classList.remove('hidden');
+          } else {
+            fig.classList.add('hidden');
+          }
+        });
+      });
+    });
+
+    /* ── Lightbox ── */
+    function openAt(i) {
+      visible = getVisible();
+      current = (i + visible.length) % visible.length;
+      const w = visible[current];
+      lbImg.src = w.src;
+      lbImg.alt = `${w.title[LANG] || w.title.en}, ${w.year}`;
+      const typeLabel = {
+        en: w.type === 'drawing' ? 'Drawing' : 'Painting',
+        fr: w.type === 'drawing' ? 'Dessin'  : 'Peinture',
+        ar: w.type === 'drawing' ? 'رسم'     : 'لوحة'
+      };
+      lbCap.textContent = `${w.title[LANG] || w.title.en} — ${w.medium[LANG] || w.medium.en}${w.size ? ', ' + w.size : ''}, ${w.year}`;
+      lb.hidden = false;
+      document.body.style.overflow = 'hidden';
+      if (history.pushState) history.replaceState(null, '', `#${w.id}`);
+    }
+
+    function closeLb() {
+      lb.hidden = true;
+      lbImg.src = '';
+      document.body.style.overflow = '';
+      if (history.pushState) history.replaceState(null, '', location.pathname);
+    }
+
+    document.getElementById('lb-close').addEventListener('click', closeLb);
+    document.getElementById('lb-prev').addEventListener('click', () => { visible = getVisible(); openAt(current - 1); });
+    document.getElementById('lb-next').addEventListener('click', () => { visible = getVisible(); openAt(current + 1); });
+    lb.addEventListener('click', e => { if (e.target === lb) closeLb(); });
+
+    document.addEventListener('keydown', e => {
+      if (lb.hidden) return;
+      if (e.key === 'Escape') closeLb();
+      if (e.key === 'ArrowLeft')  { visible = getVisible(); openAt(current - 1); }
+      if (e.key === 'ArrowRight') { visible = getVisible(); openAt(current + 1); }
+    });
+
+    /* Touch swipe */
+    let sx = 0;
+    lb.addEventListener('touchstart', e => { sx = e.changedTouches[0].clientX; }, { passive: true });
+    lb.addEventListener('touchend', e => {
+      const dx = e.changedTouches[0].clientX - sx;
+      if (Math.abs(dx) > 40) {
+        visible = getVisible();
+        dx < 0 ? openAt(current + 1) : openAt(current - 1);
+      }
+    }, { passive: true });
+
+    /* Deep link */
+    if (location.hash) {
+      const id = location.hash.slice(1);
+      visible = getVisible();
+      const i = visible.findIndex(w => w.id === id);
+      if (i > -1) openAt(i);
+    }
+
+    /* Track language changes */
+    new MutationObserver(() => {
+      LANG = document.documentElement.lang || 'en';
+    }).observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
+
+  })();
+  </script>
+</body>
+</html>
