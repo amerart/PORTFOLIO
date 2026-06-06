@@ -3,15 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="About Amer Musa — artist working with drawings and paintings in Paris.">
+  <meta name="description" content="About Amer Musa — artist based in Paris working with drawings and paintings.">
   <meta property="og:title" content="Amer Musa — About">
-  <meta property="og:description" content="About Amer Musa — artist working with drawings and paintings in Paris.">
-  <meta property="og:image" content="https://amermusa.com/IMAGES/painting-cover.jpg">
-  <meta property="og:url" content="https://amermusa.com/about.html">
+  <meta property="og:image" content="https://www.amermusa.com/IMAGES/painting-cover.jpg">
+  <meta property="og:url" content="https://www.amermusa.com/about.html">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://amermusa.com/IMAGES/painting-cover.jpg">
-  <title>Amer Musa — About</title>
+  <title>About — Amer Musa</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <script>
     window.axeptioSettings = {
@@ -30,47 +28,11 @@
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', { 'analytics_storage': 'denied' });
     gtag('js', new Date());
     gtag('config', 'G-P1JEFJ2362');
   </script>
   <link rel="stylesheet" href="style.css">
-
-  <style>
-    .cap { display: none; }
-    .cap.active { display: block; }
-    span.cap { display: none; }
-    span.cap.active { display: inline; }
-
-    .about-layout {
-      max-width: var(--max);
-      margin: 24px auto 40px;
-      padding: 0 16px;
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 24px;
-      align-items: flex-start;
-    }
-    .portrait-wrap { text-align: center; }
-    .portrait {
-      width: 220px;
-      height: 220px;
-      border-radius: 999px;
-      object-fit: cover;
-      margin: 10px auto 8px;
-      border: 1px solid rgba(0,0,0,.25);
-      box-shadow: 0 2px 0 rgba(0,0,0,.12);
-      background: #ddd;
-    }
-    .about-name { font-size: 20px; font-weight: 700; margin: 8px 0 4px; }
-    .about-role { color: var(--muted); font-size: 13px; margin: 0; }
-
-    @media (min-width: 960px) {
-      .about-layout { grid-template-columns: 280px 1fr; gap: 32px; }
-      .portrait-wrap { text-align: left; }
-      .portrait { margin: 0 0 10px 0; }
-      .about-name, .about-role { text-align: left; }
-    }
-  </style>
 </head>
 <body>
 
@@ -114,124 +76,86 @@
   </header>
 
   <section class="about-layout">
-    <div class="portrait-wrap">
-      <img class="portrait" src="IMAGES/amer-portrait.jpg" alt="Portrait of Amer Musa">
-      <p class="about-name">Amer Musa</p>
-      <p class="about-role cap cap-en active" lang="en">Artist — drawings &amp; paintings</p>
-      <p class="about-role cap cap-fr" lang="fr">Artiste — dessins &amp; peintures</p>
-      <p class="about-role cap cap-ar" lang="ar">فنان — رسومات ولوحات</p>
+
+    <div class="about-portrait fade">
+      <img src="IMAGES/amer-portrait.jpg" alt="Portrait of Amer Musa">
+      <p class="about-portrait-name">Amer Musa</p>
+      <p class="about-portrait-role cap cap-en active" lang="en">Artist — Paris</p>
+      <p class="about-portrait-role cap cap-fr" lang="fr">Artiste — Paris</p>
+      <p class="about-portrait-role cap cap-ar" lang="ar">فنان — باريس</p>
     </div>
 
-    <div class="story-col page-section" style="margin:0; padding:0;">
-      <h2 class="cap cap-en active" lang="en">About</h2>
-      <h2 class="cap cap-fr" lang="fr">À propos</h2>
-      <h2 class="cap cap-ar" lang="ar">نبذة</h2>
+    <div class="about-text fade-2">
 
-      <div class="columns-2 cap cap-en active" lang="en">
-        <p class="dropcap">
-          I never thought of myself as an artist when I was younger. I grew up in a small village in Sudan,
-          where most of life was about family, land, and survival. We helped in the fields, cared for the animals,
-          and walked long distances to fetch water. Art was not part of my world back then.
-        </p>
-        <p>
-          In 2014, I left Sudan as a refugee and eventually arrived in Paris in 2017. Those first years in France
-          were some of the hardest of my life. I didn't speak the language, I didn't know the culture, and for a time,
-          I didn't even have a place to sleep. It was during this period of homelessness that I discovered drawing.
-          At first, it was nothing more than a way to fill the emptiness of my days and calm the anxiety in my mind.
-          A piece of paper, a pen, and silence — that was enough.
-        </p>
-        <p>
-          Drawing quickly became my therapy. It gave me a way to process what I was living through without words.
-          I began experimenting with simple lines, shapes, and colors, almost instinctively. I didn't plan to become
-          an artist; I was simply trying to stay alive, to breathe. But as I kept drawing, I realized that I was
-          finding my own language — a language made of geometry, repetition, and minimal forms.
-        </p>
-        <p>
-          Over time, people started to notice. My first encounters with art lovers and professionals gave me confidence
-          that what I was creating mattered. Later, I was invited to collaborate on exhibitions, including with Paul Smith
-          in Paris. These experiences felt surreal, because only a few years earlier I was drawing alone on the streets,
-          not thinking anyone would ever see my work.
-        </p>
-        <p>
-          Today, I continue to create with the same tools — markers, oil pastels, and paper. My art is still minimal
-          and geometric, but for me it's never just about form. Each line and each space carries something deeper:
-          memory, silence, resilience. I believe that the act of creating is itself a way of breathing, of making sense
-          of a world that often feels overwhelming.
-        </p>
+      <div class="cap cap-en active" lang="en">
+        <h2>About</h2>
+        <p>I never thought of myself as an artist when I was younger. I grew up in a small village in Sudan,
+        where most of life was about family, land, and survival. We helped in the fields, cared for the animals,
+        and walked long distances to fetch water. Art was not part of my world back then.</p>
+        <p>In 2014, I left Sudan as a refugee and eventually arrived in Paris in 2017. Those first years in France
+        were some of the hardest of my life. I didn't speak the language, I didn't know the culture, and for a time,
+        I didn't even have a place to sleep. It was during this period of homelessness that I discovered drawing.
+        At first, it was nothing more than a way to fill the emptiness of my days and calm the anxiety in my mind.
+        A piece of paper, a pen, and silence — that was enough.</p>
+        <p>Drawing quickly became my therapy. It gave me a way to process what I was living through without words.
+        I began experimenting with simple lines, shapes, and colors, almost instinctively. I didn't plan to become
+        an artist; I was simply trying to stay alive, to breathe. But as I kept drawing, I realized that I was
+        finding my own language — a language made of geometry, repetition, and minimal forms.</p>
+        <p>Over time, people started to notice. My first encounters with art lovers and professionals gave me confidence
+        that what I was creating mattered. Later, I was invited to collaborate on exhibitions, including with Paul Smith
+        in Paris. These experiences felt surreal, because only a few years earlier I was drawing alone on the streets,
+        not thinking anyone would ever see my work.</p>
+        <p>Today, I continue to create with the same tools — markers, oil pastels, and paper. My art is still minimal
+        and geometric, but for me it's never just about form. Each line and each space carries something deeper:
+        memory, silence, resilience. I believe that the act of creating is itself a way of breathing, of making sense
+        of a world that often feels overwhelming.</p>
         <p>Art saved me, and it still does.</p>
       </div>
 
-      <div class="columns-2 cap cap-fr" lang="fr">
-        <p class="dropcap">
-          Je n'ai jamais pensé être artiste quand j'étais plus jeune. J'ai grandi dans un petit village du Soudan,
-          où la vie tournait autour de la famille, de la terre et de la survie. Nous travaillions dans les champs,
-          nous nous occupions des animaux et nous marchions de longues distances pour aller chercher de l'eau.
-          L'art ne faisait pas partie de mon univers à cette époque.
-        </p>
-        <p>
-          En 2014, j'ai quitté le Soudan en tant que réfugié et je suis finalement arrivé à Paris en 2017.
-          Ces premières années en France ont été parmi les plus difficiles de ma vie. Je ne parlais pas la langue,
-          je ne connaissais pas la culture, et pendant un temps je n'avais même pas d'endroit où dormir.
-          C'est durant cette période d'errance que j'ai découvert le dessin. Au début, ce n'était rien de plus
-          qu'un moyen de combler le vide de mes journées et d'apaiser mon anxiété.
-          Une feuille de papier, un stylo, et le silence — cela suffisait.
-        </p>
-        <p>
-          Très vite, le dessin est devenu ma thérapie. Il m'a permis d'exprimer ce que je vivais sans passer par les mots.
-          J'ai commencé à expérimenter avec des lignes, des formes et des couleurs, presque instinctivement.
-          Je n'avais pas l'intention de devenir artiste ; je cherchais simplement à survivre, à respirer.
-          Mais en continuant, j'ai compris que je trouvais ma propre langue — une langue faite de géométrie,
-          de répétition et de formes minimalistes.
-        </p>
-        <p>
-          Avec le temps, des gens ont commencé à remarquer mon travail. Mes premières rencontres avec des amateurs
-          et des professionnels de l'art m'ont donné la confiance que ce que je faisais avait du sens.
-          Plus tard, j'ai été invité à participer à des expositions, notamment en collaboration avec Paul Smith à Paris.
-          Ces expériences me semblaient irréelles, car quelques années auparavant je dessinais seul dans la rue,
-          sans penser que quelqu'un verrait un jour mes œuvres.
-        </p>
-        <p>
-          Aujourd'hui, je continue à créer avec les mêmes outils — feutres, pastels à l'huile et papier.
-          Mon art reste minimal et géométrique, mais pour moi ce n'est jamais seulement une question de forme.
-          Chaque ligne et chaque espace portent quelque chose de plus profond : mémoire, silence, résilience.
-          Je crois que l'acte de créer est une façon de respirer, de donner du sens à un monde qui paraît souvent trop lourd.
-        </p>
+      <div class="cap cap-fr" lang="fr">
+        <h2>À propos</h2>
+        <p>Je n'ai jamais pensé être artiste quand j'étais plus jeune. J'ai grandi dans un petit village du Soudan,
+        où la vie tournait autour de la famille, de la terre et de la survie. Nous travaillions dans les champs,
+        nous nous occupions des animaux et nous marchions de longues distances pour aller chercher de l'eau.
+        L'art ne faisait pas partie de mon univers à cette époque.</p>
+        <p>En 2014, j'ai quitté le Soudan en tant que réfugié et je suis finalement arrivé à Paris en 2017.
+        Ces premières années en France ont été parmi les plus difficiles de ma vie. Je ne parlais pas la langue,
+        je ne connaissais pas la culture, et pendant un temps je n'avais même pas d'endroit où dormir.
+        C'est durant cette période d'errance que j'ai découvert le dessin. Au début, ce n'était rien de plus
+        qu'un moyen de combler le vide de mes journées et d'apaiser mon anxiété.
+        Une feuille de papier, un stylo, et le silence — cela suffisait.</p>
+        <p>Très vite, le dessin est devenu ma thérapie. Il m'a permis d'exprimer ce que je vivais sans passer par les mots.
+        Je n'avais pas l'intention de devenir artiste ; je cherchais simplement à survivre, à respirer.
+        Mais en continuant, j'ai compris que je trouvais ma propre langue — une langue faite de géométrie,
+        de répétition et de formes minimalistes.</p>
+        <p>Avec le temps, des gens ont commencé à remarquer mon travail. Plus tard, j'ai été invité à participer
+        à des expositions, notamment en collaboration avec Paul Smith à Paris.</p>
+        <p>Aujourd'hui, je continue à créer avec les mêmes outils — feutres, pastels à l'huile et papier.
+        Mon art reste minimal et géométrique, mais pour moi ce n'est jamais seulement une question de forme.
+        Chaque ligne et chaque espace portent quelque chose de plus profond : mémoire, silence, résilience.</p>
         <p>L'art m'a sauvé, et il continue de le faire.</p>
       </div>
 
-      <div class="columns-2 cap cap-ar" lang="ar">
-        <p class="dropcap">
-          لم أفكر يومًا أنني سأكون فنانًا عندما كنت صغيرًا. نشأت في قرية صغيرة في السودان، حيث كانت الحياة
-          تدور حول العائلة والأرض والبقاء. كنا نساعد في الحقول، نرعى الحيوانات، ونمشي مسافات طويلة لجلب الماء.
-          لم يكن الفن جزءًا من عالمي في ذلك الوقت.
-        </p>
-        <p>
-          في عام 2014 غادرت السودان كلاجئ، ووصلت في النهاية إلى باريس عام 2017.
-          كانت تلك السنوات الأولى في فرنسا من أصعب فترات حياتي. لم أكن أتحدث اللغة، لم أعرف الثقافة،
-          ولفترة من الزمن لم يكن لدي حتى مكان أنام فيه. خلال فترة التشرد هذه اكتشفت الرسم.
-          في البداية لم يكن سوى وسيلة لملء فراغ الأيام وتهدئة القلق في داخلي.
-          ورقة، قلم، وصمت — كان ذلك كافيًا.
-        </p>
-        <p>
-          سرعان ما أصبح الرسم علاجي. منحني طريقة لأعبر عما أعيشه دون كلمات.
-          بدأت أجرب الخطوط والأشكال والألوان ببساطة وبشكل غريزي.
-          لم أخطط أن أصبح فنانًا؛ كنت فقط أحاول أن أعيش، أن أتنفس.
-          لكن مع الاستمرار، أدركت أنني أجد لغتي الخاصة — لغة مصنوعة من الهندسة، التكرار، والأشكال البسيطة.
-        </p>
-        <p>
-          مع مرور الوقت بدأ الناس يلاحظون عملي. لقاءاتي الأولى مع محبي الفن والمهنيين أعطتني الثقة بأن ما أفعله له معنى.
-          لاحقًا تمت دعوتي للمشاركة في معارض، بما في ذلك بالتعاون مع Paul Smith في باريس.
-          كانت تلك التجارب تبدو غير واقعية، لأنني قبل بضع سنوات فقط كنت أرسم وحدي في الشوارع،
-          من دون أن أتخيل أن أحدًا سيرى أعمالي يومًا ما.
-        </p>
-        <p>
-          اليوم ما زلت أخلق باستخدام نفس الأدوات — أقلام التلوين، الباستيل الزيتي، والورق.
-          فني ما زال بسيطًا وهندسيًا، لكنه بالنسبة لي ليس مجرد شكل.
-          كل خط وكل مساحة تحمل شيئًا أعمق: ذاكرة، صمت، وصمود.
-          أؤمن أن فعل الإبداع هو في حد ذاته وسيلة للتنفس، لفهم عالم غالبًا ما يكون مرهقًا.
-        </p>
+      <div class="cap cap-ar" lang="ar">
+        <h2>نبذة</h2>
+        <p>لم أفكر يومًا أنني سأكون فنانًا عندما كنت صغيرًا. نشأت في قرية صغيرة في السودان، حيث كانت الحياة
+        تدور حول العائلة والأرض والبقاء. كنا نساعد في الحقول، نرعى الحيوانات، ونمشي مسافات طويلة لجلب الماء.
+        لم يكن الفن جزءًا من عالمي في ذلك الوقت.</p>
+        <p>في عام 2014 غادرت السودان كلاجئ، ووصلت في النهاية إلى باريس عام 2017.
+        كانت تلك السنوات الأولى في فرنسا من أصعب فترات حياتي. لم أكن أتحدث اللغة، لم أعرف الثقافة،
+        ولفترة من الزمن لم يكن لدي حتى مكان أنام فيه. خلال فترة التشرد هذه اكتشفت الرسم.
+        في البداية لم يكن سوى وسيلة لملء فراغ الأيام وتهدئة القلق في داخلي.
+        ورقة، قلم، وصمت — كان ذلك كافيًا.</p>
+        <p>سرعان ما أصبح الرسم علاجي. منحني طريقة لأعبر عما أعيشه دون كلمات.
+        لم أخطط أن أصبح فنانًا؛ كنت فقط أحاول أن أعيش، أن أتنفس.
+        لكن مع الاستمرار، أدركت أنني أجد لغتي الخاصة — لغة مصنوعة من الهندسة، التكرار، والأشكال البسيطة.</p>
+        <p>مع مرور الوقت بدأ الناس يلاحظون عملي. لاحقًا تمت دعوتي للمشاركة في معارض،
+        بما في ذلك بالتعاون مع Paul Smith في باريس.</p>
+        <p>اليوم ما زلت أخلق باستخدام نفس الأدوات. فني ما زال بسيطًا وهندسيًا، لكنه بالنسبة لي ليس مجرد شكل.
+        كل خط وكل مساحة تحمل شيئًا أعمق: ذاكرة، صمت، وصمود.</p>
         <p>الفن أنقذني، وما زال ينقذني حتى اليوم.</p>
       </div>
+
     </div>
   </section>
 
