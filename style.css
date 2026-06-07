@@ -218,6 +218,21 @@ footer {
   color: var(--muted);
   margin-top: 4px;
 }
+.footer-legal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 16px;
+  list-style: none;
+}
+.footer-legal a {
+  font-size: 10px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  transition: color .2s;
+}
+.footer-legal a:hover { color: var(--ink); }
 
 /* ============================================================
    HOME PAGE
