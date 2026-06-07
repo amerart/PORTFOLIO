@@ -200,7 +200,9 @@ footer {
 }
 .footer-links {
   display: flex;
-  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px 20px;
   list-style: none;
 }
 .footer-links a {
