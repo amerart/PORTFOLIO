@@ -78,6 +78,19 @@
       color: var(--muted);
       margin-top: 4px;
     }
+
+    /* Story link — appears only on works that have a detail page */
+    .work-story-link {
+      display: inline-block;
+      margin-top: 8px;
+      font-size: 10px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      border-bottom: 1px solid transparent;
+      transition: border-color .2s;
+    }
+    .work-story-link:hover { border-color: var(--accent); }
   </style>
 </head>
 <body>
@@ -358,7 +371,9 @@
         year: 2022,
         title: { en: 'Geometry VIII', fr: 'Géométrie VIII', ar: 'هندسة VIII' },
         medium: { en: 'Marker on paper', fr: 'Feutre sur papier', ar: 'قلم على ورق' },
-        size: ''
+        size: '',
+        storyUrl: 'work-geometry-viii.html',
+        storyLabel: { en: 'Read the story →', fr: 'Lire l\'histoire →', ar: 'اقرأ القصة ←' }
       },
       {
         id: 'drawing-16',
@@ -399,6 +414,11 @@
       });
 
       const cap = document.createElement('figcaption');
+      const storyLink = w.storyUrl ? `
+        <a class="work-story-link cap cap-en active" href="${w.storyUrl}">${w.storyLabel.en}</a>
+        <a class="work-story-link cap cap-fr" href="${w.storyUrl}">${w.storyLabel.fr}</a>
+        <a class="work-story-link cap cap-ar" href="${w.storyUrl}">${w.storyLabel.ar}</a>
+      ` : '';
       cap.innerHTML = `
         <strong class="cap cap-en active">${w.title.en}</strong>
         <strong class="cap cap-fr">${w.title.fr}</strong>
@@ -406,6 +426,7 @@
         <span class="work-type cap cap-en active">${w.type === 'drawing' ? 'Drawing' : 'Painting'}, ${w.year}</span>
         <span class="work-type cap cap-fr">${w.type === 'drawing' ? 'Dessin' : 'Peinture'}, ${w.year}</span>
         <span class="work-type cap cap-ar">${w.type === 'drawing' ? 'رسم' : 'لوحة'}، ${w.year}</span>
+        ${storyLink}
       `;
 
       fig.appendChild(img);
