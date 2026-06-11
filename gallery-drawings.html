@@ -217,7 +217,7 @@
     // ===== ARTWORKS DATA — add commas fixed below =====
     const ARTWORKS = [
       { id:'drawing-01', thumb:'IMAGES/drawings/drawing-01.jpg', full:'IMAGES/drawings/drawing-01.jpg', width:1200, height:1500, year:2023,
-        title:{ en:'Study in Lines', fr:'Étude de lignes', ar:'دراسة خطوط' }, medium:{ en:'marker on paper', fr:'feutre sur papier', ar:'قلم على ورق' }, tags:['Lines','Black-white'] },
+        title:{ en:'Study in Lines', fr:'Étude de lignes', ar:'دراسة خطوط' }, medium:{ en:'marker on paper', fr:'feutre sur papier', ar:'قلم على ورق' }, tags:['Lines','Black-white'], workPage:'work-optical.html' },
       { id:'drawing-03', thumb:'IMAGES/drawings/drawing-03.jpg', full:'IMAGES/drawings/drawing-03.jpg', width:1200, height:1500, year:2022,
         title:{ en:'Minimal Composition', fr:'Composition minimale', ar:'تكوين بسيط' }, medium:{ en:'—', fr:'—', ar:'—' }, tags:['Minimal','Color'] },
       { id:'drawing-04', thumb:'IMAGES/drawings/drawing-04.jpg', full:'IMAGES/drawings/drawing-04.jpg', width:1200, height:1500, year:2022,
@@ -348,6 +348,11 @@
           <p class="cap cap-en"><span class="title">${a.title.en}, ${a.year}</span> <span class="meta">— ${a.medium.en}</span></p>
           <p class="cap cap-fr"><span class="title">${a.title.fr}, ${a.year}</span> <span class="meta">— ${a.medium.fr}</span></p>
           <p class="cap cap-ar"><span class="title">${a.title.ar}، ${a.year}</span> <span class="meta">— ${a.medium.ar}</span></p>
+          ${a.workPage ? `
+          <p class="cap cap-en" style="margin-top:6px"><a href="${a.workPage}" style="font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--rule);padding-bottom:1px;">View details →</a></p>
+          <p class="cap cap-fr" style="margin-top:6px"><a href="${a.workPage}" style="font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--rule);padding-bottom:1px;">Voir le détail →</a></p>
+          <p class="cap cap-ar" style="margin-top:6px"><a href="${a.workPage}" style="font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--rule);padding-bottom:1px;">عرض التفاصيل →</a></p>
+          ` : ''}
         `;
         fig.appendChild(wrap); fig.appendChild(cap); frag.appendChild(fig);
       });
@@ -403,7 +408,8 @@
       const a = CURRENT[idx];
       lbImg.src = a.full; lbImg.alt = `${a.title[LANG] || a.title.en} (${a.year})`;
       dl.href = a.full; dl.download = `${a.id}.jpg`;
-      lbCap.innerHTML = { en:`<strong>${a.title.en}</strong>, ${a.year} — ${a.medium.en}`, fr:`<strong>${a.title.fr}</strong>, ${a.year} — ${a.medium.fr}`, ar:`<strong>${a.title.ar}</strong>، ${a.year} — ${a.medium.ar}` }[LANG];
+      const lbLink = a.workPage ? { en:`&ensp;<a href="${a.workPage}" style="font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--rule);padding-bottom:1px;">View details →</a>`, fr:`&ensp;<a href="${a.workPage}" style="font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--rule);padding-bottom:1px;">Voir le détail →</a>`, ar:`&ensp;<a href="${a.workPage}" style="font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--rule);padding-bottom:1px;">عرض التفاصيل →</a>` }[LANG] : '';
+      lbCap.innerHTML = { en:`<strong>${a.title.en}</strong>, ${a.year} — ${a.medium.en}${lbLink}`, fr:`<strong>${a.title.fr}</strong>, ${a.year} — ${a.medium.fr}${lbLink}`, ar:`<strong>${a.title.ar}</strong>، ${a.year} — ${a.medium.ar}${lbLink}` }[LANG];
       box.hidden = false; document.body.style.overflow = 'hidden';
       if (history.pushState) history.replaceState(null, '', `#${a.id}`);
     }
