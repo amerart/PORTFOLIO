@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Play — a drawing by Amer Musa. Markers on paper, 50 × 65 cm, 2022. Read the story behind this unique work.">
+  <meta property="og:title" content="Play — Amer Musa">
+  <meta property="og:description" content="Markers on paper, 50 × 65 cm, 2022. Read the story behind this unique work by Amer Musa.">
+  <meta property="og:image" content="https://amermusa.com/IMAGES/drawings/drawing-06.jpg">
+  <meta property="og:url" content="https://amermusa.com/work-play.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://amermusa.com/IMAGES/drawings/drawing-06.jpg">
+  <title>Play — Amer Musa</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <script>
+    window.axeptioSettings = {
+      clientId: "6a2335bc34e625bd3f94dcf5",
+      cookiesVersion: "51222138-6038-4999-a198-66dded545aae",
+    };
+    (function(d, s) {
+      var t = d.getElementsByTagName(s)[0],
+          e = d.createElement(s);
+      e.async = true;
+      e.src = "//static.axept.io/sdk.js";
+      t.parentNode.insertBefore(e, t);
+    })(document, "script");
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P1JEFJ2362"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-P1JEFJ2362');
+  </script>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ── Work detail page layout ── */
+    .work-detail {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 60px 32px 80px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    /* Image column */
+    .work-image-col img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border: 1px solid var(--rule);
+    }
+    .work-image-caption {
+      margin-top: 10px;
+      font-size: 11px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    /* Text column */
+    .work-text-col {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    /* Back link */
+    .work-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      border-bottom: 1px solid transparent;
+      padding-bottom: 2px;
+      transition: color .2s, border-color .2s;
+    }
+    .work-back:hover { color: var(--ink); border-color: var(--ink); }
+
+    /* Title block */
+    .work-title-block {}
+    .work-title {
+      font-family: var(--serif);
+      font-size: clamp(32px, 5vw, 52px);
+      font-weight: 300;
+      line-height: 1.1;
+      letter-spacing: .01em;
+      margin-bottom: 6px;
+    }
+    .work-subtitle {
+      font-size: 12px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    /* Story sections */
+    .work-section-label {
+      font-size: 10px;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 8px;
+    }
+    .work-body {
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 1.75;
+      color: var(--ink2);
+    }
+    .work-body p + p { margin-top: 14px; }
+
+    /* Details list */
+    .work-details {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 8px 20px;
+      font-size: 13px;
+    }
+    .work-details dt {
+      font-size: 10px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      padding-top: 2px;
+      white-space: nowrap;
+    }
+    .work-details dd {
+      color: var(--ink);
+      line-height: 1.55;
+    }
+
+    /* Mobile: stack columns */
+    @media (max-width: 768px) {
+      .work-detail {
+        grid-template-columns: 1fr;
+        gap: 36px;
+        padding: 36px 20px 60px;
+      }
+    }
+
+    /* RTL adjustments */
+    [dir="rtl"] .work-back { flex-direction: row-reverse; }
+    [dir="rtl"] .work-details { direction: rtl; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <div class="site-name"><a href="index.html">Amer Musa</a></div>
+      <ul class="main-nav" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="timeline.html">Timeline</a></li>
+        <li><a href="press.html">Press</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="https://www.instagram.com/musa.amer" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+      </ul>
+      <select class="lang-select header-lang js-lang" aria-label="Language">
+        <option value="en">EN</option>
+        <option value="fr">FR</option>
+        <option value="ar">AR</option>
+      </select>
+      <button class="burger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="timeline.html">Timeline</a>
+      <a href="press.html">Press</a>
+      <a href="news.html">News</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://www.instagram.com/musa.amer" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <select class="lang-select js-lang" aria-label="Language">
+        <option value="en">EN</option>
+        <option value="fr">FR</option>
+        <option value="ar">AR</option>
+      </select>
+    </nav>
+  </header>
+
+  <div class="work-detail fade">
+
+    <!-- Image column -->
+    <div class="work-image-col">
+      <img
+        src="IMAGES/drawings/drawing-06.jpg"
+        alt="Play, Amer Musa, 2022 — Markers on paper, 50 × 65 cm"
+        width="1200"
+        height="1500"
+      >
+      <p class="work-image-caption cap cap-en active">Play, 2022 — Markers on paper</p>
+      <p class="work-image-caption cap cap-fr">Jeu, 2022 — Feutres sur papier</p>
+      <p class="work-image-caption cap cap-ar" lang="ar">لعب، 2022 — فلوماستر على ورق</p>
+    </div>
+
+    <!-- Text column -->
+    <div class="work-text-col">
+
+      <!-- Back link -->
+      <a href="gallery.html" class="work-back cap cap-en active">← Back to Gallery</a>
+      <a href="gallery.html" class="work-back cap cap-fr">← Retour à la Galerie</a>
+      <a href="gallery.html" class="work-back cap cap-ar" lang="ar">← العودة إلى المعرض</a>
+
+      <!-- Title -->
+      <div class="work-title-block">
+        <h1 class="work-title cap cap-en active">Play</h1>
+        <h1 class="work-title cap cap-fr" lang="fr">Jeu</h1>
+        <h1 class="work-title cap cap-ar" lang="ar">لعب</h1>
+        <p class="work-subtitle cap cap-en active">Drawing, 2022</p>
+        <p class="work-subtitle cap cap-fr">Dessin, 2022</p>
+        <p class="work-subtitle cap cap-ar" lang="ar">رسم، 2022</p>
+      </div>
+
+      <!-- About the work -->
+      <div>
+        <p class="work-section-label cap cap-en active">About the work</p>
+        <p class="work-section-label cap cap-fr">À propos de l'œuvre</p>
+        <p class="work-section-label cap cap-ar" lang="ar">حول العمل</p>
+
+        <div class="work-body cap cap-en active" lang="en">
+          <p>Three colours — red, blue and black — build a structure of nested rectangles and overlapping rings. The forms are drawn with compass and rule, each line measured, the order growing as the shapes meet.</p>
+        </div>
+        <div class="work-body cap cap-fr" lang="fr">
+          <p>Trois couleurs — rouge, bleu et noir — construisent une structure de rectangles imbriqués et d'anneaux qui se chevauchent. Les formes sont tracées au compas et à la règle, chaque ligne mesurée, l'ordre naissant de la rencontre des formes.</p>
+        </div>
+        <div class="work-body cap cap-ar" lang="ar">
+          <p>ثلاثة ألوان — أحمر وأزرق وأسود — تبني تركيبًا من مستطيلات متداخلة وحلقات متقاطعة. الأشكال مرسومة بالفرجار والمسطرة، كل خط مقيس، والنظام ينمو حين تلتقي الأشكال.</p>
+        </div>
+      </div>
+
+      <!-- The story -->
+      <div>
+        <p class="work-section-label cap cap-en active">The story</p>
+        <p class="work-section-label cap cap-fr">L'histoire</p>
+        <p class="work-section-label cap cap-ar" lang="ar">القصة</p>
+
+        <div class="work-body cap cap-en active" lang="en">
+          <p>Squares inside squares, circles crossing circles. A quiet game of lines.</p>
+        </div>
+        <div class="work-body cap cap-fr" lang="fr">
+          <p>Des carrés dans des carrés, des cercles qui se croisent. Un jeu silencieux de lignes.</p>
+        </div>
+        <div class="work-body cap cap-ar" lang="ar">
+          <p>مربّعات داخل مربّعات، ودوائر تتقاطع مع دوائر. لعبة هادئة من الخطوط.</p>
+        </div>
+      </div>
+
+      <!-- The feeling -->
+      <div>
+        <p class="work-section-label cap cap-en active">The feeling</p>
+        <p class="work-section-label cap cap-fr">Le ressenti</p>
+        <p class="work-section-label cap cap-ar" lang="ar">الإحساس</p>
+
+        <div class="work-body cap cap-en active" lang="en">
+          <p>Order and play, held in balance.</p>
+        </div>
+        <div class="work-body cap cap-fr" lang="fr">
+          <p>L'ordre et le jeu, en équilibre.</p>
+        </div>
+        <div class="work-body cap cap-ar" lang="ar">
+          <p>نظامٌ ولعب، في توازن.</p>
+        </div>
+      </div>
+
+      <!-- Details -->
+      <div>
+        <p class="work-section-label cap cap-en active">Details</p>
+        <p class="work-section-label cap cap-fr">Détails</p>
+        <p class="work-section-label cap cap-ar" lang="ar">التفاصيل</p>
+
+        <dl class="work-details cap cap-en active">
+          <dt>Title</dt>       <dd>Play</dd>
+          <dt>Year</dt>        <dd>2022</dd>
+          <dt>Medium</dt>      <dd>Markers (feutres and Stabilo)</dd>
+          <dt>Support</dt>     <dd>Paper</dd>
+          <dt>Size</dt>        <dd>50 × 65 cm</dd>
+          <dt>Original</dt>    <dd>Unique work</dd>
+        </dl>
+        <dl class="work-details cap cap-fr" lang="fr">
+          <dt>Titre</dt>       <dd>Jeu</dd>
+          <dt>Année</dt>       <dd>2022</dd>
+          <dt>Médium</dt>      <dd>Feutres (feutres et Stabilo)</dd>
+          <dt>Support</dt>     <dd>Papier</dd>
+          <dt>Format</dt>      <dd>50 × 65 cm</dd>
+          <dt>Original</dt>    <dd>Œuvre unique</dd>
+        </dl>
+        <dl class="work-details cap cap-ar" lang="ar">
+          <dt>العنوان</dt>     <dd>لعب</dd>
+          <dt>السنة</dt>       <dd>2022</dd>
+          <dt>الوسيط</dt>      <dd>أقلام (فلوماستر وستابيلو)</dd>
+          <dt>الدعامة</dt>     <dd>ورق</dd>
+          <dt>الحجم</dt>       <dd>50 × 65 سم</dd>
+          <dt>النسخة</dt>      <dd>عمل فريد</dd>
+        </dl>
+      </div>
+
+    </div><!-- /.work-text-col -->
+  </div><!-- /.work-detail -->
+
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-name">Amer Musa</p>
+      <ul class="footer-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="timeline.html">Timeline</a></li>
+        <li><a href="press.html">Press</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="https://www.instagram.com/musa.amer" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+      </ul>
+      <ul class="footer-legal">
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="cookies.html">Cookie Policy</a></li>
+        <li><a href="legal.html">Legal Notice</a></li>
+      </ul>
+      <p class="footer-copy">© <span class="js-year"></span> Amer Musa. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="shared-nav.js"></script>
+</body>
+</html>
