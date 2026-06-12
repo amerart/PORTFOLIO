@@ -241,15 +241,16 @@
         size: ''
       },
       {
-        id: 'drawing-03',
-        src: 'IMAGES/drawings/drawing-03.jpg',
+        id: 'sunlight-studies',
+        src: 'IMAGES/drawings/drawing-11.jpg',
         type: 'drawing',
         year: 2022,
-        title: { en: 'Minimal Composition', fr: 'Composition minimale', ar: 'تكوين بسيط' },
-        medium: { en: 'Markers (feutres and Stabilo)', fr: 'Feutres (feutres et Stabilo)', ar: 'أقلام (فلوماستر وستابيلو)' },
-        size: '50 × 65 cm',
+        title: { en: 'Sunlight Studies', fr: 'Études de lumière', ar: 'دراسات الضوء' },
+        medium: { en: 'Stabilo on paper', fr: 'Stabilo sur papier', ar: 'ستابيلو على ورق' },
+        size: 'Series · 4 works',
+        seriesUrl: 'work-sunlight-studies.html',
         storyUrl: 'work-sunlight-studies.html',
-        storyLabel: { en: 'Read the story →', fr: 'Lire l\'histoire →', ar: 'اقرأ القصة ←' }
+        storyLabel: { en: 'View the series →', fr: 'Voir la série →', ar: 'عرض السلسلة ←' }
       },
       {
         id: 'painting-03',
@@ -337,17 +338,6 @@
         size: ''
       },
       {
-        id: 'drawing-11',
-        src: 'IMAGES/drawings/drawing-11.jpg',
-        type: 'drawing',
-        year: 2022,
-        title: { en: 'Geometry IV', fr: 'Géométrie IV', ar: 'هندسة IV' },
-        medium: { en: 'Markers (feutres and Stabilo)', fr: 'Feutres (feutres et Stabilo)', ar: 'أقلام (فلوماستر وستابيلو)' },
-        size: '50 × 65 cm',
-        storyUrl: 'work-sunlight-studies.html',
-        storyLabel: { en: 'Read the story →', fr: 'Lire l\'histoire →', ar: 'اقرأ القصة ←' }
-      },
-      {
         id: 'painting-17',
         src: 'IMAGES/paintings/painting-17.jpg',
         type: 'painting',
@@ -418,6 +408,7 @@
       img.addEventListener('load', () => img.classList.add('loaded'));
       if (img.complete) img.classList.add('loaded');
       img.addEventListener('click', () => {
+        if (w.seriesUrl) { window.location.href = w.seriesUrl; return; }
         visible = getVisible();
         const vi = visible.findIndex(v => v.id === w.id);
         openAt(vi);
