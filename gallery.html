@@ -65,10 +65,15 @@
     }
 
     /* Hide/show by type */
-    .art-grid figure { transition: opacity .3s; }
+    .art-grid figure { transition: opacity .3s; overflow: hidden; }
     .art-grid figure.hidden {
       display: none;
     }
+
+    /* Zoom on hover — colours stay vivid, no dimming */
+    .art-grid figure { overflow: hidden; }
+    .art-grid figure img { transition: transform .65s ease, opacity .4s ease; }
+    body .art-grid figure:hover img { transform: scale(1.06); opacity: 1; }
 
     /* Type badge on each work */
     .work-type {
