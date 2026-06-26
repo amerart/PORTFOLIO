@@ -72,8 +72,16 @@
 
     /* Zoom on hover — colours stay vivid, no dimming */
     .art-grid figure { overflow: hidden; }
-    .art-grid figure img { transition: transform .65s ease, opacity .4s ease; }
+    .art-grid figure img { transition: transform .65s ease, opacity .4s ease, filter .65s ease; }
     body .art-grid figure:hover img { transform: scale(1.06); opacity: 1; }
+
+    /* Drawings: lift brightness and clarity for a clean, professional look */
+    figure[data-type="drawing"] img {
+      filter: brightness(1.10) contrast(1.05) saturate(0.95);
+    }
+    body figure[data-type="drawing"]:hover img {
+      filter: brightness(1.14) contrast(1.06) saturate(0.95);
+    }
 
     /* Type badge on each work */
     .work-type {
