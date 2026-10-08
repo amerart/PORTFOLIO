@@ -2,3 +2,4 @@
 *.code-workspace
 _originals/
 _archive_unused/
+preview-*.html
