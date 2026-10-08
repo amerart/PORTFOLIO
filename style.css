@@ -15,6 +15,7 @@
   --muted:   #8a8070;
   --rule:    #c8bfb0;
   --accent:  #e04e0c;
+  --accent-text: #c2410c; /* darker orange for small text (readability) */
   --max:     1160px;
   --gap:     28px;
   --serif:   'Cormorant Garamond', Georgia, serif;
@@ -303,7 +304,7 @@ footer {
   padding-bottom: 4px;
   transition: gap .2s, color .2s;
 }
-.hero-cta:hover { gap: 16px; color: var(--accent); border-color: var(--accent); }
+.hero-cta:hover { gap: 16px; color: var(--accent-text); border-color: var(--accent); }
 
 @media (max-width: 860px) {
   .hero { grid-template-columns: 1fr; min-height: auto; }
@@ -759,7 +760,7 @@ footer {
   font-size: 10px;
   letter-spacing: .2em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--accent-text);
   margin-bottom: 6px;
 }
 .tl-title {
@@ -822,7 +823,7 @@ footer {
   padding-bottom: 8px;
   transition: color .2s, border-color .2s;
 }
-.contact-detail a:hover { color: var(--accent); border-color: var(--accent); }
+.contact-detail a:hover { color: var(--accent-text); border-color: var(--accent); }
 .contact-form-side h3 {
   font-family: var(--serif);
   font-size: 24px;
