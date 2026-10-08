@@ -1,0 +1,4 @@
+.claude/
+*.code-workspace
+_originals/
+_archive_unused/

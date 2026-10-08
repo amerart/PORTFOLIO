@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://amermusa.com/sitemap.xml
+Sitemap: https://www.amermusa.com/sitemap.xml
