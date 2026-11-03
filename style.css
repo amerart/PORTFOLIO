@@ -251,10 +251,11 @@ footer {
 .hero-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  padding: 48px;
   transition: transform 8s var(--ease);
 }
-.hero-image:hover img { transform: scale(1.04); }
+.hero-image:hover img { transform: scale(1.02); }
 .hero-text {
   display: flex;
   flex-direction: column;
@@ -308,7 +309,8 @@ footer {
 
 @media (max-width: 860px) {
   .hero { grid-template-columns: 1fr; min-height: auto; }
-  .hero-image { height: 55vw; min-height: 300px; }
+  .hero-image { height: 110vw; max-height: 80vh; min-height: 300px; }
+  .hero-image img { padding: 24px; }
   .hero-text { padding: 40px 28px; }
   .hero-title { font-size: clamp(44px, 12vw, 72px); }
 }
@@ -352,17 +354,18 @@ footer {
 }
 .highlight-card .img-wrap {
   overflow: hidden;
-  background: var(--ivory2);
+  background: #ffffff;
   aspect-ratio: 3/4;
   margin-bottom: 14px;
 }
 .highlight-card img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  padding: 20px;
   transition: transform .5s var(--ease);
 }
-.highlight-card:hover img { transform: scale(1.04); }
+.highlight-card:hover img { transform: scale(1.02); }
 .highlight-card .card-label {
   font-size: 11px;
   letter-spacing: .12em;
@@ -441,12 +444,14 @@ footer {
   max-width: var(--max);
   margin: 0 auto;
   padding: 36px 32px 80px;
-  columns: 3;
-  column-gap: 32px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 56px 32px;
+  align-items: start;
 }
 .art-grid figure {
   break-inside: avoid;
-  margin-bottom: 56px;
+  margin-bottom: 0;
   cursor: zoom-in;
   background: var(--ivory);
   overflow: hidden;
@@ -454,6 +459,10 @@ footer {
 .art-grid figure img {
   width: 100%;
   height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: contain;
+  padding: 20px;
+  background: #ffffff;
   display: block;
   transition: opacity .4s ease, transform .4s ease;
   opacity: 0;
@@ -478,11 +487,10 @@ footer {
 }
 
 @media (max-width: 860px) {
-  .art-grid { columns: 2; column-gap: 24px; }
+  .art-grid { grid-template-columns: repeat(2, 1fr); gap: 48px 24px; }
 }
 @media (max-width: 540px) {
-  .art-grid { columns: 1; padding: 20px 16px 40px; }
-  .art-grid figure { margin-bottom: 40px; }
+  .art-grid { grid-template-columns: 1fr; gap: 40px; padding: 20px 16px 40px; }
 }
 @media (max-width: 640px) {
   .gallery-hero { flex-direction: column; align-items: flex-start; padding: 36px 20px 24px; }
