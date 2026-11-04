@@ -366,6 +366,7 @@ footer {
   transition: transform .5s var(--ease);
 }
 .highlight-card:hover img { transform: scale(1.02); }
+.highlight-card .img-wrap.is-portrait img { object-fit: cover; padding: 0; }
 .highlight-card .card-label {
   font-size: 11px;
   letter-spacing: .12em;
@@ -434,11 +435,11 @@ footer {
   line-height: 1;
 }
 .gallery-hero-desc {
-  max-width: 300px;
+  max-width: 340px;
   font-size: 13px;
   color: var(--muted);
   line-height: 1.7;
-  text-align: right;
+  text-align: left;
 }
 .art-grid {
   max-width: var(--max);
@@ -1002,7 +1003,7 @@ footer {
 [dir="rtl"] .hero-tagline { border-left: none; border-right: 2px solid var(--accent); padding-left: 0; padding-right: 16px; }
 [dir="rtl"] .about-text p:first-of-type::first-letter { float: right; padding: 6px 0 0 10px; }
 [dir="rtl"] .press-body p:first-of-type::first-letter { float: right; padding: 4px 0 0 10px; }
-[dir="rtl"] .gallery-hero-desc { text-align: left; }
+[dir="rtl"] .gallery-hero-desc { text-align: right; }
 
 /* ============================================================
    PRINT
