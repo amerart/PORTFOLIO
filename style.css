@@ -462,8 +462,6 @@ footer {
   height: auto;
   aspect-ratio: 4 / 5;
   object-fit: contain;
-  padding: 20px;
-  background: #ffffff;
   display: block;
   transition: opacity .4s ease, transform .4s ease;
   opacity: 0;
