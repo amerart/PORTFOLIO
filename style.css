@@ -585,6 +585,12 @@ footer {
   aspect-ratio: 3/4;
   object-fit: cover;
 }
+.about-photo-credit {
+  margin-top: 14px;
+  font-size: 11px;
+  letter-spacing: .04em;
+  color: var(--muted);
+}
 .about-portrait-name {
   font-family: var(--serif);
   font-size: 22px;
