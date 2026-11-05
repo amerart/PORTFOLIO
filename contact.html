@@ -86,6 +86,9 @@
       <p class="contact-info-text cap cap-en active" lang="en">For enquiries about exhibitions, collaborations or commissions, please get in touch.</p>
       <p class="contact-info-text cap cap-fr" lang="fr">Pour toute question sur les expositions, collaborations ou commandes, n'hésitez pas à me contacter.</p>
       <p class="contact-info-text cap cap-ar" lang="ar">للاستفسار عن المعارض أو التعاونات أو الطلبات، يرجى التواصل معي.</p>
+      <p class="contact-info-text contact-portfolio cap cap-en active" lang="en">My portfolio is available on request. Just ask in your message.</p>
+      <p class="contact-info-text contact-portfolio cap cap-fr" lang="fr">Mon portfolio est disponible sur demande. Il suffit de le demander dans votre message.</p>
+      <p class="contact-info-text contact-portfolio cap cap-ar" lang="ar">ملف أعمالي متاح عند الطلب. يكفي أن تطلبه في رسالتك.</p>
       <div class="contact-detail">
         <a href="https://www.instagram.com/musa.amer" target="_blank" rel="noopener noreferrer">Instagram → @musa.amer</a>
       </div>
@@ -154,6 +157,19 @@
 
   <script src="shared-nav.js"></script>
   <script>
+    /* Coming from "Portfolio available on request": prefill the message */
+    if (location.hash === '#portfolio') {
+      let lang = 'en';
+      try { lang = localStorage.getItem('am_lang') || 'en'; } catch (e) {}
+      const msg = {
+        en: 'Hello Amer, I would like to receive your portfolio.',
+        fr: 'Bonjour Amer, je souhaiterais recevoir votre portfolio.',
+        ar: 'مرحبًا عامر، أودّ الحصول على ملف أعمالك.'
+      };
+      const box = document.getElementById('contact-message');
+      if (box && !box.value) box.value = msg[lang] || msg.en;
+    }
+
     document.getElementById('contact-form').addEventListener('submit', async function (e) {
       e.preventDefault();
       const form = e.target;

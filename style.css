@@ -591,6 +591,19 @@ footer {
   letter-spacing: .04em;
   color: var(--muted);
 }
+.about-portfolio-link {
+  display: inline-block;
+  margin-top: 22px;
+  font-size: 12px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--accent-text);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+.about-portfolio-link:hover { border-bottom-color: var(--accent); }
+.about-portfolio-link.cap.active { display: inline-block !important; }
+.contact-portfolio { margin-top: 14px; }
 .about-portrait-name {
   font-family: var(--serif);
   font-size: 22px;
