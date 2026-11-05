@@ -475,6 +475,15 @@
       });
     });
 
+    /* Open on a filter from a link: gallery.html#drawings or #paintings */
+    (function () {
+      const map = { '#drawings': 'drawing', '#paintings': 'painting' };
+      const f = map[location.hash];
+      if (!f) return;
+      const btn = document.querySelector('.filter-btn[data-filter="' + f + '"]');
+      if (btn) btn.click();
+    })();
+
     /* ── Lightbox ── */
     function openAt(i) {
       visible = getVisible();
