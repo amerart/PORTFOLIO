@@ -90,6 +90,7 @@
       <p class="contact-info-text contact-portfolio cap cap-fr" lang="fr">Mon portfolio est disponible sur demande. Il suffit de le demander dans votre message.</p>
       <p class="contact-info-text contact-portfolio cap cap-ar" lang="ar">ملف أعمالي متاح عند الطلب. يكفي أن تطلبه في رسالتك.</p>
       <div class="contact-detail">
+        <a class="js-mail" data-u="tra" data-d="moc.asumrema" dir="ltr">Email → <span class="js-mail-text">art [at] amermusa [dot] com</span></a>
         <a href="https://www.instagram.com/musa.amer" target="_blank" rel="noopener noreferrer">Instagram → @musa.amer</a>
       </div>
     </div>
@@ -149,6 +150,14 @@
 
   <script src="shared-nav.js"></script>
   <script>
+    /* Email: put together in the browser so spam robots can't read it */
+    document.querySelectorAll('.js-mail').forEach(function (el) {
+      var r = function (t) { return t.split('').reverse().join(''); };
+      var addr = r(el.dataset.u) + '@' + r(el.dataset.d);
+      el.href = 'mailto:' + addr;
+      var t = el.querySelector('.js-mail-text'); if (t) t.textContent = addr;
+    });
+
     /* Coming from "Portfolio available on request": prefill the message */
     if (location.hash === '#portfolio') {
       let lang = 'en';
