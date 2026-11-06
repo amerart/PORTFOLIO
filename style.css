@@ -823,6 +823,22 @@ footer {
   color: var(--ink2);
   line-height: 1.8;
 }
+.tl-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  margin-top: 12px;
+}
+.tl-links a {
+  font-size: 11px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--accent-text);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+.tl-links a em { text-transform: none; letter-spacing: .02em; font-size: 12px; }
+.tl-links a:hover { border-bottom-color: var(--accent); }
 [dir="rtl"] .timeline-list { padding-left: 0; padding-right: 40px; }
 [dir="rtl"] .timeline-list::before { left: auto; right: 0; }
 [dir="rtl"] .tl-item::before { left: auto; right: -44px; }
