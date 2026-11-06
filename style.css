@@ -823,6 +823,24 @@ footer {
   color: var(--ink2);
   line-height: 1.8;
 }
+.tl-press {
+  margin-top: 18px;
+  max-width: 460px;
+}
+.tl-press img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid var(--rule);
+  transition: opacity .3s var(--ease);
+}
+.tl-press a:hover img { opacity: .85; }
+.tl-press figcaption {
+  margin-top: 8px;
+  font-size: 11px;
+  letter-spacing: .08em;
+  color: var(--muted);
+}
 .tl-links {
   display: flex;
   flex-wrap: wrap;
