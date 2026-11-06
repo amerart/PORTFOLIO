@@ -841,6 +841,13 @@ footer {
   letter-spacing: .08em;
   color: var(--muted);
 }
+.tl-press-row { max-width: 520px; }
+.tl-press-imgs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+.tl-press-imgs img { aspect-ratio: 3 / 4; object-fit: cover; }
 .tl-links {
   display: flex;
   flex-wrap: wrap;
