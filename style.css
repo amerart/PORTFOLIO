@@ -848,6 +848,11 @@ footer {
   gap: 8px;
 }
 .tl-press-imgs img { aspect-ratio: 3 / 4; object-fit: cover; }
+.tl-press-strip { max-width: 620px; }
+.tl-press-strip .tl-press-imgs { display: flex; gap: 8px; grid-template-columns: none; }
+.tl-press-strip .tl-press-imgs a { flex: 0 1 auto; min-width: 0; }
+.tl-press-strip .tl-press-imgs img { height: 170px; width: auto; max-width: 100%; aspect-ratio: auto; object-fit: cover; }
+@media (max-width: 860px) { .tl-press-strip .tl-press-imgs img { height: 110px; } }
 .tl-links {
   display: flex;
   flex-wrap: wrap;
