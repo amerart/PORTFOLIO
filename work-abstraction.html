@@ -1,0 +1,346 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Abstraction — a series of ten paintings by Amer Musa. Acrylic on paper, A5, 2022.">
+  <meta property="og:title" content="Abstraction — Amer Musa">
+  <meta property="og:description" content="A series of ten paintings by Amer Musa. Acrylic on paper, A5, 2022.">
+  <meta property="og:image" content="https://www.amermusa.com/IMAGES/paintings/abstraction-cover.jpg">
+  <meta property="og:url" content="https://www.amermusa.com/work-abstraction.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://www.amermusa.com/IMAGES/paintings/abstraction-cover.jpg">
+  <title>Abstraction — Amer Musa</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <script>
+    window.axeptioSettings = {
+      clientId: "6a2335bc34e625bd3f94dcf5",
+      cookiesVersion: "51222138-6038-4999-a198-66dded545aae",
+    };
+    (function(d, s) {
+      var t = d.getElementsByTagName(s)[0],
+          e = d.createElement(s);
+      e.async = true;
+      e.src = "//static.axept.io/sdk.js";
+      t.parentNode.insertBefore(e, t);
+    })(document, "script");
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P1JEFJ2362"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-P1JEFJ2362');
+  </script>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .series-layout {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 60px 32px 80px;
+    }
+
+    /* Back link */
+    .work-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      border-bottom: 1px solid transparent;
+      padding-bottom: 2px;
+      transition: color .2s, border-color .2s;
+      margin-bottom: 40px;
+    }
+    .work-back:hover { color: var(--ink); border-color: var(--ink); }
+
+    /* Intro block */
+    .series-intro {
+      max-width: 640px;
+      margin-bottom: 60px;
+    }
+    .series-title {
+      font-family: var(--serif);
+      font-size: clamp(32px, 5vw, 52px);
+      font-weight: 300;
+      line-height: 1.1;
+      letter-spacing: .01em;
+      margin-bottom: 6px;
+    }
+    .series-subtitle {
+      font-size: 12px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 28px;
+    }
+    .series-body {
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 1.75;
+      color: var(--ink2);
+    }
+
+    /* Works grid */
+    .series-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px 40px;
+    }
+    .series-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border: 1px solid var(--rule);
+    }
+    .series-item figcaption {
+      margin-top: 10px;
+    }
+    .series-caption {
+      font-size: 11px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+      .series-layout {
+        padding: 36px 20px 60px;
+      }
+      .series-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .series-intro {
+        margin-bottom: 40px;
+      }
+    }
+
+    [dir="rtl"] .work-back { flex-direction: row-reverse; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <div class="site-name"><a href="index.html">Amer Musa</a></div>
+      <ul class="main-nav" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="timeline.html">Timeline</a></li>
+        <li><a href="press.html">Press</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="https://www.instagram.com/musa.amer" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+      </ul>
+      <select class="lang-select header-lang js-lang" aria-label="Language">
+        <option value="en">EN</option>
+        <option value="fr">FR</option>
+        <option value="ar">AR</option>
+      </select>
+      <button class="burger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="timeline.html">Timeline</a>
+      <a href="press.html">Press</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://www.instagram.com/musa.amer" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <select class="lang-select js-lang" aria-label="Language">
+        <option value="en">EN</option>
+        <option value="fr">FR</option>
+        <option value="ar">AR</option>
+      </select>
+    </nav>
+  </header>
+
+  <div class="series-layout fade">
+
+    <!-- Back link -->
+    <a href="gallery.html" class="work-back cap cap-en active">← Back to Gallery</a>
+    <a href="gallery.html" class="work-back cap cap-fr">← Retour à la Galerie</a>
+    <a href="gallery.html" class="work-back cap cap-ar" lang="ar">← العودة إلى المعرض</a>
+
+    <!-- Intro -->
+    <div class="series-intro">
+      <h1 class="series-title cap cap-en active">Abstraction</h1>
+      <h1 class="series-title cap cap-fr" lang="fr">Abstraction</h1>
+      <h1 class="series-title cap cap-ar" lang="ar">تجريد</h1>
+
+      <p class="series-subtitle cap cap-en active">Series — Painting, 2022</p>
+      <p class="series-subtitle cap cap-fr">Série — Peinture, 2022</p>
+      <p class="series-subtitle cap cap-ar" lang="ar">سلسلة — لوحات، 2022</p>
+    </div>
+
+    <!-- Works grid -->
+    <div class="series-grid">
+
+      <figure class="series-item">
+        <img
+          src="IMAGES/paintings/abstraction-01.jpg"
+          alt="Abstraction 1, Amer Musa, 2022 — Acrylic on paper, A5"
+          width="1600"
+          height="1225"
+          loading="lazy"
+        >
+        <figcaption>
+          <p class="series-caption cap cap-en active">Abstraction 1 — Acrylic on paper — A5 — 2022</p>
+          <p class="series-caption cap cap-fr">Abstraction 1 — Acrylique sur papier — A5 — 2022</p>
+          <p class="series-caption cap cap-ar" lang="ar">تجريد 1 — أكريليك على ورق — A5 — 2022</p>
+        </figcaption>
+      </figure>
+      <figure class="series-item">
+        <img
+          src="IMAGES/paintings/abstraction-02.jpg"
+          alt="Abstraction 2, Amer Musa, 2022 — Acrylic on paper, A5"
+          width="1600"
+          height="1239"
+          loading="lazy"
+        >
+        <figcaption>
+          <p class="series-caption cap cap-en active">Abstraction 2 — Acrylic on paper — A5 — 2022</p>
+          <p class="series-caption cap cap-fr">Abstraction 2 — Acrylique sur papier — A5 — 2022</p>
+          <p class="series-caption cap cap-ar" lang="ar">تجريد 2 — أكريليك على ورق — A5 — 2022</p>
+        </figcaption>
+      </figure>
+      <figure class="series-item">
+        <img
+          src="IMAGES/paintings/abstraction-03.jpg"
+          alt="Abstraction 3, Amer Musa, 2022 — Acrylic on paper, A5"
+          width="1600"
+          height="1218"
+          loading="lazy"
+        >
+        <figcaption>
+          <p class="series-caption cap cap-en active">Abstraction 3 — Acrylic on paper — A5 — 2022</p>
+          <p class="series-caption cap cap-fr">Abstraction 3 — Acrylique sur papier — A5 — 2022</p>
+          <p class="series-caption cap cap-ar" lang="ar">تجريد 3 — أكريليك على ورق — A5 — 2022</p>
+        </figcaption>
+      </figure>
+      <figure class="series-item">
+        <img
+          src="IMAGES/paintings/abstraction-04.jpg"
+          alt="Abstraction 4, Amer Musa, 2022 — Acrylic on paper, A5"
+          width="1600"
+          height="1246"
+          loading="lazy"
+        >
+        <figcaption>
+          <p class="series-caption cap cap-en active">Abstraction 4 — Acrylic on paper — A5 — 2022</p>
+          <p class="series-caption cap cap-fr">Abstraction 4 — Acrylique sur papier — A5 — 2022</p>
+          <p class="series-caption cap cap-ar" lang="ar">تجريد 4 — أكريليك على ورق — A5 — 2022</p>
+        </figcaption>
+      </figure>
+      <figure class="series-item">
+        <img
+          src="IMAGES/paintings/abstraction-05.jpg"
+          alt="Abstraction 5, Amer Musa, 2022 — Acrylic on paper, A5"
+          width="1600"
+          height="1223"
+          loading="lazy"
+        >
+        <figcaption>
+          <p class="series-caption cap cap-en active">Abstraction 5 — Acrylic on paper — A5 — 2022</p>
+          <p class="series-caption cap cap-fr">Abstraction 5 — Acrylique sur papier — A5 — 2022</p>
+          <p class="series-caption cap cap-ar" lang="ar">تجريد 5 — أكريليك على ورق — A5 — 2022</p>
+        </figcaption>
+      </figure>
+      <figure class="series-item">
+        <img
+          src="IMAGES/paintings/abstraction-06.jpg"
+          alt="Abstraction 6, Amer Musa, 2022 — Acrylic on paper, A5"
+          width="1600"
+          height="1241"
+          loading="lazy"
+        >
+        <figcaption>
+          <p class="series-caption cap cap-en active">Abstraction 6 — Acrylic on paper — A5 — 2022</p>
+          <p class="series-caption cap cap-fr">Abstraction 6 — Acrylique sur papier — A5 — 2022</p>
+          <p class="series-caption cap cap-ar" lang="ar">تجريد 6 — أكريليك على ورق — A5 — 2022</p>
+        </figcaption>
+      </figure>
+      <figure class="series-item">
+        <img
+          src="IMAGES/paintings/abstraction-07.jpg"
+          alt="Abstraction 7, Amer Musa, 2022 — Acrylic on paper, A5"
+          width="1600"
+          height="1219"
+          loading="lazy"
+        >
+        <figcaption>
+          <p class="series-caption cap cap-en active">Abstraction 7 — Acrylic on paper — A5 — 2022</p>
+          <p class="series-caption cap cap-fr">Abstraction 7 — Acrylique sur papier — A5 — 2022</p>
+          <p class="series-caption cap cap-ar" lang="ar">تجريد 7 — أكريليك على ورق — A5 — 2022</p>
+        </figcaption>
+      </figure>
+      <figure class="series-item">
+        <img
+          src="IMAGES/paintings/abstraction-08.jpg"
+          alt="Abstraction 8, Amer Musa, 2022 — Acrylic on paper, A5"
+          width="1600"
+          height="1245"
+          loading="lazy"
+        >
+        <figcaption>
+          <p class="series-caption cap cap-en active">Abstraction 8 — Acrylic on paper — A5 — 2022</p>
+          <p class="series-caption cap cap-fr">Abstraction 8 — Acrylique sur papier — A5 — 2022</p>
+          <p class="series-caption cap cap-ar" lang="ar">تجريد 8 — أكريليك على ورق — A5 — 2022</p>
+        </figcaption>
+      </figure>
+      <figure class="series-item">
+        <img
+          src="IMAGES/paintings/abstraction-09.jpg"
+          alt="Abstraction 9, Amer Musa, 2022 — Acrylic on paper, A5"
+          width="1294"
+          height="987"
+          loading="lazy"
+        >
+        <figcaption>
+          <p class="series-caption cap cap-en active">Abstraction 9 — Acrylic on paper — A5 — 2022</p>
+          <p class="series-caption cap cap-fr">Abstraction 9 — Acrylique sur papier — A5 — 2022</p>
+          <p class="series-caption cap cap-ar" lang="ar">تجريد 9 — أكريليك على ورق — A5 — 2022</p>
+        </figcaption>
+      </figure>
+      <figure class="series-item">
+        <img
+          src="IMAGES/paintings/abstraction-10.jpg"
+          alt="Abstraction 10, Amer Musa, 2022 — Acrylic on paper, A5"
+          width="1294"
+          height="1003"
+          loading="lazy"
+        >
+        <figcaption>
+          <p class="series-caption cap cap-en active">Abstraction 10 — Acrylic on paper — A5 — 2022</p>
+          <p class="series-caption cap cap-fr">Abstraction 10 — Acrylique sur papier — A5 — 2022</p>
+          <p class="series-caption cap cap-ar" lang="ar">تجريد 10 — أكريليك على ورق — A5 — 2022</p>
+        </figcaption>
+      </figure>
+
+    </div><!-- /.series-grid -->
+
+  </div><!-- /.series-layout -->
+
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-name">Amer Musa</p>
+      <ul class="footer-legal">
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="cookies.html">Cookie Policy</a></li>
+        <li><a href="legal.html">Legal Notice</a></li>
+      </ul>
+      <p class="footer-copy">© <span class="js-year"></span> Amer Musa. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="shared-nav.js"></script>
+</body>
+</html>
