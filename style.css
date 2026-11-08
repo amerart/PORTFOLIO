@@ -502,7 +502,7 @@ footer {
 .lb-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(18,15,12,.92);
+  background: rgba(18,15,12,.97);
   z-index: 1000;
   display: flex;
   align-items: center;
@@ -559,9 +559,14 @@ footer {
 .lb-prev:hover, .lb-next:hover { background: rgba(247,243,236,.18); }
 .lb-prev { left: -56px; }
 .lb-next { right: -56px; }
+.lb-count { font-style: normal; font-size: 12px; letter-spacing: .12em; opacity: .7; margin-inline-start: 8px; }
+.lb-prev[hidden], .lb-next[hidden] { display: none; }
+.tl-press a.tl-lb { cursor: zoom-in; }
+
 @media (max-width: 640px) {
   .lb-prev { left: 0; }
   .lb-next { right: 0; }
+  .lb-prev, .lb-next { background: rgba(18,15,12,.6); border-color: rgba(247,243,236,.35); }
 }
 
 /* ============================================================
