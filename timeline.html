@@ -320,16 +320,43 @@
         <p class="tl-year">2025 — ongoing</p>
         <h2 class="tl-title">New works &amp; collaborations</h2>
         <p class="tl-body">Continuing to develop new series in Paris — drawings that move between memory, fashion and everyday life. Circles, lines and grids carrying silence and resilience.</p>
+        <div class="tl-fade" aria-hidden="true">
+          <img src="IMAGES/new/tl-new-1.jpg" alt="" width="971" height="1000" loading="lazy" class="is-on">
+          <img src="IMAGES/new/tl-new-2.jpg" alt="" width="991" height="1000" loading="lazy">
+          <img src="IMAGES/new/tl-new-3.jpg" alt="" width="792" height="1000" loading="lazy">
+          <img src="IMAGES/new/tl-new-4.jpg" alt="" width="711" height="1000" loading="lazy">
+          <img src="IMAGES/new/tl-new-5.jpg" alt="" width="1000" height="958" loading="lazy">
+          <img src="IMAGES/new/tl-new-6.jpg" alt="" width="643" height="1000" loading="lazy">
+        </div>
+        <p class="tl-links"><a href="gallery.html">Visit the gallery →</a></p>
       </div>
       <div class="tl-item cap cap-fr" lang="fr">
         <p class="tl-year">2025 — en cours</p>
         <h2 class="tl-title">Nouvelles œuvres &amp; collaborations</h2>
         <p class="tl-body">Poursuite du développement de nouvelles séries à Paris — des dessins qui circulent entre mémoire, mode et vie quotidienne. Cercles, lignes et grilles portant silence et résilience.</p>
+        <div class="tl-fade" aria-hidden="true">
+          <img src="IMAGES/new/tl-new-1.jpg" alt="" width="971" height="1000" loading="lazy" class="is-on">
+          <img src="IMAGES/new/tl-new-2.jpg" alt="" width="991" height="1000" loading="lazy">
+          <img src="IMAGES/new/tl-new-3.jpg" alt="" width="792" height="1000" loading="lazy">
+          <img src="IMAGES/new/tl-new-4.jpg" alt="" width="711" height="1000" loading="lazy">
+          <img src="IMAGES/new/tl-new-5.jpg" alt="" width="1000" height="958" loading="lazy">
+          <img src="IMAGES/new/tl-new-6.jpg" alt="" width="643" height="1000" loading="lazy">
+        </div>
+        <p class="tl-links"><a href="gallery.html">Découvrir la galerie →</a></p>
       </div>
       <div class="tl-item cap cap-ar" lang="ar">
         <p class="tl-year">2025 — مستمر</p>
         <h2 class="tl-title">أعمال وتعاونات جديدة</h2>
         <p class="tl-body">مواصلة تطوير سلاسل جديدة في باريس — رسومات تتنقل بين الذاكرة والموضة والحياة اليومية. دوائر وخطوط وشبكات تحمل الصمت والصمود.</p>
+        <div class="tl-fade" aria-hidden="true">
+          <img src="IMAGES/new/tl-new-1.jpg" alt="" width="971" height="1000" loading="lazy" class="is-on">
+          <img src="IMAGES/new/tl-new-2.jpg" alt="" width="991" height="1000" loading="lazy">
+          <img src="IMAGES/new/tl-new-3.jpg" alt="" width="792" height="1000" loading="lazy">
+          <img src="IMAGES/new/tl-new-4.jpg" alt="" width="711" height="1000" loading="lazy">
+          <img src="IMAGES/new/tl-new-5.jpg" alt="" width="1000" height="958" loading="lazy">
+          <img src="IMAGES/new/tl-new-6.jpg" alt="" width="643" height="1000" loading="lazy">
+        </div>
+        <p class="tl-links"><a href="gallery.html">زُر المعرض ←</a></p>
       </div>
 
     </div>
@@ -407,6 +434,18 @@
       if(x0===null) return; var dx=e.changedTouches[0].clientX-x0; x0=null;
       if(Math.abs(dx)>40) go(dx<0?1:-1);
     });
+  })();
+  </script>
+  <script>
+  (function(){
+    if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    setInterval(function(){
+      document.querySelectorAll('.tl-fade').forEach(function(box){
+        var im=box.querySelectorAll('img'); if(im.length<2) return;
+        var cur=0; im.forEach(function(x,k){ if(x.classList.contains('is-on')) cur=k; });
+        im[cur].classList.remove('is-on'); im[(cur+1)%im.length].classList.add('is-on');
+      });
+    },4500);
   })();
   </script>
   <script src="shared-nav.js"></script>
