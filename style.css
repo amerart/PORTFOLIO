@@ -1133,3 +1133,7 @@ footer {
 
 /* Keep the copyright line in the right order on the Arabic version */
 .footer-copy { direction: ltr; unicode-bidi: isolate; }
+
+/* Timeline 2018: early drawings on the page colour */
+.tl-early .tl-press-imgs { isolation: isolate; background: var(--ivory); }
+.tl-early img { mix-blend-mode: multiply; border: none; }
