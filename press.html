@@ -30,7 +30,22 @@
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    gtag('consent', 'default', { 'analytics_storage': 'denied' });
+    gtag('consent', 'default', {
+      analytics_storage: 'denied',
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied'
+    });
+    // Axeptio: turn Analytics on only if the visitor accepts
+    window._axcb = window._axcb || [];
+    _axcb.push(function(axeptio) {
+      axeptio.on('cookies:complete', function(choices) {
+        var ok = Object.keys(choices).some(function(k) {
+          return k.indexOf('google') !== -1 && choices[k] === true;
+        });
+        gtag('consent', 'update', { analytics_storage: ok ? 'granted' : 'denied' });
+      });
+    });
     gtag('js', new Date());
     gtag('config', 'G-P1JEFJ2362');
   </script>
