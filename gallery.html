@@ -214,9 +214,9 @@
         <span class="cap cap-fr">Fermer</span>
         <span class="cap cap-ar">إغلاق</span>
       </button>
-      <button class="lb-prev" id="lb-prev" aria-label="Previous">←</button>
+      <button class="lb-prev" id="lb-prev" aria-label="Previous" hidden>←</button>
       <img id="lb-img" src="" alt="">
-      <button class="lb-next" id="lb-next" aria-label="Next">→</button>
+      <button class="lb-next" id="lb-next" aria-label="Next" hidden>→</button>
       <p id="lb-cap" class="lb-caption"></p>
     </div>
   </div>
@@ -545,20 +545,9 @@
     document.addEventListener('keydown', e => {
       if (lb.hidden) return;
       if (e.key === 'Escape') closeLb();
-      if (e.key === 'ArrowLeft')  { visible = getVisible(); openAt(current - 1); }
-      if (e.key === 'ArrowRight') { visible = getVisible(); openAt(current + 1); }
     });
 
-    /* Touch swipe */
-    let sx = 0;
-    lb.addEventListener('touchstart', e => { sx = e.changedTouches[0].clientX; }, { passive: true });
-    lb.addEventListener('touchend', e => {
-      const dx = e.changedTouches[0].clientX - sx;
-      if (Math.abs(dx) > 40) {
-        visible = getVisible();
-        dx < 0 ? openAt(current + 1) : openAt(current - 1);
-      }
-    }, { passive: true });
+    /* One work at a time: no moving to other works from the viewer */
 
     /* Deep link */
     if (location.hash) {
