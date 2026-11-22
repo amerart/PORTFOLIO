@@ -643,7 +643,7 @@ footer {
   line-height: 1.85;
   color: var(--ink2);
   margin-bottom: 20px;
-  text-align: justify;
+  text-align: start;
 }
 .about-text p:first-of-type::first-letter {
   font-family: var(--serif);
@@ -1137,3 +1137,7 @@ footer {
 /* Timeline 2018: early drawings on the page colour */
 .tl-early .tl-press-imgs { isolation: isolate; background: var(--ivory); }
 .tl-early img { mix-blend-mode: multiply; border: none; }
+
+/* About: big first letter only in English (French "Je" and Arabic letters would split) */
+.about-text .cap-fr p:first-of-type::first-letter,
+.about-text .cap-ar p:first-of-type::first-letter { float: none; font-size: inherit; line-height: inherit; padding: 0; font-family: inherit; font-weight: inherit; }
